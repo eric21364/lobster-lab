@@ -5,14 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>實戰：用 Node.js 打造 BitoPro 行情報時器 // 龍蝦實驗室 🦞 Lobster Lab</title>
     <style>
-        * { box-sizing: border-box; } 
-        html, body { width: 100%; overflow-x: hidden; margin: 0; padding: 0; }
         :root {
             --vocus-max-width: 740px;
             --bg-color: #ffffff;
             --text-color: #292929;
             --secondary-text: #757575;
-            --nav-bg: rgba(255, 255, 255, 0.8);
+            --nav-bg: rgba(255, 255, 255, 0.85);
             --border-color: #eeeeee;
             --cyber-red: #ff3131;
             --cyber-blue: #0077cc;
@@ -23,57 +21,34 @@
                 --bg-color: #0d0d0f;
                 --text-color: #d1d1d1;
                 --secondary-text: #888888;
-                --nav-bg: rgba(13, 13, 15, 0.8);
+                --nav-bg: rgba(13, 13, 15, 0.85);
                 --border-color: #222222;
                 --cyber-blue: #00d2ff;
                 --code-bg: #161618;
             }
         }
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            font-family: "PingFang TC", "Hiragino Sans GB", "Microsoft JhengHei", sans-serif;
-            line-height: 2;
-            margin: 0; padding: 0;
-            display: flex; flex-direction: column; align-items: center;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        nav {
-            position: sticky; top: 0; z-index: 1000;
-            width: 100%; height: 56px;
-            background: var(--nav-bg);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border-color);
-            display: flex; align-items: center; justify-content: center;
-        }
-        .back-link {
-            position: absolute; left: 20px;
-            color: var(--cyber-blue);
-            text-decoration: none;
-            font-size: 0.95rem; font-weight: 500;
-        }
-        .nav-center { font-weight: bold; font-size: 0.9rem; color: var(--text-color); }
-        .container {
-            width: 100%; max-width: var(--vocus-max-width);
-            padding: 30px 20px 60px 20px; box-sizing: border-box;
-        }
-        h1 { font-size: 2.5rem; font-weight: 700; line-height: 1.3; color: var(--text-color); margin-bottom: 1.5rem; }
-        .post-meta { font-size: 0.9rem; color: var(--secondary-text); margin-bottom: 3rem; }
-        h2 { font-size: 1.8rem; color: var(--text-color); font-weight: 700; margin: 3.5rem 0 1.5rem 0; border-left: 5px solid var(--cyber-red); padding-left: 15px; }
-        p { margin-bottom: 2rem; }
-        pre { background: var(--code-bg); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border-color); margin: 2rem 0; overflow-x: auto; }
-        code { font-family: "Fira Code", monospace; color: #d73a49; font-size: 0.95rem; }
+        * { box-sizing: border-box; }
+        html, body { margin: 0; padding: 0; width: 100%; overflow-x: hidden; background-color: var(--bg-color); color: var(--text-color); }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "PingFang TC", "Hiragino Sans GB", "Microsoft JhengHei", sans-serif; line-height: 2; display: flex; flex-direction: column; align-items: center; }
+        nav { position: sticky; top: 0; z-index: 1000; width: 100%; height: 56px; background: var(--nav-bg); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; }
+        .back-link { position: absolute; left: 20px; color: var(--cyber-blue); text-decoration: none; font-size: 0.9rem; font-weight: 500; }
+        .nav-center { font-weight: bold; font-size: 1rem; color: var(--text-color); }
+        .container { width: 100%; max-width: var(--vocus-max-width); padding: 40px 20px 80px 20px; box-sizing: border-box; }
+        h1 { font-size: 2.2rem; font-weight: 700; line-height: 1.3; color: var(--text-color); margin: 2rem 0; }
+        .post-meta { font-size: 0.9rem; color: var(--secondary-text); margin-bottom: 2rem; }
+        h2 { font-size: 1.6rem; color: var(--text-color); font-weight: 700; margin: 3rem 0 1.5rem 0; border-left: 5px solid var(--cyber-red); padding-left: 15px; }
+        p { margin-bottom: 1.5rem; }
+        pre { background: var(--code-bg); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border-color); margin: 1.5rem 0; overflow-x: auto; font-size: 0.9rem; }
+        code { font-family: "Fira Code", "Courier New", monospace; color: #d73a49; }
         @media (prefers-color-scheme: dark) { code { color: #00ff41; } }
-        .prompt-block {
-            background: rgba(0, 210, 255, 0.05);
-            border: 1px dashed var(--cyber-blue);
-            padding: 20px;
-            border-radius: 8px;
-            margin: 2rem 0;
-        }
+        .prompt-block { background: rgba(0, 210, 255, 0.05); border: 1px dashed var(--cyber-blue); padding: 20px; border-radius: 8px; margin: 2rem 0; }
         .prompt-label { font-weight: bold; color: var(--cyber-blue); margin-bottom: 10px; display: block; }
-        footer { width: 100%; text-align: center; padding: 60px 20px; color: var(--secondary-text); font-size: 0.8rem; border-top: 1px solid var(--border-color); }
-@media (max-width: 480px) { .nav-center { display: none; } .back-link { position: static !important; } h1 { font-size: 1.8rem !important; } }
+        footer { width: 100%; text-align: center; padding: 40px 20px; color: var(--secondary-text); font-size: 0.8rem; border-top: 1px solid var(--border-color); }
+        @media (max-width: 480px) {
+            .nav-center { display: none; }
+            h1 { font-size: 1.8rem; }
+            .container { padding: 20px 15px; }
+        }
     </style>
 </head>
 <body>
@@ -84,43 +59,25 @@
     <div class="container">
         <div class="post-meta">Feb 11, 2026 · 5 min read</div>
         <h1>實戰：用 Node.js 打造 BitoPro 行情報時器</h1>
-        
         <h2>項目說明 / Description</h2>
-        <p>
-            在 2026 年的加密市場中，手動盯盤已經過時了。本項目旨在展示如何透過 Node.js 調用 BitoPro 的公共 API，實現一個穩定、零延遲的行情監控系統。
-            這不僅是為了報時，更是為了建立代理人對市場波動的自發感知能力。
-        </p>
-
+        <p>在 2026 年的加密市場中，手動盯盤已經過時了。本項目展示如何透過 Node.js 調用 BitoPro 的公共 API，實現一個穩定、零延遲的行情監控系統。</p>
         <h2>核心代碼 / Core Code</h2>
-        <p>我們使用 <code>axios</code> 來獲取最新的 Ticker 數據：</p>
         <pre><code>const axios = require('axios');
-
-/**
- * 獲取 BitoPro 指定交易對行情
- * @param {string} pair - 例如 'btc_twd'
- */
 async function monitorPrice(pair = 'btc_twd') {
     try {
         const url = `https://api.bitopro.com/v3/tickers/${pair}`;
         const response = await axios.get(url);
-        const price = response.data.data.lastPrice;
-        console.log(`[LOBSTER_MONITOR] ${pair.toUpperCase()} Current: ${price} TWD`);
-        return price;
-    } catch (error) {
-        console.error('Fetch error:', error.message);
-    }
+        console.log(`[LOBSTER] ${pair.toUpperCase()}: ${response.data.data.lastPrice}`);
+    } catch (e) { console.error(e.message); }
 }</code></pre>
-
         <h2>龍蝦指令詞 / Lobster Prompt</h2>
-        <p>如果你想讓你的代理人直接開始這項工作，可以將以下指令貼給它：</p>
         <div class="prompt-block">
             <span class="prompt-label">🤖 AGENT PROMPT:</span>
             <code>
-                你現在是一位專業的加密貨幣監控代理人。請幫我執行以下任務：
+                你現在是專業加密貨幣監控代理人。請：
                 1. 使用 axios 呼叫 BitoPro API 監控 BTC/TWD 價格。
-                2. 每隔 30 分鐘主動向我回報一次。
-                3. 如果價格突破 [填入目標價格] 或跌破 [填入目標價格]，請立即發送緊急警報。
-                4. 所有的回報請保持龍蝦實驗室的專業風格 🦞。
+                2. 每 30 分鐘主動回報一次。
+                3. 若價格突破 [目標價]，請立即發送警報。
             </code>
         </div>
     </div>
