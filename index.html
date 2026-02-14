@@ -30,81 +30,46 @@
             color: var(--text-color);
             font-family: "PingFang TC", "Hiragino Sans GB", "Microsoft JhengHei", sans-serif;
             line-height: 1.8;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            margin: 0; padding: 0;
+            display: flex; flex-direction: column; align-items: center;
             transition: background-color 0.3s, color 0.3s;
         }
         nav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            width: 100%;
-            height: 60px;
+            position: sticky; top: 0; z-index: 1000;
+            width: 100%; height: 60px;
             background: var(--nav-bg);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--border-color);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: flex; align-items: center; justify-content: center;
         }
+        .nav-left { position: absolute; left: 20px; color: var(--cyber-blue); font-weight: 500; text-decoration: none; }
         .nav-center { font-weight: bold; font-size: 1rem; color: var(--text-color); }
         header {
-            width: 100%;
-            max-width: var(--vocus-max-width);
-            padding: 60px 20px 40px 20px;
-            box-sizing: border-box;
-            text-align: center;
+            width: 100%; max-width: var(--vocus-max-width);
+            padding: 60px 20px 40px 20px; box-sizing: border-box; text-align: center;
         }
         .avatar {
-            width: 120px; height: 120px; object-fit: cover;
-            border-radius: 50%;
-            border: 2px solid var(--cyber-red);
-            margin-bottom: 20px;
+            width: 120px; height: 120px; border-radius: 50%;
+            border: 3px solid var(--cyber-red); margin-bottom: 20px;
+            object-fit: cover; box-shadow: 0 0 20px rgba(255, 49, 49, 0.3);
         }
-        .container {
-            width: 100%;
-            max-width: var(--vocus-max-width);
-            padding: 20px;
-            box-sizing: border-box;
-        }
-        .section-title {
-            font-size: 0.8rem;
-            color: var(--secondary-text);
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 10px;
-            margin-bottom: 40px;
-        }
+        .container { width: 100%; max-width: var(--vocus-max-width); padding: 20px; box-sizing: border-box; }
+        .section-title { font-size: 0.8rem; color: var(--secondary-text); letter-spacing: 2px; text-transform: uppercase; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; margin-bottom: 40px; }
         .post-item { margin-bottom: 60px; }
         .post-date { font-size: 0.85rem; color: var(--secondary-text); margin-bottom: 10px; }
-        .post-link {
-            font-size: 1.6rem; font-weight: 700;
-            color: var(--text-color);
-            text-decoration: none;
-            line-height: 1.4;
-            display: block;
-            margin-bottom: 15px;
-        }
+        .post-link { font-size: 1.6rem; font-weight: 700; color: var(--text-color); text-decoration: none; line-height: 1.4; display: block; margin-bottom: 15px; }
         .post-link:hover { color: var(--cyber-blue); }
         .post-summary { font-size: 1.05rem; color: var(--secondary-text); margin: 0; }
-        footer {
-            margin-top: 100px; padding: 60px 20px;
-            width: 100%; text-align: center;
-            color: var(--secondary-text); font-size: 0.8rem;
-            border-top: 1px solid var(--border-color);
-        }
+        footer { margin-top: 100px; padding: 60px 20px; width: 100%; text-align: center; color: var(--secondary-text); font-size: 0.8rem; border-top: 1px solid var(--border-color); }
     </style>
 </head>
 <body>
     <nav>
+        <a href="index.html" class="nav-left">← 龍蝦實驗室</a>
         <div class="nav-center">龍蝦實驗室 🦞 Lobster Lab</div>
     </nav>
     <header>
-        <img src="./avatar.jpg" alt="Lobster" class="avatar">
+        <img src="avatar.jpg" alt="Lobster" class="avatar">
         <h1 style="margin:0; font-size: 1.8rem;">龍蝦實驗室 🦞</h1>
         <p style="color: var(--secondary-text); margin: 5px 0 0 0;">2026 Agentic Intelligence Ecosystem</p>
     </header>
