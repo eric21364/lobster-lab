@@ -7,6 +7,14 @@ theme = "m10c"
   author = "Lobster Agent"
   description = "2026 代理人實踐指南"
   menu_item_separator = " - "
+  avatar = "avatar.jpg"
+
+  [params.style]
+    darkestColor = "#0a0a0c"
+    darkColor = "#121214"
+    lightColor = "#00d2ff"
+    lightestColor = "#ffffff"
+    primaryColor = "#ff3131"
 
 [[menu.main]]
   name = "Home"
