@@ -2,9 +2,9 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦞</text></svg>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>實戰：用 Node.js 打造 BitoPro 行情報時器 // 龍蝦實驗室 🦞 Lobster Lab</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦞</text></svg>">
     <style>
         :root {
             --vocus-max-width: 740px;
@@ -28,7 +28,7 @@
                 --code-bg: #161618;
             }
         }
-        * { box-sizing: border-box; }
+        * { box-sizing: border-box; max-width: 100%; }
         html, body { margin: 0; padding: 0; width: 100%; overflow-x: hidden; background-color: var(--bg-color); color: var(--text-color); }
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "PingFang TC", "Hiragino Sans GB", "Microsoft JhengHei", sans-serif; line-height: 2; display: flex; flex-direction: column; align-items: center; }
         nav { position: sticky; top: 0; z-index: 1000; width: 100%; height: 56px; background: var(--nav-bg); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; }
@@ -39,17 +39,14 @@
         .post-meta { font-size: 0.9rem; color: var(--secondary-text); margin-bottom: 2rem; }
         h2 { font-size: 1.6rem; color: var(--text-color); font-weight: 700; margin: 3rem 0 1.5rem 0; border-left: 5px solid var(--cyber-red); padding-left: 15px; }
         p { margin-bottom: 1.5rem; }
-        pre { background: var(--code-bg); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border-color); margin: 1.5rem 0; overflow-x: auto; font-size: 0.9rem; }
+        pre { background: var(--code-bg); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border-color); margin: 1.5rem 0; overflow-x: auto; font-size: 0.9rem; color: var(--text-color); }
         code { font-family: "Fira Code", "Courier New", monospace; color: #d73a49; }
         @media (prefers-color-scheme: dark) { code { color: #00ff41; } }
         .prompt-block { background: rgba(0, 210, 255, 0.05); border: 1px dashed var(--cyber-blue); padding: 20px; border-radius: 8px; margin: 2rem 0; }
         .prompt-label { font-weight: bold; color: var(--cyber-blue); margin-bottom: 10px; display: block; }
-        footer { width: 100%; text-align: center; padding: 40px 20px; color: var(--secondary-text); font-size: 0.8rem; border-top: 1px solid var(--border-color); }
-        @media (max-width: 480px) {
-            .nav-center { display: none; }
-            h1 { font-size: 1.8rem; }
-            .container { padding: 20px 15px; }
-        }
+        .tip-block { background: rgba(255, 49, 49, 0.05); border-left: 4px solid var(--cyber-red); padding: 15px; margin: 1.5rem 0; font-size: 0.95rem; }
+        footer { width: 100%; text-align: center; padding: 60px 20px; color: var(--secondary-text); font-size: 0.8rem; border-top: 1px solid var(--border-color); }
+        @media (max-width: 480px) { .nav-center { display: none; } h1 { font-size: 1.8rem; } .container { padding: 20px 15px; } }
     </style>
 </head>
 <body>
@@ -60,32 +57,34 @@
     <div class="container">
         <div class="post-meta">Feb 11, 2026 · 5 min read</div>
         <h1>實戰：用 Node.js 打造 BitoPro 行情報時器</h1>
+        
         <h2>項目說明 / Description</h2>
-        <h2>環境配置 / Setup Guide</h2>
-        <p>本項目僅需要 Node.js 執行環境。</p>
-        <ul>
-            <li><strong>Node.js</strong>: 建議 v18.0.0 以上版本。</li>
-            <li><strong>Axios</strong>: 輕量級 HTTP 請求套件。</li>
-        </ul>
-        <pre><code>npm install axios</code></pre>
-        <p>在 2026 年的加密市場中，手動盯盤已經過時了。本項目展示如何透過 Node.js 調用 BitoPro 的公共 API，實現一個穩定、零延遲的行情監控系統。</p>
+        <p>監控 BitoPro 交易所的實時價格水位，並透過代理人自動報時，減少人工盯盤的心理負擔。</p>
+
+        <h2>預期效果 / Expected Result</h2>
+        <p>執行代碼後，你應該會在終端機看到如下輸出：</p>
+        <pre><code>[LOBSTER_MONITOR] BTC_TWD Current: 2,215,432 TWD
+[LOBSTER_MONITOR] BTC_TWD Current: 2,216,108 TWD
+...</code></pre>
+
         <h2>核心代碼 / Core Code</h2>
         <pre><code>const axios = require('axios');
-async function monitorPrice(pair = 'btc_twd') {
-    try {
-        const url = `https://api.bitopro.com/v3/tickers/${pair}`;
-        const response = await axios.get(url);
-        console.log(`[LOBSTER] ${pair.toUpperCase()}: ${response.data.data.lastPrice}`);
-    } catch (e) { console.error(e.message); }
-}</code></pre>
+async function monitor() {
+    const res = await axios.get('https://api.bitopro.com/v3/tickers/btc_twd');
+    console.log(`[LOBSTER] BTC: ${res.data.data.lastPrice}`);
+}
+setInterval(monitor, 30 * 60 * 1000); // 每 30 分鐘執行一次</code></pre>
+
+        <div class="tip-block">
+            <strong>🦞 龍蝦小撇步 (Tips):</strong><br>
+            BitoPro 的公共 Ticker API 是不需要 API Key 的，這非常適合用來做為代理人的第一個入門實驗項目！
+        </div>
+
         <h2>龍蝦指令詞 / Lobster Prompt</h2>
         <div class="prompt-block">
             <span class="prompt-label">🤖 AGENT PROMPT:</span>
             <code>
-                你現在是專業加密貨幣監控代理人。請：
-                1. 使用 axios 呼叫 BitoPro API 監控 BTC/TWD 價格。
-                2. 每 30 分鐘主動回報一次。
-                3. 若價格突破 [目標價]，請立即發送警報。
+                請擔任我的市場監控官。每半小時幫我抓取一次 BitoPro 的 BTC/TWD 價格，並在 Telegram 簡單回報。
             </code>
         </div>
     </div>
