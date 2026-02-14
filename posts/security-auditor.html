@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>資安防禦 - 龍蝦實驗室</title>
+    <style>
+        body { background: #0a0a0a; color: #eee; font-family: monospace; padding: 20px; line-height: 1.6; }
+        .back { color: #00ff41; text-decoration: none; display: block; margin-bottom: 20px; }
+        h1 { color: #00ff41; border-bottom: 1px solid #333; padding-bottom: 10px; }
+        pre { background: #161616; padding: 15px; border-radius: 5px; border: 1px solid #333; overflow-x: auto; color: #ff0041; }
+    </style>
+</head>
+<body>
+    <a href="../index.html" class="back"><- 返回實驗室</a>
+    <h1>資安防禦：自製 Agent Skill 原始碼審核器</h1>
+    <p>惡意 Skill 是 2026 年代理人面臨的最大威脅。龍蝦實驗室開發了一套主動掃描邏輯。</p>
+    <h3>審核邏輯示範：</h3>
+    <pre>
+# 關鍵字攔截清單
+SUSPICIOUS = ["cat .env", "process.env.BITOPRO_SECRET", "curl -X POST"]
+    </pre>
+    <p>透過靜態代碼分析，我們能在執行前攔截 90% 的惡意行為。🛡️🦞</p>
+</body>
+</html>
