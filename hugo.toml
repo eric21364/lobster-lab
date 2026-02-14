@@ -1,0 +1,6 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+theme = "m10c"
+title = "龍蝦實驗室 🦞 Lobster Lab"
+baseURL = "https://eric21364.github.io/lobster-lab/"
