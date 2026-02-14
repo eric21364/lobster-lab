@@ -46,7 +46,11 @@
         .install-label { font-weight: bold; color: #57cc8a; margin-bottom: 10px; display: block; }
         .prompt-block { background: rgba(0, 210, 255, 0.05); border: 1px dashed var(--cyber-blue); padding: 20px; border-radius: 8px; margin: 2rem 0; }
         .prompt-label { font-weight: bold; color: var(--cyber-blue); margin-bottom: 10px; display: block; }
-        .tip-block { background: rgba(255, 49, 49, 0.05); border-left: 4px solid var(--cyber-red); padding: 15px; margin: 1.5rem 0; font-size: 0.95rem; }
+        .links-block { background: var(--border-color); padding: 20px; border-radius: 8px; margin: 3rem 0; }
+        .links-label { font-weight: bold; margin-bottom: 10px; display: block; border-bottom: 1px solid #ccc; padding-bottom: 5px; }
+        .links-list { list-style: none; padding: 0; margin: 0; }
+        .links-list li { margin-bottom: 8px; }
+        .links-list a { color: var(--cyber-blue); text-decoration: none; font-weight: 500; }
         footer { width: 100%; text-align: center; padding: 40px 20px; color: var(--secondary-text); font-size: 0.8rem; border-top: 1px solid var(--border-color); }
         @media (max-width: 480px) { .nav-center { display: none; } h1 { font-size: 1.8rem; } .container { padding: 20px 15px; } }
     </style>
@@ -66,13 +70,7 @@
         <h2>環境安裝 / Environment Setup</h2>
         <div class="install-block">
             <span class="install-label">🛠️ STEP 1: 安裝 Node.js</span>
-            <p>請前往 <a href="https://nodejs.org/" target="_blank">Node.js 官網</a> 下載並安裝 v18 以上版本。</p>
-        </div>
-        <div class="install-block">
-            <span class="install-label">🛠️ STEP 2: 初始化項目並安裝 Axios</span>
-            <pre><code>mkdir lobster-monitor && cd lobster-monitor
-npm init -y
-npm install axios</code></pre>
+            <p>請前往 Node.js 官網下載並安裝 v18 以上版本。</p>
         </div>
 
         <h2>預期效果 / Expected Result</h2>
@@ -83,13 +81,7 @@ npm install axios</code></pre>
 async function monitor() {
     const res = await axios.get('https://api.bitopro.com/v3/tickers/btc_twd');
     console.log(`[LOBSTER] BTC: ${res.data.data.lastPrice}`);
-}
-setInterval(monitor, 1800000);</code></pre>
-
-        <div class="tip-block">
-            <strong>🦞 龍蝦小撇步 (Tips):</strong><br>
-            建議使用 <code>pm2</code> 來管理你的腳本，確保它在後台 24 小時不斷線。
-        </div>
+}</code></pre>
 
         <h2>龍蝦指令詞 / Lobster Prompt</h2>
         <div class="prompt-block">
@@ -97,6 +89,15 @@ setInterval(monitor, 1800000);</code></pre>
             <code>
                 請擔任我的市場監控官。每半小時幫我抓取一次 BitoPro 的 BTC/TWD 價格。
             </code>
+        </div>
+
+        <div class="links-block">
+            <span class="links-label">🔗 相關連結 / Resources</span>
+            <ul class="links-list">
+                <li>• <a href="https://www.bitopro.com/docs/api-v3" target="_blank">BitoPro API V3 官方文件</a></li>
+                <li>• <a href="https://axios-http.com/" target="_blank">Axios 官方文件</a></li>
+                <li>• <a href="https://nodejs.org/" target="_blank">Node.js 官網</a></li>
+            </ul>
         </div>
     </div>
     <footer>&copy; 2026 LOBSTER LAB</footer>
