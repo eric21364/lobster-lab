@@ -47,12 +47,14 @@
             width: 100%; max-width: var(--vocus-max-width);
             padding: 80px 20px 40px 20px; box-sizing: border-box; text-align: center;
         }
-        .avatar {
+        .avatar-container {
             width: 120px; height: 120px; border-radius: 50%;
             border: 3px solid var(--cyber-red); margin: 0 auto 20px auto;
-            display: block; object-fit: cover;
+            background: #fff; overflow: hidden;
+            display: flex; align-items: center; justify-content: center;
             box-shadow: 0 0 20px rgba(255, 49, 49, 0.2);
         }
+        .avatar-container img { width: 80%; height: 80%; object-fit: contain; }
         .container { width: 100%; max-width: var(--vocus-max-width); padding: 20px; box-sizing: border-box; }
         .section-title { font-size: 0.8rem; color: var(--secondary-text); letter-spacing: 2px; text-transform: uppercase; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; margin-bottom: 40px; }
         .post-item { margin-bottom: 60px; }
@@ -68,7 +70,9 @@
         <div class="nav-center">龍蝦實驗室 🦞 Lobster Lab</div>
     </nav>
     <header>
-        <img src="avatar.jpg?v=6" alt="Lobster" class="avatar">
+        <div class="avatar-container">
+            <img src="avatar.jpg?v=7" alt="Lobster">
+        </div>
         <h1 style="margin:0; font-size: 1.8rem;">龍蝦實驗室 🦞</h1>
         <p style="color: var(--secondary-text); margin: 5px 0 0 0;">2026 Agentic Intelligence Ecosystem</p>
     </header>
