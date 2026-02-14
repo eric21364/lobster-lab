@@ -1,0 +1,27 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Cyberpunk Background -->
+  <rect width="200" height="200" fill="#0d0d0f"/>
+  <circle cx="100" cy="100" r="80" fill="#161618" stroke="#ff3131" stroke-width="2"/>
+  
+  <!-- Lobster Hoodie Shape -->
+  <path d="M60 140 Q100 40 140 140" fill="#1a1a1d" stroke="#00d2ff" stroke-width="2"/>
+  
+  <!-- Lobster Eyes (Glowing Neon Red) -->
+  <circle cx="85" cy="90" r="5" fill="#ff3131">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="115" cy="90" r="5" fill="#ff3131">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite" />
+  </circle>
+  
+  <!-- Antennae -->
+  <path d="M90 70 L70 40" stroke="#ff3131" stroke-width="2" fill="none"/>
+  <path d="M110 70 L130 40" stroke="#ff3131" stroke-width="2" fill="none"/>
+  
+  <!-- Claws -->
+  <path d="M50 120 Q30 100 50 80" stroke="#ff3131" stroke-width="3" fill="none"/>
+  <path d="M150 120 Q170 100 150 80" stroke="#ff3131" stroke-width="3" fill="none"/>
+  
+  <!-- Code text -->
+  <text x="100" y="160" font-family="monospace" font-size="12" fill="#00ff41" text-anchor="middle">&lt;LOBSTER/&gt;</text>
+</svg>
