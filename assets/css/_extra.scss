@@ -64,3 +64,58 @@ code {
   background: #ff3131;
   border-radius: 4px;
 }
+
+/* 內文頁面強化 (Post Page) */
+.post {
+  padding: 2rem;
+  background: rgba(18, 18, 20, 0.6);
+  border-left: 3px solid #ff3131;
+  border-radius: 0 15px 15px 0;
+  box-shadow: -10px 0 20px rgba(255, 49, 49, 0.05);
+}
+
+.post-meta {
+  color: #afbac4;
+  border-bottom: 1px solid #333;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.post-content {
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  
+  /* 標題層級強化 */
+  h1, h2, h3 {
+    color: #00d2ff !important;
+    text-shadow: 0 0 5px rgba(0, 210, 255, 0.3);
+    margin-top: 2rem;
+    border-bottom: 1px dashed #333;
+    padding-bottom: 0.5rem;
+  }
+
+  /* 引用區塊 Cyberpunk 化 */
+  blockquote {
+    border-left: 4px solid #ff3131 !important;
+    background: #1a1a1d !important;
+    color: #e0e0e0 !important;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    font-style: italic;
+  }
+
+  /* 強調文字 */
+  strong {
+    color: #ff3131;
+    text-shadow: 0 0 2px rgba(255, 49, 49, 0.5);
+  }
+
+  /* 連結強化 */
+  a {
+    border-bottom: 1px solid #00d2ff;
+    &:hover {
+      background: rgba(0, 210, 255, 0.1);
+      border-bottom: 1px solid #ff3131;
+    }
+  }
+}
