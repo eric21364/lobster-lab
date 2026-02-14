@@ -1,138 +1,139 @@
-/* Vocus-inspired Cyberpunk Minimalist Theme */
+/* Vocus-inspired Cyberpunk Minimalist Theme - FORCE OVERRIDE */
 
 :root {
   --vocus-max-width: 740px;
   --cyber-red: #ff3131;
   --cyber-blue: #00d2ff;
   --cyber-bg: #0d0d0f;
-  --cyber-text: #e0e0e0;
+  --cyber-text: #d1d1d1;
 }
 
+/* 全域重設 */
 body {
   background-color: var(--cyber-bg) !important;
   color: var(--cyber-text) !important;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans TC", sans-serif;
-  -webkit-font-smoothing: antialiased;
+  font-family: "PingFang TC", "Hiragino Sans GB", "Microsoft JhengHei", sans-serif !important;
+  line-height: 1.8 !important;
 }
 
-/* 佈局調整 */
-.app-container {
-  max-width: var(--vocus-max-width) !important;
-  margin: 0 auto !important;
-  padding: 80px 20px !important;
-}
-
+/* 移除主題預設側邊欄，改為頂部導覽佈局 */
 @media (min-width: 940px) {
   .app-header {
-    width: 100% !important;
     position: relative !important;
+    width: 100% !important;
     min-height: auto !important;
     padding: 2rem 0 !important;
-    border-right: none !important;
-    border-bottom: 1px solid #222;
     background: transparent !important;
-    box-shadow: none !important;
+    border-right: none !important;
+    border-bottom: 1px solid #222 !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 20px !important;
   }
   
   .app-container {
-    margin-left: auto !important;
-  }
-
-  .app-header-avatar {
-    width: 60px !important;
-    height: 60px !important;
-    margin-bottom: 0 !important;
-  }
-
-  .app-header-title {
-    font-size: 1.2rem !important;
-    display: inline-block !important;
-    margin-left: 15px !important;
-    vertical-align: middle;
+    max-width: var(--vocus-max-width) !important;
+    margin: 0 auto !important;
+    padding: 60px 20px !important;
   }
 }
 
-/* 文章標題區 */
-.post-header {
-  margin-bottom: 3rem;
-  text-align: left;
+.app-header-avatar {
+  width: 50px !important;
+  height: 50px !important;
+  margin: 0 !important;
+}
+
+.app-header-title {
+  font-size: 1.2rem !important;
+  margin: 0 !important;
+  color: #fff !important;
+}
+
+.app-header p, .app-header-social {
+  display: none !important; /* 隱藏贅餘資訊 */
+}
+
+/* 文章標題區 (Vocus Style) */
+.post {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
 }
 
 .post-title {
   font-size: 2.5rem !important;
   font-weight: 700 !important;
   line-height: 1.3 !important;
-  color: #fff !important;
-  margin-bottom: 1.5rem !important;
-  text-shadow: none !important;
+  color: #ffffff !important;
+  margin-bottom: 2rem !important;
+  display: block !important;
 }
 
 .post-meta {
+  font-size: 0.9rem !important;
   color: #888 !important;
-  font-size: 0.95rem !important;
+  margin-bottom: 3rem !important;
   border: none !important;
-  padding: 0 !important;
 }
 
-/* 內文排版 (Vocus 風格) */
+/* 核心內文調整 - 確保強制覆蓋主題樣式 */
 .post-content {
-  font-size: 1.2rem !important;
-  line-height: 1.8 !important;
-  letter-spacing: 0.01em !important;
-  color: #d1d1d1 !important;
+  font-size: 1.15rem !important;
+  color: var(--cyber-text) !important;
+  line-height: 2 !important; /* 加大行距 */
+  letter-spacing: 0.02em !important;
 }
 
 .post-content p {
-  margin-bottom: 1.8rem;
+  margin-bottom: 2rem !important;
 }
 
-.post-content h2 {
-  font-size: 1.8rem !important;
-  margin: 3rem 0 1.5rem 0 !important;
-  color: var(--cyber-blue) !important;
+/* 小標題 Vocus 化 */
+.post-content h1, .post-content h2, .post-content h3 {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  margin: 3.5rem 0 1.5rem 0 !important;
   border: none !important;
+  text-shadow: none !important;
 }
 
-.post-content h3 {
-  font-size: 1.5rem !important;
-  margin: 2.5rem 0 1rem 0 !important;
-  color: var(--cyber-blue) !important;
-}
+.post-content h2 { font-size: 1.8rem !important; }
+.post-content h3 { font-size: 1.5rem !important; }
 
-/* 圖片全寬化 */
-.post-content img {
-  display: block;
-  margin: 3rem auto;
-  border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-}
-
-/* 引用 */
+/* 引用塊 Vocus 化 */
 .post-content blockquote {
-  border-left: 3px solid var(--cyber-red) !important;
-  padding-left: 20px !important;
-  margin: 2rem 0 !important;
+  border-left: 4px solid var(--cyber-red) !important;
+  padding: 0.5rem 0 0.5rem 1.5rem !important;
+  margin: 2.5rem 0 !important;
   background: transparent !important;
-  font-size: 1.3rem !important;
   color: #fff !important;
-  font-style: normal !important;
+  font-size: 1.2rem !important;
 }
 
-/* 程式碼 */
+/* 連結 */
+.post-content a {
+  color: var(--cyber-blue) !important;
+  text-decoration: underline !important;
+  &:hover {
+    color: var(--cyber-red) !important;
+  }
+}
+
+/* 程式碼區塊細節 */
 pre {
   background: #161618 !important;
   padding: 1.5rem !important;
-  border-radius: 12px !important;
+  border-radius: 8px !important;
+  border: 1px solid #333 !important;
   margin: 2rem 0 !important;
-  border: 1px solid #222 !important;
 }
 
 code {
-  font-family: 'Fira Code', monospace !important;
-  background: transparent !important;
-}
-
-/* 隱藏預設側邊欄描述，讓頂部更簡潔 */
-.app-header p {
-  display: none;
+  font-family: "Fira Code", monospace !important;
+  color: #00ff41 !important;
+  font-size: 0.95rem !important;
 }
