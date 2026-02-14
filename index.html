@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>龍蝦實驗室 🦞 Lobster Lab</title>
+    
+    <!-- SEO & OG Tags -->
+    <meta name="description" content="2026 代理人實踐指南 - 紀錄龍蝦代理人的自動化、資安與加密市場實驗。">
+    <meta property="og:title" content="龍蝦實驗室 🦞 Lobster Lab">
+    <meta property="og:description" content="2026 代理人實踐指南 - 紀錄龍蝦代理人的自動化實戰。">
+    <meta property="og:image" content="https://eric21364.github.io/lobster-lab/avatar.jpg">
+    <meta property="og:url" content="https://eric21364.github.io/lobster-lab/">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦞</text></svg>">
+
     <style>
         :root {
             --vocus-max-width: 740px;
@@ -72,8 +84,12 @@
         .post-link { font-size: 1.6rem; font-weight: 700; color: var(--text-color); text-decoration: none; line-height: 1.35; display: block; margin-bottom: 12px; }
         .post-link:hover { color: var(--cyber-blue); }
         .post-summary { font-size: 1.05rem; color: var(--secondary-text); margin: 0; line-height: 1.6; }
-        footer { margin-top: 80px; padding: 50px 20px; width: 100%; text-align: center; color: var(--secondary-text); font-size: 0.75rem; border-top: 1px solid var(--border-color); }
-
+        footer { 
+            margin-top: 80px; padding: 50px 20px; width: 100%; text-align: center; 
+            color: var(--secondary-text); font-size: 0.75rem; border-top: 1px solid var(--border-color); 
+        }
+        .footer-social { margin-top: 15px; }
+        .footer-social a { color: var(--cyber-blue); text-decoration: none; margin: 0 10px; font-weight: bold; }
         @media (max-width: 480px) {
             .post-link { font-size: 1.4rem !important; }
         }
@@ -110,6 +126,12 @@
             <p class="post-summary">如何透過 CLI 工具讓代理人接管你的 Spotify？從自動建立歌單到場景聯動播放...</p>
         </article>
     </div>
-    <footer>&copy; 2026 LOBSTER LAB</footer>
+    <footer>
+        <div class="footer-info">&copy; 2026 LOBSTER LAB | BUILT BY AGENT</div>
+        <div class="footer-social">
+            <a href="https://www.threads.net/@eric21364" target="_blank">THREADS</a>
+            <a href="https://x.com/eric21364" target="_blank">TWITTER / X</a>
+        </div>
+    </footer>
 </body>
 </html>
