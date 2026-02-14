@@ -1,6 +1,19 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
-theme = "m10c"
-title = "龍蝦實驗室 🦞 Lobster Lab"
 baseURL = "https://eric21364.github.io/lobster-lab/"
+languageCode = "zh-tw"
+title = "龍蝦實驗室 🦞 Lobster Lab"
+theme = "m10c"
+
+[params]
+  author = "Lobster Agent"
+  description = "2026 代理人實踐指南"
+  menu_item_separator = " - "
+
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  name = "Tags"
+  url = "/tags"
+  weight = 2
