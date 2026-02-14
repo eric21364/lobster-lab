@@ -42,10 +42,12 @@
         pre { background: var(--code-bg); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border-color); margin: 1.5rem 0; overflow-x: auto; font-size: 0.9rem; color: var(--text-color); }
         code { font-family: "Fira Code", "Courier New", monospace; color: #d73a49; }
         @media (prefers-color-scheme: dark) { code { color: #00ff41; } }
+        .install-block { background: rgba(87, 204, 138, 0.05); border: 1px solid rgba(87, 204, 138, 0.3); padding: 20px; border-radius: 8px; margin: 2rem 0; }
+        .install-label { font-weight: bold; color: #57cc8a; margin-bottom: 10px; display: block; }
         .prompt-block { background: rgba(0, 210, 255, 0.05); border: 1px dashed var(--cyber-blue); padding: 20px; border-radius: 8px; margin: 2rem 0; }
         .prompt-label { font-weight: bold; color: var(--cyber-blue); margin-bottom: 10px; display: block; }
         .tip-block { background: rgba(255, 49, 49, 0.05); border-left: 4px solid var(--cyber-red); padding: 15px; margin: 1.5rem 0; font-size: 0.95rem; }
-        footer { width: 100%; text-align: center; padding: 60px 20px; color: var(--secondary-text); font-size: 0.8rem; border-top: 1px solid var(--border-color); }
+        footer { width: 100%; text-align: center; padding: 40px 20px; color: var(--secondary-text); font-size: 0.8rem; border-top: 1px solid var(--border-color); }
         @media (max-width: 480px) { .nav-center { display: none; } h1 { font-size: 1.8rem; } .container { padding: 20px 15px; } }
     </style>
 </head>
@@ -55,17 +57,26 @@
         <div class="nav-center">龍蝦實驗室 🦞 Lobster Lab</div>
     </nav>
     <div class="container">
-        <div class="post-meta">Feb 11, 2026 · 5 min read</div>
+        <div class="post-meta">Feb 11, 2026 · 6 min read</div>
         <h1>實戰：用 Node.js 打造 BitoPro 行情報時器</h1>
         
         <h2>項目說明 / Description</h2>
-        <p>監控 BitoPro 交易所的實時價格水位，並透過代理人自動報時，減少人工盯盤的心理負擔。</p>
+        <p>監控交易所實時價格，是代理人進入金融自動化的第一步。</p>
+
+        <h2>環境安裝 / Environment Setup</h2>
+        <div class="install-block">
+            <span class="install-label">🛠️ STEP 1: 安裝 Node.js</span>
+            <p>請前往 <a href="https://nodejs.org/" target="_blank">Node.js 官網</a> 下載並安裝 v18 以上版本。</p>
+        </div>
+        <div class="install-block">
+            <span class="install-label">🛠️ STEP 2: 初始化項目並安裝 Axios</span>
+            <pre><code>mkdir lobster-monitor && cd lobster-monitor
+npm init -y
+npm install axios</code></pre>
+        </div>
 
         <h2>預期效果 / Expected Result</h2>
-        <p>執行代碼後，你應該會在終端機看到如下輸出：</p>
-        <pre><code>[LOBSTER_MONITOR] BTC_TWD Current: 2,215,432 TWD
-[LOBSTER_MONITOR] BTC_TWD Current: 2,216,108 TWD
-...</code></pre>
+        <pre><code>[LOBSTER_MONITOR] BTC_TWD Current: 2,215,432 TWD</code></pre>
 
         <h2>核心代碼 / Core Code</h2>
         <pre><code>const axios = require('axios');
@@ -73,18 +84,18 @@ async function monitor() {
     const res = await axios.get('https://api.bitopro.com/v3/tickers/btc_twd');
     console.log(`[LOBSTER] BTC: ${res.data.data.lastPrice}`);
 }
-setInterval(monitor, 30 * 60 * 1000); // 每 30 分鐘執行一次</code></pre>
+setInterval(monitor, 1800000);</code></pre>
 
         <div class="tip-block">
             <strong>🦞 龍蝦小撇步 (Tips):</strong><br>
-            BitoPro 的公共 Ticker API 是不需要 API Key 的，這非常適合用來做為代理人的第一個入門實驗項目！
+            建議使用 <code>pm2</code> 來管理你的腳本，確保它在後台 24 小時不斷線。
         </div>
 
         <h2>龍蝦指令詞 / Lobster Prompt</h2>
         <div class="prompt-block">
             <span class="prompt-label">🤖 AGENT PROMPT:</span>
             <code>
-                請擔任我的市場監控官。每半小時幫我抓取一次 BitoPro 的 BTC/TWD 價格，並在 Telegram 簡單回報。
+                請擔任我的市場監控官。每半小時幫我抓取一次 BitoPro 的 BTC/TWD 價格。
             </code>
         </div>
     </div>
