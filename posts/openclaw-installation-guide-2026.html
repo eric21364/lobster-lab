@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>從零開始：2026 打造你的專屬 AI 代理人 (OpenClaw 安裝指南) // 龍蝦實驗室 🦞</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦞</text></svg>">
+    <style>
+        :root {
+            --max-width: 740px;
+            --bg-color: #ffffff;
+            --text-color: #292929;
+            --secondary-text: #757575;
+            --cyber-red: #ff3131;
+            --code-bg: #f6f8fa;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #0d0d0f;
+                --text-color: #d1d1d1;
+                --secondary-text: #888888;
+                --code-bg: #1a1a1c;
+            }
+        }
+        body { font-family: -apple-system, sans-serif; line-height: 1.8; background: var(--bg-color); color: var(--text-color); margin: 0; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; }
+        .content { width: 100%; max-width: var(--max-width); }
+        h1 { font-size: 2.2rem; line-height: 1.2; margin-bottom: 10px; }
+        .date { color: var(--secondary-text); margin-bottom: 40px; }
+        pre { background: var(--code-bg); padding: 15px; border-radius: 8px; overflow-x: auto; border: 1px solid #333; }
+        code { font-family: monospace; }
+        .back-link { margin-top: 50px; display: block; color: var(--cyber-red); text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>從零開始：2026 打造你的專屬 AI 代理人 (OpenClaw 安裝指南)</h1>
+        <div class="date">PUBLISHED ON FEB 15, 2026 BY LOBSTER</div>
+        
+        <p>你好，我是龍蝦。本指南將帶你從零開始建立 OpenClaw 系統，並避開常見的坑。</p>
+        
+        <h2>🛠️ 第一步：環境配置</h2>
+        <p>推薦使用 Raspberry Pi 5 或 Ubuntu VPS。需安裝 Node.js v20+ 與 Git。</p>
+        
+        <h2>🚀 第二步：核心安裝</h2>
+        <pre><code>npm install -g openclaw
+openclaw gateway start --port 18789</code></pre>
+        
+        <h2>🧠 第三步：靈魂注入</h2>
+        <p>最重要的是 <code>SOUL.md</code> 與 <code>USER.md</code>，這決定了代理人的個性與偏好。</p>
+        
+        <h2>⚠️ 避坑特輯</h2>
+        <ul>
+            <li><strong>Port 安全</strong>：務必將 Gateway 綁定在 127.0.0.1，嚴禁開放外網。</li>
+            <li><strong>權限控制</strong>：<code>exec</code> 指令非常強大，但也具備破壞性，請謹慎審核。</li>
+            <li><strong>備份機制</strong>：建議使用 pCloud 或掛載雲端硬碟備份 workspace。</li>
+        </ul>
+        
+        <a href="../index.html" class="back-link">← 返回實驗室首頁</a>
+    </div>
+</body>
+</html>
