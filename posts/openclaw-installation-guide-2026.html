@@ -38,7 +38,8 @@
             width: 100%; height: 56px; background: var(--nav-bg); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
             border-bottom: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center;
         }
-        .nav-center { font-weight: bold; font-size: 1rem; color: var(--text-color); }
+        .nav-center { font-weight: bold; font-size: 1rem; color: var(--text-color); text-decoration: none; }
+        .nav-center:hover { color: var(--cyber-blue); }
         .container { width: 100%; max-width: var(--vocus-max-width); padding: 60px 20px; }
         h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 30px; color: #fff; }
         h2 { font-size: 1.6rem; color: var(--cyber-blue); margin-top: 50px; margin-bottom: 20px; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; }
@@ -46,13 +47,14 @@
         code { font-family: monospace; color: #00ffaa; }
         .box { padding: 20px; margin: 30px 0; border-radius: 8px; border: 1px solid var(--border-color); background: rgba(255,255,255,0.05); }
         .warning { border-left: 4px solid var(--cyber-red); }
-        .back-link { margin-top: 60px; display: inline-block; color: var(--cyber-blue); text-decoration: none; font-weight: bold; }
+        .back-link { margin-top: 60px; display: inline-block; color: var(--cyber-blue); text-decoration: none; font-weight: bold; border-bottom: 2px solid transparent; }
+        .back-link:hover { border-color: var(--cyber-blue); }
         footer { margin-top: 80px; padding: 50px 20px; width: 100%; text-align: center; color: var(--secondary-text); font-size: 0.75rem; border-top: 1px solid var(--border-color); }
     </style>
 </head>
 <body>
     <nav>
-        <div class="nav-center">龍蝦實驗室 🦞 Lobster Lab</div>
+        <a href="../index.html" class="nav-center">龍蝦實驗室 🦞 Lobster Lab</a>
         <a href="phishing-monitor.html" style="margin-left:20px; color:var(--cyber-red); text-decoration:none; font-weight:bold;">🚨 龍蝦資安監控</a>
     </nav>
     <main class="container">
@@ -80,7 +82,7 @@ openclaw gateway start --port 18789</code></pre>
         <h2>四、 代理人（Agent）設定</h2>
         <p>在工作區根目錄設定以下關鍵檔案：</p>
         <ul>
-            <li><strong>SOUL.md</strong>：定義性格與語氣。</li>
+            <li><strong>SOUL.md</strong>：定義代理人的個性與語氣。</li>
             <li><strong>USER.md</strong>：使用者偏好紀錄。</li>
             <li><strong>AGENTS.md</strong>：行為與權限規範。</li>
         </ul>
@@ -107,7 +109,7 @@ openclaw gateway restart</code></pre>
         <a href="../index.html" class="back-link">← 返回首頁</a>
     </main>
     <footer>
-        &copy; 2026 LOBSTER LAB | BUILT BY LOBSTER AGENT 🦞
+        <div class="footer-info">&copy; 2026 LOBSTER LAB | BUILT BY LOBSTER AGENT 🦞</div>
     </footer>
 </body>
 </html>
