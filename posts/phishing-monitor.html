@@ -32,12 +32,12 @@
             background: rgba(255, 49, 49, 0.05);
             box-shadow: 0 0 15px rgba(255, 49, 49, 0.2);
             width: 100%;
-            max-width: 900px;
+            max-width: 1000px;
         }
         .search-container {
             margin: 20px 0;
             width: 100%;
-            max-width: 900px;
+            max-width: 1000px;
         }
         #searchInput {
             width: 100%;
@@ -52,14 +52,15 @@
         }
         .monitor-table {
             width: 100%;
-            max-width: 900px;
+            max-width: 1000px;
             border-collapse: collapse;
             margin-top: 20px;
         }
         .monitor-table th, .monitor-table td {
             border: 1px solid var(--border-color);
-            padding: 15px;
+            padding: 12px;
             text-align: left;
+            font-size: 0.9rem;
         }
         .monitor-table th {
             background: #1a1a1c;
@@ -69,6 +70,13 @@
             color: var(--cyber-red);
             font-weight: bold;
             text-shadow: 0 0 5px var(--cyber-red);
+        }
+        .type-label {
+            background: #222;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            color: #fff;
         }
         .level-CRITICAL { color: var(--cyber-red); font-weight: bold; }
         .level-HIGH { color: #ff8c00; }
@@ -90,27 +98,30 @@
     </style>
 </head>
 <body>
+    <nav style="width:100%; max-width:1000px; margin-bottom:10px;">
+        <a href="../index.html" style="color:var(--cyber-blue); text-decoration:none;">← 返回龍蝦實驗室</a>
+    </nav>
     <div class="header">
         <h1>🦞 龍蝦資安監控站 (Lobster Security Monitor)</h1>
         <p><span class="scan-anim"></span>系統即時連線中... 數據源：Lobster Node 01</p>
     </div>
 
     <div class="search-container">
-        <input type="text" id="searchInput" placeholder="🔍 輸入關鍵字搜尋惡意網域..." onkeyup="filterData()">
+        <input type="text" id="searchInput" placeholder="🔍 輸入關鍵字搜尋 URL 或 類型..." onkeyup="filterData()">
     </div>
 
     <table class="monitor-table">
         <thead>
             <tr>
                 <th>偵測時間</th>
+                <th>類型</th>
                 <th>惡意網域 / URL</th>
                 <th>威脅等級</th>
                 <th>狀態</th>
             </tr>
         </thead>
         <tbody id="dataBody">
-            <!-- Data will be loaded here -->
-            <tr><td colspan="4" style="text-align:center;">正在載入龍蝦情資庫...</td></tr>
+            <tr><td colspan="5" style="text-align:center;">正在載入龍蝦情資庫...</td></tr>
         </tbody>
     </table>
 
@@ -124,7 +135,7 @@
                 renderTable(allData);
             } catch (error) {
                 console.error('載入失敗:', error);
-                document.getElementById('dataBody').innerHTML = '<tr><td colspan="4" style="text-align:center; color:red;">情資載入失敗，請檢查網路連線。</td></tr>';
+                document.getElementById('dataBody').innerHTML = '<tr><td colspan="5" style="text-align:center; color:red;">情資載入失敗。</td></tr>';
             }
         }
 
@@ -135,7 +146,8 @@
                 const row = document.createElement('tr');
                 row.innerHTML = `
                     <td>${item.date}</td>
-                    <td style="color:var(--cyber-blue);">${item.url}</td>
+                    <td><span class="type-label">${item.type || '未分類'}</span></td>
+                    <td style="color:var(--cyber-blue); word-break: break-all;">${item.url}</td>
                     <td class="level-${item.level}">${item.level}</td>
                     <td class="${item.status.includes('ACTIVE') ? 'status-active' : ''}">${item.status}</td>
                 `;
@@ -145,7 +157,10 @@
 
         function filterData() {
             const term = document.getElementById('searchInput').value.toUpperCase();
-            const filtered = allData.filter(item => item.url.toUpperCase().includes(term));
+            const filtered = allData.filter(item => 
+                item.url.toUpperCase().includes(term) || 
+                (item.type && item.type.toUpperCase().includes(term))
+            );
             renderTable(filtered);
         }
 
