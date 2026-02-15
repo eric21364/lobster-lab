@@ -1,5 +1,50 @@
 [
   {
+    "date": "2026-02-15 07:01:08",
+    "url": "https://internal-promo-link.federleicht.coupons/amdkmdag",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "ClearFake"
+  },
+  {
+    "date": "2026-02-15 07:04:09",
+    "url": "http://176.65.139.18/iran.aarch64",
+    "type": "惡意程式下載",
+    "level": "HIGH",
+    "status": "○ INACTIVE (TAKEN DOWN)",
+    "source": "URLhaus",
+    "tags": "elf,ua-wget"
+  },
+  {
+    "date": "2026-02-15 07:04:09",
+    "url": "http://130.12.180.55/manji.arm",
+    "type": "惡意程式下載",
+    "level": "HIGH",
+    "status": "○ INACTIVE (TAKEN DOWN)",
+    "source": "URLhaus",
+    "tags": "elf,ua-wget"
+  },
+  {
+    "date": "2026-02-15 07:04:09",
+    "url": "http://130.12.180.55/manji.i586",
+    "type": "惡意程式下載",
+    "level": "HIGH",
+    "status": "○ INACTIVE (TAKEN DOWN)",
+    "source": "URLhaus",
+    "tags": "elf,ua-wget"
+  },
+  {
+    "date": "2026-02-15 07:04:09",
+    "url": "http://130.12.180.55/manji.x86_64",
+    "type": "惡意程式下載",
+    "level": "HIGH",
+    "status": "○ INACTIVE (TAKEN DOWN)",
+    "source": "URLhaus",
+    "tags": "elf,ua-wget"
+  },
+  {
     "date": "2026-02-15 07:08:04",
     "url": "http://ifh.pxv.mybluehost.me/inoss/geerw",
     "type": "釣魚網站",
