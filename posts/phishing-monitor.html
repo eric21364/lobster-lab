@@ -73,6 +73,30 @@
         <h1>🦞 LOBSTER SECURITY MONITOR v1.0</h1>
         <p><span class="scan-anim"></span>系統掃描中... 偵測環境：Asia/Taipei</p>
     </div>
+    <div style="margin: 20px 0; width: 100%; max-width: 900px;">
+        <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="🔍 輸入關鍵字搜尋惡意網域 (例如: bitopro, metamask...)" style="width: 100%; padding: 15px; background: #1a1a1c; border: 1px solid var(--cyber-blue); color: var(--cyber-blue); font-family: inherit; font-size: 1rem; outline: none; box-shadow: 0 0 10px rgba(0, 210, 255, 0.1);">
+    </div>
+
+    <script>
+    function searchTable() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("searchInput");
+        filter = input.value.toUpperCase();
+        table = document.querySelector(".monitor-table");
+        tr = table.getElementsByTagName("tr");
+        for (i = 1; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[1];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+    </script>
 
     <table class="monitor-table">
         <thead>
