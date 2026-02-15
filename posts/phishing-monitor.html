@@ -13,6 +13,7 @@
             --cyber-red: #ff3131;
             --cyber-green: #00ff41;
             --cyber-blue: #00d2ff;
+            --cyber-gray: #555555;
         }
         body {
             background-color: var(--bg-color);
@@ -71,6 +72,11 @@
             font-weight: bold;
             text-shadow: 0 0 5px var(--cyber-red);
         }
+        .status-inactive {
+            color: var(--cyber-gray);
+            font-weight: normal;
+            text-shadow: none;
+        }
         .type-label {
             background: #222;
             padding: 2px 8px;
@@ -121,7 +127,7 @@
             </tr>
         </thead>
         <tbody id="dataBody">
-            <tr><td colspan="5" style="text-align:center;">正在載入龍蝦情資庫...</td></tr>
+            <!-- Data will be loaded here -->
         </tbody>
     </table>
 
@@ -144,12 +150,13 @@
             body.innerHTML = '';
             data.forEach(item => {
                 const row = document.createElement('tr');
+                const isInactive = item.status.includes('INACTIVE');
                 row.innerHTML = `
                     <td>${item.date}</td>
                     <td><span class="type-label">${item.type || '未分類'}</span></td>
-                    <td style="color:var(--cyber-blue); word-break: break-all;">${item.url}</td>
-                    <td class="level-${item.level}">${item.level}</td>
-                    <td class="${item.status.includes('ACTIVE') ? 'status-active' : ''}">${item.status}</td>
+                    <td style="color:${isInactive ? 'var(--cyber-gray)' : 'var(--cyber-blue)'}; word-break: break-all;">${item.url}</td>
+                    <td class="level-${item.level}" style="opacity:${isInactive ? 0.5 : 1}">${item.level}</td>
+                    <td class="${isInactive ? 'status-inactive' : 'status-active'}">${item.status}</td>
                 `;
                 body.appendChild(row);
             });
