@@ -1,5 +1,423 @@
 [
   {
+    "date": "2026-02-15 07:08:06",
+    "url": "http://115.63.205.208:58219/bin.sh",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-02-15 07:10:12",
+    "url": "http://175.148.104.99:45505/i",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "aike.aikearena1000.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "www.xweisxuk.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "www.blsorun.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "www.evoliqoproi.top",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "www.nationsilver.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "www.haskeyjjm.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "25.hksyv.top",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "www.citics3013.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "www.dbkzjx.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "www.vaultx-tradingx.top",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "www.jsuewq.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "www.twchief.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "www.galaxus.qpon",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "www.apebondtd.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "www.dealloop-realm.store",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "www.aegetwer.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "www.panasonic-vip.xyz",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "web.7gzser.top",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "h5.bitmain-ex.xyz",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "www.fjibew.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "www.wfascxaxz.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "www.khrudtre.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "h5.jdfbitpro.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "pc.aylpexchange.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "pc.straitsts.vip",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "www.coinoloading.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "abroad-nnh5.fengyatech.top",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "www.emoneywsx.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "www.exmarketusa.net",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "www.mgxo.top",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "www.ibkrmyweb.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "www.databaseonb.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "ttqy.kjoopk.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "h5.cjkisd.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "app.tw-pro.vip",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "www.dsjhfsjjfgsd.cc",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "www.usdcfru.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "www.dsfpoeq.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "www.mindexweb.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "h5.jdfibitm.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "www.xzbuof.cc",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "ooo68888.festomaxa.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "www.anpro-i.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "stocks.eflsdj.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "www.aiqxqxh.cc",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "www.bitgftuo.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "h5.mcnxvbd.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "www.t-rasptw.pro",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "www.alignmkta.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-15 07:15:11",
+    "url": "www.gjxsked.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
     "date": "2026-02-15 07:01:08",
     "url": "https://internal-promo-link.federleicht.coupons/amdkmdag",
     "type": "惡意程式下載",
