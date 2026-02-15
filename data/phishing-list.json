@@ -1,5 +1,86 @@
 [
   {
+    "date": "2026-02-15 07:24:14",
+    "url": "http://118.232.137.101:54819/bin.sh",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,arm,elf,mirai,Mozi"
+  },
+  {
+    "date": "2026-02-15 07:33:42",
+    "url": "http://117.209.19.173:36019/bin.sh",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-02-15 07:34:15",
+    "url": "http://115.63.205.208:58219/i",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-02-15 07:35:17",
+    "url": "http://222.140.180.93:44501/i",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-02-15 07:42:07",
+    "url": "http://182.114.199.191:41171/bin.sh",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-02-15 07:42:09",
+    "url": "http://123.190.30.194:53301/bin.sh",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-02-15 07:47:06",
+    "url": "https://x7p9a.nebula4tango.coupons/x64",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "ClearFake"
+  },
+  {
+    "date": "2026-02-15 07:51:17",
+    "url": "http://117.209.19.173:36019/i",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-02-15 07:54:13",
+    "url": "http://123.190.30.194:53301/i",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
     "date": "2026-02-15 07:11:08",
     "url": "http://222.140.180.93:44501/bin.sh",
     "type": "惡意程式下載",
