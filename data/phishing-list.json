@@ -1,5 +1,26 @@
 [
   {
+    "date": "2026-02-15 12:21:02",
+    "type": "一頁式詐騙",
+    "url": "super-cheap-electronics.xyz",
+    "level": "HIGH",
+    "status": "● ACTIVE"
+  },
+  {
+    "date": "2026-02-15 12:21:02",
+    "type": "投資詐騙",
+    "url": "line-invest-teacher-lin.com",
+    "level": "CRITICAL",
+    "status": "● ACTIVE"
+  },
+  {
+    "date": "2026-02-15 12:21:02",
+    "type": "品牌冒充",
+    "url": "bito-pro-auth-check.xyz",
+    "level": "CRITICAL",
+    "status": "● ACTIVE"
+  },
+  {
     "date": "2026-02-15 12:17:18",
     "url": "taipei-iphone-sale.shop",
     "level": "HIGH",
