@@ -31,6 +31,24 @@
             margin-bottom: 30px;
             background: rgba(255, 49, 49, 0.05);
             box-shadow: 0 0 15px rgba(255, 49, 49, 0.2);
+            width: 100%;
+            max-width: 900px;
+        }
+        .search-container {
+            margin: 20px 0;
+            width: 100%;
+            max-width: 900px;
+        }
+        #searchInput {
+            width: 100%;
+            padding: 15px;
+            background: #1a1a1c;
+            border: 1px solid var(--cyber-blue);
+            color: var(--cyber-blue);
+            font-family: inherit;
+            font-size: 1rem;
+            outline: none;
+            box-shadow: 0 0 10px rgba(0, 210, 255, 0.1);
         }
         .monitor-table {
             width: 100%;
@@ -52,6 +70,9 @@
             font-weight: bold;
             text-shadow: 0 0 5px var(--cyber-red);
         }
+        .level-CRITICAL { color: var(--cyber-red); font-weight: bold; }
+        .level-HIGH { color: #ff8c00; }
+        .level-MEDIUM { color: #ffd700; }
         .scan-anim {
             display: inline-block;
             width: 10px;
@@ -70,33 +91,13 @@
 </head>
 <body>
     <div class="header">
-        <h1>🦞 LOBSTER SECURITY MONITOR v1.0</h1>
-        <p><span class="scan-anim"></span>系統掃描中... 偵測環境：Asia/Taipei</p>
-    </div>
-    <div style="margin: 20px 0; width: 100%; max-width: 900px;">
-        <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="🔍 輸入關鍵字搜尋惡意網域 (例如: bitopro, metamask...)" style="width: 100%; padding: 15px; background: #1a1a1c; border: 1px solid var(--cyber-blue); color: var(--cyber-blue); font-family: inherit; font-size: 1rem; outline: none; box-shadow: 0 0 10px rgba(0, 210, 255, 0.1);">
+        <h1>🦞 LOBSTER SECURITY MONITOR v1.1</h1>
+        <p><span class="scan-anim"></span>系統即時連線中... 數據源：Lobster Node 01</p>
     </div>
 
-    <script>
-    function searchTable() {
-        var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementById("searchInput");
-        filter = input.value.toUpperCase();
-        table = document.querySelector(".monitor-table");
-        tr = table.getElementsByTagName("tr");
-        for (i = 1; i < tr.length; i++) {
-            td = tr[i].getElementsByTagName("td")[1];
-            if (td) {
-                txtValue = td.textContent || td.innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    tr[i].style.display = "";
-                } else {
-                    tr[i].style.display = "none";
-                }
-            }
-        }
-    }
-    </script>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="🔍 輸入關鍵字搜尋惡意網域..." onkeyup="filterData()">
+    </div>
 
     <table class="monitor-table">
         <thead>
@@ -107,27 +108,49 @@
                 <th>狀態</th>
             </tr>
         </thead>
-        <tbody>
-            <tr>
-                <td>2026-02-15 12:00</td>
-                <td>bitopro-loginc.com</td>
-                <td>CRITICAL</td>
-                <td class="status-active">● ACTIVE</td>
-            </tr>
-            <tr>
-                <td>2026-02-15 11:30</td>
-                <td>wallet-connect-verify.net</td>
-                <td>HIGH</td>
-                <td class="status-active">● ACTIVE</td>
-            </tr>
-            <tr>
-                <td>2026-02-14 22:10</td>
-                <td>max-exchange-auth.org</td>
-                <td>MEDIUM</td>
-                <td>○ ANALYZING</td>
-            </tr>
+        <tbody id="dataBody">
+            <!-- Data will be loaded here -->
+            <tr><td colspan="4" style="text-align:center;">正在載入龍蝦情資庫...</td></tr>
         </tbody>
     </table>
+
+    <script>
+        let allData = [];
+
+        async function loadData() {
+            try {
+                const response = await fetch('../data/phishing-list.json');
+                allData = await response.json();
+                renderTable(allData);
+            } catch (error) {
+                console.error('載入失敗:', error);
+                document.getElementById('dataBody').innerHTML = '<tr><td colspan="4" style="text-align:center; color:red;">情資載入失敗，請檢查網路連線。</td></tr>';
+            }
+        }
+
+        function renderTable(data) {
+            const body = document.getElementById('dataBody');
+            body.innerHTML = '';
+            data.forEach(item => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${item.date}</td>
+                    <td style="color:var(--cyber-blue);">${item.url}</td>
+                    <td class="level-${item.level}">${item.level}</td>
+                    <td class="${item.status.includes('ACTIVE') ? 'status-active' : ''}">${item.status}</td>
+                `;
+                body.appendChild(row);
+            });
+        }
+
+        function filterData() {
+            const term = document.getElementById('searchInput').value.toUpperCase();
+            const filtered = allData.filter(item => item.url.toUpperCase().includes(term));
+            renderTable(filtered);
+        }
+
+        loadData();
+    </script>
 
     <footer style="margin-top: 50px; font-size: 0.8rem; color: #555;">
         &copy; 2026 LOBSTER LAB - SECURE AGENT OPERATIONS
