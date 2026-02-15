@@ -1,5 +1,26 @@
 [
   {
+    "date": "2026-02-15 12:28:05",
+    "type": "一頁式詐騙",
+    "url": "limited-time-dyson.xyz",
+    "level": "MEDIUM",
+    "status": "○ INACTIVE (TAKEN DOWN)"
+  },
+  {
+    "date": "2026-02-15 12:28:05",
+    "type": "品牌冒充",
+    "url": "binance-support-ticket.com",
+    "level": "HIGH",
+    "status": "○ INACTIVE (TAKEN DOWN)"
+  },
+  {
+    "date": "2026-02-15 12:28:05",
+    "type": "投資詐騙",
+    "url": "line-invest-gold88.xyz",
+    "level": "CRITICAL",
+    "status": "○ INACTIVE (TAKEN DOWN)"
+  },
+  {
     "date": "2026-02-15 12:24:10",
     "type": "一頁式詐騙",
     "url": "taipei-cheap-gadget.xyz",
