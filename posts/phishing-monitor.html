@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>龍蝦資安監控站 // 龍蝦實驗室 🦞 Lobster Lab</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦞</text></svg>">
+    <style>
+        :root {
+            --bg-color: #0d0d0f;
+            --text-color: #d1d1d1;
+            --border-color: #222222;
+            --cyber-red: #ff3131;
+            --cyber-green: #00ff41;
+            --cyber-blue: #00d2ff;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Fira Code', monospace, "PingFang TC";
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            border: 2px solid var(--cyber-red);
+            padding: 20px;
+            margin-bottom: 30px;
+            background: rgba(255, 49, 49, 0.05);
+            box-shadow: 0 0 15px rgba(255, 49, 49, 0.2);
+        }
+        .monitor-table {
+            width: 100%;
+            max-width: 900px;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .monitor-table th, .monitor-table td {
+            border: 1px solid var(--border-color);
+            padding: 15px;
+            text-align: left;
+        }
+        .monitor-table th {
+            background: #1a1a1c;
+            color: var(--cyber-blue);
+        }
+        .status-active {
+            color: var(--cyber-red);
+            font-weight: bold;
+            text-shadow: 0 0 5px var(--cyber-red);
+        }
+        .scan-anim {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: var(--cyber-green);
+            border-radius: 50%;
+            margin-right: 10px;
+            animation: pulse 1s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 255, 65, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(0, 255, 65, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 255, 65, 0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🦞 LOBSTER SECURITY MONITOR v1.0</h1>
+        <p><span class="scan-anim"></span>系統掃描中... 偵測環境：Asia/Taipei</p>
+    </div>
+
+    <table class="monitor-table">
+        <thead>
+            <tr>
+                <th>偵測時間</th>
+                <th>惡意網域 / URL</th>
+                <th>威脅等級</th>
+                <th>狀態</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2026-02-15 12:00</td>
+                <td>bitopro-loginc.com</td>
+                <td>CRITICAL</td>
+                <td class="status-active">● ACTIVE</td>
+            </tr>
+            <tr>
+                <td>2026-02-15 11:30</td>
+                <td>wallet-connect-verify.net</td>
+                <td>HIGH</td>
+                <td class="status-active">● ACTIVE</td>
+            </tr>
+            <tr>
+                <td>2026-02-14 22:10</td>
+                <td>max-exchange-auth.org</td>
+                <td>MEDIUM</td>
+                <td>○ ANALYZING</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <footer style="margin-top: 50px; font-size: 0.8rem; color: #555;">
+        &copy; 2026 LOBSTER LAB - SECURE AGENT OPERATIONS
+    </footer>
+</body>
+</html>
