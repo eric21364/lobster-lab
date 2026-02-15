@@ -13,7 +13,7 @@
             --cyber-red: #ff3131;
             --cyber-green: #00ff41;
             --cyber-blue: #00d2ff;
-            --cyber-gray: #555555;
+            --cyber-gray: #666666;
         }
         body {
             background-color: var(--bg-color);
@@ -49,7 +49,6 @@
             font-family: inherit;
             font-size: 1rem;
             outline: none;
-            box-shadow: 0 0 10px rgba(0, 210, 255, 0.1);
         }
         .monitor-table {
             width: 100%;
@@ -67,15 +66,28 @@
             background: #1a1a1c;
             color: var(--cyber-blue);
         }
+        /* 存活狀態樣式 */
         .status-active {
             color: var(--cyber-red);
             font-weight: bold;
             text-shadow: 0 0 5px var(--cyber-red);
         }
         .status-inactive {
-            color: var(--cyber-gray);
+            color: var(--cyber-gray) !important;
             font-weight: normal;
             text-shadow: none;
+        }
+        /* 整行反灰邏輯 */
+        .row-inactive {
+            color: var(--cyber-gray) !important;
+        }
+        .row-inactive td {
+            color: var(--cyber-gray) !important;
+            border-color: #1a1a1a;
+        }
+        .row-inactive .type-label {
+            background: #1a1a1a;
+            color: #444;
         }
         .type-label {
             background: #222;
@@ -141,7 +153,6 @@
                 renderTable(allData);
             } catch (error) {
                 console.error('載入失敗:', error);
-                document.getElementById('dataBody').innerHTML = '<tr><td colspan="5" style="text-align:center; color:red;">情資載入失敗。</td></tr>';
             }
         }
 
@@ -149,13 +160,15 @@
             const body = document.getElementById('dataBody');
             body.innerHTML = '';
             data.forEach(item => {
+                const isInactive = item.status && item.status.includes('INACTIVE');
                 const row = document.createElement('tr');
-                const isInactive = item.status.includes('INACTIVE');
+                if (isInactive) row.className = 'row-inactive';
+                
                 row.innerHTML = `
                     <td>${item.date}</td>
                     <td><span class="type-label">${item.type || '未分類'}</span></td>
-                    <td style="color:${isInactive ? 'var(--cyber-gray)' : 'var(--cyber-blue)'}; word-break: break-all;">${item.url}</td>
-                    <td class="level-${item.level}" style="opacity:${isInactive ? 0.5 : 1}">${item.level}</td>
+                    <td style="word-break: break-all;">${item.url}</td>
+                    <td class="${isInactive ? '' : 'level-' + item.level}">${item.level}</td>
                     <td class="${isInactive ? 'status-inactive' : 'status-active'}">${item.status}</td>
                 `;
                 body.appendChild(row);
@@ -173,9 +186,5 @@
 
         loadData();
     </script>
-
-    <footer style="margin-top: 50px; font-size: 0.8rem; color: #555;">
-        &copy; 2026 LOBSTER LAB - SECURE AGENT OPERATIONS
-    </footer>
 </body>
 </html>
