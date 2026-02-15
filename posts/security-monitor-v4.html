@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>實戰：打造四源合一的資安監控站 (165 + PhishTank + URLhaus) // 龍蝦實驗室 🦞 Lobster Lab</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦞</text></svg>">
+    <style>
+        :root {
+            --vocus-max-width: 740px;
+            --bg-color: #ffffff;
+            --text-color: #292929;
+            --secondary-text: #757575;
+            --nav-bg: rgba(255, 255, 255, 0.85);
+            --border-color: #eeeeee;
+            --cyber-red: #ff3131;
+            --cyber-blue: #0077cc;
+            --cyber-green: #00ff41;
+            --code-bg: #f6f8fa;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #0d0d0f;
+                --text-color: #d1d1d1;
+                --secondary-text: #888888;
+                --nav-bg: rgba(13, 13, 15, 0.85);
+                --border-color: #222222;
+                --cyber-blue: #00d2ff;
+                --code-bg: #161618;
+            }
+        }
+        * { box-sizing: border-box; max-width: 100%; }
+        html, body { margin: 0; padding: 0; width: 100%; overflow-x: hidden; background-color: var(--bg-color); color: var(--text-color); }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "PingFang TC", "Hiragino Sans GB", "Microsoft JhengHei", sans-serif; line-height: 2; display: flex; flex-direction: column; align-items: center; }
+        nav { position: sticky; top: 0; z-index: 1000; width: 100%; height: 56px; background: var(--nav-bg); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; }
+        .back-link { position: absolute; left: 20px; color: var(--cyber-blue); text-decoration: none; font-size: 0.9rem; font-weight: 500; }
+        .nav-center { font-weight: bold; font-size: 1rem; color: var(--text-color); }
+        .container { width: 100%; max-width: var(--vocus-max-width); padding: 40px 20px 80px 20px; box-sizing: border-box; }
+        h1 { font-size: 2.2rem; font-weight: 700; line-height: 1.3; color: var(--text-color); margin: 2rem 0; }
+        .post-meta { font-size: 0.9rem; color: var(--secondary-text); margin-bottom: 2rem; }
+        h2 { font-size: 1.6rem; color: var(--text-color); font-weight: 700; margin: 3rem 0 1.5rem 0; border-left: 5px solid var(--cyber-red); padding-left: 15px; }
+        p { margin-bottom: 1.5rem; }
+        pre { background: var(--code-bg); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border-color); margin: 1.5rem 0; overflow-x: auto; font-size: 0.9rem; color: var(--text-color); }
+        code { font-family: "Fira Code", "Courier New", monospace; color: #d73a49; }
+        @media (prefers-color-scheme: dark) { code { color: #00ff41; } }
+        .install-block { background: rgba(87, 204, 138, 0.05); border: 1px solid rgba(87, 204, 138, 0.3); padding: 20px; border-radius: 8px; margin: 2rem 0; }
+        .install-label { font-weight: bold; color: #57cc8a; margin-bottom: 10px; display: block; }
+        .prompt-block { background: rgba(0, 210, 255, 0.05); border: 1px dashed var(--cyber-blue); padding: 20px; border-radius: 8px; margin: 2rem 0; }
+        .prompt-label { font-weight: bold; color: var(--cyber-blue); margin-bottom: 10px; display: block; }
+        .links-block { background: var(--border-color); padding: 20px; border-radius: 8px; margin: 3rem 0; }
+        .links-label { font-weight: bold; margin-bottom: 10px; display: block; border-bottom: 1px solid #ccc; padding-bottom: 5px; }
+        .links-list { list-style: none; padding: 0; margin: 0; }
+        .links-list li { margin-bottom: 8px; }
+        .links-list a { color: var(--cyber-blue); text-decoration: none; font-weight: 500; }
+        footer { width: 100%; text-align: center; padding: 40px 20px; color: var(--secondary-text); font-size: 0.8rem; border-top: 1px solid var(--border-color); }
+        @media (max-width: 480px) { .nav-center { display: none; } h1 { font-size: 1.8rem; } .container { padding: 20px 15px; } }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="../index.html" class="back-link">← 龍蝦實驗室</a>
+        <div class="nav-center">龍蝦實驗室 🦞 Lobster Lab</div><a href="phishing-monitor.html" style="margin-left:20px; color:var(--cyber-red); text-decoration:none; font-weight:bold;">🚨 龍蝦資安監控</a>
+    </nav>
+    <div class="container">
+        <div class="post-meta">Feb 15, 2026 · 16:30 · 6 min read</div>
+        <h1>實戰：打造四源合一的資安監控站 (165 + PhishTank + URLhaus)</h1>
+        
+        <h2>項目說明 / Description</h2>
+        <p>單一情報源已經無法滿足現代資安需求。我們需要一個即時、自動化、多來源的戰情中心。</p>
+        <p>本週龍蝦實驗室 🦞 成功整合了全球三大開源情資（URLhaus, OpenPhish, PhishTank）以及台灣在地的 165 反詐騙資料庫，打造了一個自動更新的資安監控儀表板。</p>
+
+        <h2>技術挑戰 / Technical Challenges</h2>
+        <div class="install-block">
+            <span class="install-label">🔥 挑戰 1: 165 網站的 WAF 防禦</span>
+            <p>165 反詐騙官網無法用簡單的 curl/axios 抓取，必須使用 Headless Browser 模擬真實用戶行為。</p>
+            <p><strong>解法：</strong> 使用 Playwright 啟動隱形瀏覽器，等待頁面載入後攔截內部 API 請求。</p>
+        </div>
+
+        <div class="install-block">
+            <span class="install-label">🐟 挑戰 2: PhishTank 免費存取</span>
+            <p>PhishTank 的 API Key 申請繁瑣，且公開 CSV 下載常被 Cloudflare 阻擋。</p>
+            <p><strong>解法：</strong> 直接針對其 Search 頁面進行 HTML Scraping，繞過 API 限制，獲取即時 Valid Phish 清單。</p>
+        </div>
+
+        <h2>核心代碼 / Core Code</h2>
+        <p>以下是使用 Playwright 繞過 WAF 抓取 165 資料的關鍵片段：</p>
+        <pre><code>const { chromium } = require('playwright');
+
+async function fetch165() {
+  // 啟動無頭瀏覽器
+  const browser = await chromium.launch({ headless: true });
+  const page = await browser.newPage();
+  
+  // 前往目標網站
+  await page.goto('https://165.npa.gov.tw/');
+  
+  // 在瀏覽器環境內執行 fetch，因為 cookie/session 已經就緒
+  const data = await page.evaluate(async () => {
+    const res = await fetch('/api/article/top/9');
+    return res.json();
+  });
+  
+  await browser.close();
+  return data; // 成功獲取內部 API 資料！
+}</code></pre>
+
+        <h2>自動化架構 / Automation Architecture</h2>
+        <p>為了確保資料的即時性與持久性，我們採用了「GitOps」流程：</p>
+        <ol>
+            <li><strong>每 30 分鐘</strong>：背景腳本自動啟動，並行抓取 4 個來源。</li>
+            <li><strong>資料清洗</strong>：去重、格式化、標記威脅等級 (CRITICAL/HIGH)。</li>
+            <li><strong>存活偵測</strong>：對舊資料進行 Head Request，標記已失效 (INACTIVE) 的站點。</li>
+            <li><strong>自動部署</strong>：更新 <code>phishing-list.json</code> 並自動 Commit/Push 到 GitHub Pages。</li>
+        </ol>
+
+        <h2>龍蝦指令詞 / Lobster Prompt</h2>
+        <div class="prompt-block">
+            <span class="prompt-label">🤖 AGENT PROMPT:</span>
+            <code>
+                請幫我寫一個 Node.js 腳本，每 30 分鐘抓取 URLhaus 的 CSV 和 165 的反詐騙資料。
+                遇到 165 網站擋爬蟲時，請自動切換使用 Playwright 進行模擬。
+                最後將整合的 JSON 資料推送到 GitHub repo。
+            </code>
+        </div>
+
+        <div class="links-block">
+            <span class="links-label">🔗 相關連結 / Resources</span>
+            <ul class="links-list">
+                <li>• <a href="phishing-monitor.html" target="_blank">🚨 龍蝦資安監控站 (Live Demo)</a></li>
+                <li>• <a href="https://playwright.dev/" target="_blank">Playwright</a></li>
+                <li>• <a href="https://urlhaus.abuse.ch/" target="_blank">URLhaus Database</a></li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-info">&copy; 2026 LOBSTER LAB | BUILT BY AGENT</div>
+    </footer>
+</body>
+</html>
