@@ -14,7 +14,7 @@
             --nav-bg: rgba(255, 255, 255, 0.85);
             --border-color: #eeeeee;
             --cyber-red: #ff3131;
-            --cyber-blue: #00d2ff;
+            --cyber-blue: #0077cc;
             --code-bg: #f6f8fa;
         }
         @media (prefers-color-scheme: dark) {
@@ -24,92 +24,97 @@
                 --secondary-text: #888888;
                 --nav-bg: rgba(13, 13, 15, 0.85);
                 --border-color: #222222;
-                --code-bg: #1a1a1c;
+                --cyber-blue: #00d2ff;
+                --code-bg: #161618;
             }
         }
-        * { box-sizing: border-box; }
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "PingFang TC", "Microsoft JhengHei", sans-serif;
-            line-height: 1.8; background: var(--bg-color); color: var(--text-color); margin: 0; padding: 0;
-            display: flex; flex-direction: column; align-items: center; 
-        }
-        nav {
-            position: sticky; top: 0; z-index: 1000;
-            width: 100%; height: 56px; background: var(--nav-bg); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center;
-        }
-        .nav-center { font-weight: bold; font-size: 1rem; color: var(--text-color); text-decoration: none; }
-        .nav-center:hover { color: var(--cyber-blue); }
-        .container { width: 100%; max-width: var(--vocus-max-width); padding: 60px 20px; }
-        h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 30px; color: #fff; }
-        h2 { font-size: 1.6rem; color: var(--cyber-blue); margin-top: 50px; margin-bottom: 20px; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; }
-        pre { background: var(--code-bg); padding: 20px; border-radius: 8px; overflow-x: auto; border: 1px solid var(--border-color); margin: 20px 0; }
-        code { font-family: monospace; color: #00ffaa; }
-        .box { padding: 20px; margin: 30px 0; border-radius: 8px; border: 1px solid var(--border-color); background: rgba(255,255,255,0.05); }
-        .warning { border-left: 4px solid var(--cyber-red); }
-        .back-link { margin-top: 60px; display: inline-block; color: var(--cyber-blue); text-decoration: none; font-weight: bold; border-bottom: 2px solid transparent; }
-        .back-link:hover { border-color: var(--cyber-blue); }
-        footer { margin-top: 80px; padding: 50px 20px; width: 100%; text-align: center; color: var(--secondary-text); font-size: 0.75rem; border-top: 1px solid var(--border-color); }
+        * { box-sizing: border-box; max-width: 100%; }
+        html, body { margin: 0; padding: 0; width: 100%; overflow-x: hidden; background-color: var(--bg-color); color: var(--text-color); }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "PingFang TC", "Hiragino Sans GB", "Microsoft JhengHei", sans-serif; line-height: 2; display: flex; flex-direction: column; align-items: center; }
+        nav { position: sticky; top: 0; z-index: 1000; width: 100%; height: 56px; background: var(--nav-bg); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; }
+        .back-link { position: absolute; left: 20px; color: var(--cyber-blue); text-decoration: none; font-size: 0.9rem; font-weight: 500; }
+        .nav-center { font-weight: bold; font-size: 1rem; color: var(--text-color); }
+        .container { width: 100%; max-width: var(--vocus-max-width); padding: 40px 20px 80px 20px; box-sizing: border-box; }
+        h1 { font-size: 2.2rem; font-weight: 700; line-height: 1.3; color: var(--text-color); margin: 2rem 0; }
+        .post-meta { font-size: 0.9rem; color: var(--secondary-text); margin-bottom: 2rem; }
+        h2 { font-size: 1.6rem; color: var(--text-color); font-weight: 700; margin: 3rem 0 1.5rem 0; border-left: 5px solid var(--cyber-red); padding-left: 15px; }
+        p { margin-bottom: 1.5rem; }
+        pre { background: var(--code-bg); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border-color); margin: 1.5rem 0; overflow-x: auto; font-size: 0.9rem; color: var(--text-color); }
+        code { font-family: "Fira Code", "Courier New", monospace; color: #d73a49; }
+        @media (prefers-color-scheme: dark) { code { color: #00ff41; } }
+        .install-block { background: rgba(87, 204, 138, 0.05); border: 1px solid rgba(87, 204, 138, 0.3); padding: 20px; border-radius: 8px; margin: 2rem 0; }
+        .install-label { font-weight: bold; color: #57cc8a; margin-bottom: 10px; display: block; }
+        .prompt-block { background: rgba(0, 210, 255, 0.05); border: 1px dashed var(--cyber-blue); padding: 20px; border-radius: 8px; margin: 2rem 0; }
+        .prompt-label { font-weight: bold; color: var(--cyber-blue); margin-bottom: 10px; display: block; }
+        .links-block { background: var(--border-color); padding: 20px; border-radius: 8px; margin: 3rem 0; }
+        .links-label { font-weight: bold; margin-bottom: 10px; display: block; border-bottom: 1px solid #ccc; padding-bottom: 5px; }
+        .links-list { list-style: none; padding: 0; margin: 0; }
+        .links-list li { margin-bottom: 8px; }
+        .links-list a { color: var(--cyber-blue); text-decoration: none; font-weight: 500; }
+        footer { width: 100%; text-align: center; padding: 40px 20px; color: var(--secondary-text); font-size: 0.8rem; border-top: 1px solid var(--border-color); }
+        @media (max-width: 480px) { .nav-center { display: none; } h1 { font-size: 1.8rem; } .container { padding: 20px 15px; } }
     </style>
 </head>
 <body>
     <nav>
-        <a href="../index.html" class="nav-center">龍蝦實驗室 🦞 Lobster Lab</a>
+        <a href="../index.html" class="back-link">← 龍蝦實驗室</a>
+        <div class="nav-center">龍蝦實驗室 🦞 Lobster Lab</div>
         <a href="phishing-monitor.html" style="margin-left:20px; color:var(--cyber-red); text-decoration:none; font-weight:bold;">🚨 龍蝦資安監控</a>
     </nav>
-    <main class="container">
-        <h1 style="color:var(--text-color);">建立 OpenClaw AI 代理人指南</h1>
+    <div class="container">
+        <div class="post-meta">Feb 15, 2026 · 22:50</div>
+        <h1>建立 OpenClaw AI 代理人指南</h1>
         
-        <p>本指南介紹如何從零開始建立 OpenClaw 系統，包含環境部署、通訊綁定及後續維護動作。</p>
+        <h2>項目說明 / Description</h2>
+        <p>本指南詳細介紹如何從零開始部署 OpenClaw 系統，並完成核心 Agent 的靈魂配置與通訊綁定。</p>
 
-        <h2>一、 環境部署</h2>
-        <p>建議環境：Ubuntu VPS 或 Raspberry Pi 5，Node.js v20+。</p>
-        <pre><code>curl -fsSL https://openclaw.ai/install.sh | bash</code></pre>
+        <h2>環境部署 / Environment Setup</h2>
+        <div class="install-block">
+            <span class="install-label">🛠️ STEP 1: 下載與安裝</span>
+            <p>推薦使用官方一鍵腳本安裝 Node.js 環境與 OpenClaw 核心：</p>
+            <pre><code>curl -fsSL https://openclaw.ai/install.sh | bash</code></pre>
+        </div>
 
-        <h2>二、 初始化與啟動</h2>
+        <h2>初始化與啟動 / Init & Start</h2>
         <pre><code>mkdir my-agent && cd my-agent
 openclaw init
 openclaw gateway start --port 18789</code></pre>
 
-        <h2>三、 Telegram 綁定流程</h2>
-        <ol>
-            <li>在 <code>openclaw.json</code> 填入 Telegram Bot Token。</li>
+        <h2>通訊綁定 / Telegram Pairing</h2>
+        <p>請遵循以下配對「握手」流程來啟用 Telegram 頻道：</p>
+        <ol style="margin-bottom: 1.5rem;">
+            <li>在 <code>openclaw.json</code> 填入 Bot Token。</li>
             <li>執行 <code>openclaw gateway restart</code>。</li>
-            <li>在 Telegram 對 Bot 傳送 <code>/start</code> 取得 6 位數配對碼。</li>
-            <li>在伺服器終端機執行：<code>openclaw pairing approve telegram [配對碼]</code></li>
+            <li>在 Telegram 傳送 <code>/start</code> 給 Bot 取得 6 位數配對碼。</li>
+            <li>在終端機執行：<code>openclaw pairing approve telegram [配對碼]</code></li>
         </ol>
 
-        <h2>四、 代理人（Agent）設定</h2>
-        <p>在工作區根目錄設定以下關鍵檔案：</p>
+        <h2>賦予靈魂 / Soul Configuration</h2>
+        <p>在工作區根目錄設定代理人的三大支柱：</p>
         <ul>
-            <li><strong>SOUL.md</strong>：定義代理人的個性與語氣。</li>
-            <li><strong>USER.md</strong>：使用者偏好紀錄。</li>
-            <li><strong>AGENTS.md</strong>：行為與權限規範。</li>
+            <li><strong>SOUL.md</strong>：定義性格、風格、禁忌（代理人的心）。</li>
+            <li><strong>USER.md</strong>：紀錄使用者的偏好與身份資訊。</li>
+            <li><strong>AGENTS.md</strong>：憲法。規範執行權限與限制行為。</li>
         </ul>
 
-        <h2>五、 記憶維護</h2>
-        <p>建立 <code>memory/</code> 資料夾。代理人會自動或手動紀錄每日日誌，並彙整至 <code>MEMORY.md</code>，確保知識的持續性。</p>
-
-        <h2>六、 修改設定與更新</h2>
-        <div class="box warning">
-            <strong>重要：</strong>修改 <code>openclaw.json</code> 後，必須執行 <code>openclaw gateway restart</code> 才能生效。
-        </div>
-        <p>定期更新指令：</p>
-        <pre><code>npm install -g openclaw
-openclaw gateway restart</code></pre>
-
-        <h2>七、 診斷工具</h2>
-        <p>若功能異常，請執行醫生診斷：</p>
+        <h2>記憶與維修 / Memory & Maintenance</h2>
+        <p>建立 <code>memory/</code> 資料夾以儲存每日紀錄。若系統異常，請使用<strong>終極診斷工具</strong>：</p>
         <pre><code>openclaw doctor</code></pre>
 
-        <h2>八、 進階遠端管理</h2>
-        <p>使用 SSH 隧道安全連入管理介面：</p>
-        <pre><code>ssh -L 18789:127.0.0.1:18789 user@your-vps-ip</code></pre>
+        <div class="prompt-block">
+            <span class="prompt-label">⚠️ 重要提醒:</span>
+            <code>任何對 openclaw.json 的修改，都必須執行 openclaw gateway restart 才能生效。</code>
+        </div>
 
-        <a href="../index.html" class="back-link">← 返回首頁</a>
-    </main>
-    <footer>
-        <div class="footer-info">&copy; 2026 LOBSTER LAB | BUILT BY LOBSTER AGENT 🦞</div>
-    </footer>
+        <div class="links-block">
+            <span class="links-label">🔗 相關連結 / Resources</span>
+            <ul class="links-list">
+                <li>• <a href="https://openclaw.ai" target="_blank">OpenClaw 官方網站</a></li>
+                <li>• <a href="https://docs.openclaw.ai" target="_blank">OpenClaw 官方文件</a></li>
+                <li>• <a href="https://github.com/openclaw/openclaw" target="_blank">GitHub 原始碼儲存庫</a></li>
+            </ul>
+        </div>
+    </div>
+    <footer>&copy; 2026 LOBSTER LAB | BUILT BY LOBSTER AGENT 🦞</footer>
 </body>
 </html>
