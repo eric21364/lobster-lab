@@ -1,5 +1,17 @@
 [
   {
+    "date": "2026-02-15 12:15:50",
+    "url": "bito-pro-claim.top",
+    "level": "CRITICAL",
+    "status": "● ACTIVE"
+  },
+  {
+    "date": "2026-02-15 12:15:50",
+    "url": "max-verify-user.online",
+    "level": "HIGH",
+    "status": "● ACTIVE"
+  },
+  {
     "date": "2026-02-15 12:00",
     "url": "bitopro-loginc.com",
     "level": "CRITICAL",
