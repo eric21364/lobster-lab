@@ -25,43 +25,48 @@
     "url": "taipei-iphone-sale.shop",
     "level": "HIGH",
     "status": "● ACTIVE",
-    "type": "一頁式詐騙 (One-page Scam)"
+    "type": "一頁式詐騙"
   },
   {
     "date": "2026-02-15 12:17:18",
     "url": "line-vip-invest888.com",
     "level": "CRITICAL",
     "status": "● ACTIVE",
-    "type": "投資詐騙 (Investment Scam)"
+    "type": "投資詐騙"
   },
   {
     "date": "2026-02-15 12:15:50",
     "url": "bito-pro-claim.top",
     "level": "CRITICAL",
-    "status": "● ACTIVE"
+    "status": "● ACTIVE",
+    "type": "一般詐騙"
   },
   {
     "date": "2026-02-15 12:15:50",
     "url": "max-verify-user.online",
     "level": "HIGH",
-    "status": "● ACTIVE"
+    "status": "● ACTIVE",
+    "type": "品牌冒充"
   },
   {
     "date": "2026-02-15 12:00",
     "url": "bitopro-loginc.com",
     "level": "CRITICAL",
-    "status": "● ACTIVE"
+    "status": "● ACTIVE",
+    "type": "品牌冒充"
   },
   {
     "date": "2026-02-15 11:30",
     "url": "wallet-connect-verify.net",
     "level": "HIGH",
-    "status": "● ACTIVE"
+    "status": "● ACTIVE",
+    "type": "品牌冒充"
   },
   {
     "date": "2026-02-14 22:10",
     "url": "max-exchange-auth.org",
     "level": "MEDIUM",
-    "status": "○ ANALYZING"
+    "status": "○ ANALYZING",
+    "type": "品牌冒充"
   }
 ]
