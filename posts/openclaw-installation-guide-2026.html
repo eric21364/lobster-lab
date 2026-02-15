@@ -3,43 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>建立 OpenClaw AI 代理人指南 // 龍蝦實驗室 🦞</title>
+    <title>建立 OpenClaw AI 代理人指南 // 龍蝦實驗室 🦞 Lobster Lab</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦞</text></svg>">
     <style>
         :root {
-            --max-width: 800px;
-            --bg-color: #0d0d0f;
-            --surface-color: #16161a;
-            --text-color: #e0e0e0;
-            --secondary-text: #94a3b8;
+            --vocus-max-width: 740px;
+            --bg-color: #ffffff;
+            --text-color: #292929;
+            --secondary-text: #757575;
+            --nav-bg: rgba(255, 255, 255, 0.85);
+            --border-color: #eeeeee;
             --cyber-red: #ff3131;
             --cyber-blue: #00d2ff;
-            --cyber-green: #00ffaa;
-            --border-color: #2d2d33;
-            --code-bg: #000000;
+            --code-bg: #f6f8fa;
         }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #0d0d0f;
+                --text-color: #d1d1d1;
+                --secondary-text: #888888;
+                --nav-bg: rgba(13, 13, 15, 0.85);
+                --border-color: #222222;
+                --code-bg: #1a1a1c;
+            }
+        }
+        * { box-sizing: border-box; }
         body { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            line-height: 1.7; background: var(--bg-color); color: var(--text-color); 
-            padding: 0; display: flex; flex-direction: column; align-items: center; 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "PingFang TC", "Microsoft JhengHei", sans-serif;
+            line-height: 1.8; background: var(--bg-color); color: var(--text-color); margin: 0; padding: 0;
+            display: flex; flex-direction: column; align-items: center; 
         }
-        .container { width: 100%; max-width: var(--max-width); padding: 60px 25px; }
+        nav {
+            position: sticky; top: 0; z-index: 1000;
+            width: 100%; height: 56px; background: var(--nav-bg); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center;
+        }
+        .nav-center { font-weight: bold; font-size: 1rem; color: var(--text-color); }
+        .container { width: 100%; max-width: var(--vocus-max-width); padding: 60px 20px; }
         h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 30px; color: #fff; }
         h2 { font-size: 1.6rem; color: var(--cyber-blue); margin-top: 50px; margin-bottom: 20px; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; }
-        h3 { font-size: 1.2rem; color: var(--cyber-red); margin: 30px 0 10px 0; }
-        p { margin-bottom: 20px; }
         pre { background: var(--code-bg); padding: 20px; border-radius: 8px; overflow-x: auto; border: 1px solid var(--border-color); margin: 20px 0; }
-        code { font-family: monospace; color: var(--cyber-green); }
-        .box { padding: 20px; margin: 30px 0; border-radius: 8px; border: 1px solid var(--border-color); background: var(--surface-color); }
+        code { font-family: monospace; color: #00ffaa; }
+        .box { padding: 20px; margin: 30px 0; border-radius: 8px; border: 1px solid var(--border-color); background: rgba(255,255,255,0.05); }
         .warning { border-left: 4px solid var(--cyber-red); }
-        .back-link { margin-top: 60px; display: inline-block; color: var(--cyber-blue); text-decoration: none; }
-        footer { margin-top: 100px; padding-bottom: 40px; text-align: center; color: var(--secondary-text); font-size: 0.8rem; }
+        .back-link { margin-top: 60px; display: inline-block; color: var(--cyber-blue); text-decoration: none; font-weight: bold; }
+        footer { margin-top: 80px; padding: 50px 20px; width: 100%; text-align: center; color: var(--secondary-text); font-size: 0.75rem; border-top: 1px solid var(--border-color); }
     </style>
 </head>
 <body>
+    <nav>
+        <div class="nav-center">龍蝦實驗室 🦞 Lobster Lab</div>
+        <a href="phishing-monitor.html" style="margin-left:20px; color:var(--cyber-red); text-decoration:none; font-weight:bold;">🚨 龍蝦資安監控</a>
+    </nav>
     <main class="container">
-        <h1>建立 OpenClaw AI 代理人指南</h1>
+        <h1 style="color:var(--text-color);">建立 OpenClaw AI 代理人指南</h1>
         
         <p>本指南介紹如何從零開始建立 OpenClaw 系統，包含環境部署、通訊綁定及後續維護動作。</p>
 
@@ -57,30 +74,30 @@ openclaw gateway start --port 18789</code></pre>
             <li>在 <code>openclaw.json</code> 填入 Telegram Bot Token。</li>
             <li>執行 <code>openclaw gateway restart</code>。</li>
             <li>在 Telegram 對 Bot 傳送 <code>/start</code> 取得 6 位數配對碼。</li>
-            <li>執行：<code>openclaw pairing approve telegram [配對碼]</code></li>
+            <li>在伺服器終端機執行：<code>openclaw pairing approve telegram [配對碼]</code></li>
         </ol>
 
         <h2>四、 代理人（Agent）設定</h2>
-        <p>在工作區根目錄設定以下檔案：</p>
+        <p>在工作區根目錄設定以下關鍵檔案：</p>
         <ul>
-            <li><strong>SOUL.md</strong>：定義代理人的個性與語氣。</li>
-            <li><strong>USER.md</strong>：紀錄使用者的偏好。</li>
-            <li><strong>AGENTS.md</strong>：規範代理人的行為權限。</li>
+            <li><strong>SOUL.md</strong>：定義性格與語氣。</li>
+            <li><strong>USER.md</strong>：使用者偏好紀錄。</li>
+            <li><strong>AGENTS.md</strong>：行為與權限規範。</li>
         </ul>
 
         <h2>五、 記憶維護</h2>
-        <p>建立 <code>memory/</code> 資料夾，讓代理人產出每日紀錄（YYYY-MM-DD.md），並定期更新根目錄的 <code>MEMORY.md</code>。這能確保代理人具備長期記憶能力。</p>
+        <p>建立 <code>memory/</code> 資料夾。代理人會自動或手動紀錄每日日誌，並彙整至 <code>MEMORY.md</code>，確保知識的持續性。</p>
 
         <h2>六、 修改設定與更新</h2>
         <div class="box warning">
             <strong>重要：</strong>修改 <code>openclaw.json</code> 後，必須執行 <code>openclaw gateway restart</code> 才能生效。
         </div>
-        <p>更新系統指令：</p>
+        <p>定期更新指令：</p>
         <pre><code>npm install -g openclaw
 openclaw gateway restart</code></pre>
 
         <h2>七、 診斷工具</h2>
-        <p>若遇到功能異常，可執行診斷：</p>
+        <p>若功能異常，請執行醫生診斷：</p>
         <pre><code>openclaw doctor</code></pre>
 
         <h2>八、 進階遠端管理</h2>
