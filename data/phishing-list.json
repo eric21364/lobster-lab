@@ -1,5 +1,95 @@
 [
   {
+    "date": "2026-02-15 07:11:08",
+    "url": "http://222.140.180.93:44501/bin.sh",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-02-15 07:12:05",
+    "url": "https://allcheat.netlify.app/tExecute.exe",
+    "type": "惡意程式下載",
+    "level": "HIGH",
+    "status": "○ INACTIVE (TAKEN DOWN)",
+    "source": "URLhaus",
+    "tags": "exe,karius"
+  },
+  {
+    "date": "2026-02-15 07:12:05",
+    "url": "https://hop.greenenergygroup.org/LunX.zip",
+    "type": "惡意程式下載",
+    "level": "HIGH",
+    "status": "○ INACTIVE (TAKEN DOWN)",
+    "source": "URLhaus",
+    "tags": "archive,compressed,Password: lunex,pw-lunex,Vidar,zip"
+  },
+  {
+    "date": "2026-02-15 07:12:06",
+    "url": "https://galaxis.pw/File/G%D0%B0l%D0%B0xis.zip",
+    "type": "惡意程式下載",
+    "level": "HIGH",
+    "status": "○ INACTIVE (TAKEN DOWN)",
+    "source": "URLhaus",
+    "tags": "archive,Password: Galaxis,pw-galaxis,zip"
+  },
+  {
+    "date": "2026-02-15 07:12:07",
+    "url": "http://cryptershgs.lovestoblog.com/arquivo_20260107045307.txt",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "None"
+  },
+  {
+    "date": "2026-02-15 07:12:08",
+    "url": "https://orion.onl/%D0%92%D0%BE%D0%BEtsta%D1%80%D1%80%D0%B5%D0%B3%D1%83%D0%BEss.zip",
+    "type": "惡意程式下載",
+    "level": "HIGH",
+    "status": "○ INACTIVE (TAKEN DOWN)",
+    "source": "URLhaus",
+    "tags": "archive,compressed,Password: ryos,pw-ryos,Vidar,zip"
+  },
+  {
+    "date": "2026-02-15 07:12:08",
+    "url": "http://crypter5ds.lovestoblog.com/arquivo_20260120101822.txt",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "None"
+  },
+  {
+    "date": "2026-02-15 07:12:20",
+    "url": "https://github.com/UnlockedSine/lod/releases/download/looo/loader.zip",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "archive,compressed,zip"
+  },
+  {
+    "date": "2026-02-15 07:12:21",
+    "url": "https://cyr.crossfitmissionbay.com/Cyrex.zip",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "archive,compressed,Password: cyrex,pw-cyrex,Vidar,zip"
+  },
+  {
+    "date": "2026-02-15 07:12:51",
+    "url": "https://drp.greenenergygroup.org/LunX.zip",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "archive,comprssed,Password: lunex,pw-lunex,Vidar,zip"
+  },
+  {
     "date": "2026-02-15 07:08:06",
     "url": "http://115.63.205.208:58219/bin.sh",
     "type": "惡意程式下載",
