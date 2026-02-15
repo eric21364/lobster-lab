@@ -1,5 +1,140 @@
 [
   {
+    "date": "2026-02-15 08:03:15",
+    "url": "http://182.117.31.248:42525/bin.sh",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-02-15 08:07:15",
+    "url": "http://115.48.145.207:53657/bin.sh",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-02-15 08:09:16",
+    "url": "http://219.155.202.35:59053/bin.sh",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-02-15 08:12:06",
+    "url": "https://harvest.nebula4tango.coupons/x64",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "ClearFake"
+  },
+  {
+    "date": "2026-02-15 08:16:10",
+    "url": "http://42.59.224.108:43020/bin.sh",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-02-15 08:18:17",
+    "url": "http://114.230.165.223:42477/i",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,arm,elf,mirai,Mozi"
+  },
+  {
+    "date": "Feb 15th 2026 8:02 AM",
+    "url": "https://access-support-nt.com/captcha.php",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9345542"
+  },
+  {
+    "date": "Feb 15th 2026 8:02 AM",
+    "url": "https://access-support-nt.com/",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9345543"
+  },
+  {
+    "date": "Feb 15th 2026 8:19 AM",
+    "url": "https://officialview.ghost.io/exodus-web/",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9345545"
+  },
+  {
+    "date": "Feb 15th 2026 8:19 AM",
+    "url": "https://eng-home.ghost.io/suite-enus/",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9345546"
+  },
+  {
+    "date": "Feb 15th 2026 8:19 AM",
+    "url": "https://stertus.ghost.io/bridge-hub/",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9345547"
+  },
+  {
+    "date": "Feb 15th 2026 8:19 AM",
+    "url": "https://homepage-apps.ghost.io/en-start/",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9345548"
+  },
+  {
+    "date": "Feb 15th 2026 8:19 AM",
+    "url": "https://well-started.ghost.io/usen/",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9345549"
+  },
+  {
+    "date": "Feb 15th 2026 8:19 AM",
+    "url": "https://apps-homepage.ghost.io/en-suiteapp/",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9345550"
+  },
+  {
+    "date": "Feb 15th 2026 8:19 AM",
+    "url": "https://homepage-apps.ghost.io/start-en/",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9345551"
+  },
+  {
     "date": "Feb 15th 2026 6:50 AM",
     "url": "https://allegro.pl-37282.sbs",
     "type": "釣魚網站",
