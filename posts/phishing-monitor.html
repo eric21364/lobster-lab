@@ -79,6 +79,7 @@
         .source-urlhaus { background: rgba(255, 140, 0, 0.15); color: var(--cyber-orange); border: 1px solid rgba(255, 140, 0, 0.3); }
         .source-openphish { background: rgba(0, 210, 255, 0.15); color: var(--cyber-blue); border: 1px solid rgba(0, 210, 255, 0.3); }
         .source-165 { background: rgba(168, 85, 247, 0.15); color: var(--cyber-purple); border: 1px solid rgba(168, 85, 247, 0.3); }
+        .source-phishtank { background: rgba(0, 255, 65, 0.15); color: var(--cyber-green); border: 1px solid rgba(0, 255, 65, 0.3); }
         .source-other { background: rgba(255, 255, 255, 0.05); color: #888; }
         .level-CRITICAL { color: var(--cyber-red); font-weight: bold; }
         .level-HIGH { color: var(--cyber-orange); }
@@ -128,7 +129,7 @@
 
     <div class="header">
         <h1>🦞 龍蝦資安監控站</h1>
-        <p><span class="scan-anim"></span>即時連線中 — URLhaus · OpenPhish · 165反詐騙</p>
+        <p><span class="scan-anim"></span>即時連線中 — URLhaus · OpenPhish · PhishTank · 165反詐騙</p>
     </div>
 
     <div class="stats-panel">
@@ -143,6 +144,7 @@
         <div class="tab" onclick="switchTab('165反詐騙')" id="tab-165反詐騙">🇹🇼 165 <span class="badge" id="badge-165反詐騙">0</span></div>
         <div class="tab" onclick="switchTab('URLhaus')" id="tab-URLhaus">🦠 URLhaus <span class="badge" id="badge-URLhaus">0</span></div>
         <div class="tab" onclick="switchTab('OpenPhish')" id="tab-OpenPhish">🎣 OpenPhish <span class="badge" id="badge-OpenPhish">0</span></div>
+        <div class="tab" onclick="switchTab('PhishTank')" id="tab-PhishTank">🐟 PhishTank <span class="badge" id="badge-PhishTank">0</span></div>
     </div>
 
     <div class="search-container">
@@ -161,7 +163,7 @@
     <div class="pagination" id="pagination"></div>
 
     <div class="footer">
-        <p>🦞 Lobster Security Monitor v3.1 — Powered by URLhaus (abuse.ch) · OpenPhish · 165 NPA Taiwan</p>
+        <p>🦞 Lobster Security Monitor v3.1 — Powered by URLhaus (abuse.ch) · OpenPhish · PhishTank (Cisco Talos) · 165 NPA Taiwan</p>
         <p>Data refreshed every 30 minutes. © 2026 Lobster Lab</p>
     </div>
 
@@ -194,7 +196,7 @@
 
         function updateBadges() {
             document.getElementById('badge-all').textContent = allData.length;
-            ['165反詐騙', 'URLhaus', 'OpenPhish'].forEach(s => {
+            ['165反詐騙', 'URLhaus', 'OpenPhish', 'PhishTank'].forEach(s => {
                 const el = document.getElementById('badge-' + s);
                 if (el) el.textContent = allData.filter(x => x.source === s).length;
             });
@@ -293,6 +295,7 @@
         function getSourceClass(source) {
             if (source === 'URLhaus') return 'source-urlhaus';
             if (source === 'OpenPhish') return 'source-openphish';
+            if (source === 'PhishTank') return 'source-phishtank';
             if (source === '165反詐騙') return 'source-165';
             return 'source-other';
         }
