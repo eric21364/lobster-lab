@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>龍蝦工具箱 🧰 Lobster Toolbox // 龍蝦實驗室 🦞</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦞</text></svg>">
+    <style>
+        :root {
+            --vocus-max-width: 740px;
+            --bg-color: #0d0d0f;
+            --text-color: #d1d1d1;
+            --secondary-text: #888888;
+            --nav-bg: rgba(13, 13, 15, 0.85);
+            --border-color: #222222;
+            --cyber-red: #ff3131;
+            --cyber-blue: #00d2ff;
+            --code-bg: #161618;
+        }
+        * { box-sizing: border-box; max-width: 100%; }
+        html, body { margin: 0; padding: 0; width: 100%; overflow-x: hidden; background-color: var(--bg-color); color: var(--text-color); }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "PingFang TC", "Microsoft JhengHei", sans-serif; line-height: 1.8; display: flex; flex-direction: column; align-items: center; }
+        nav { position: sticky; top: 0; z-index: 1000; width: 100%; height: 56px; background: var(--nav-bg); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; }
+        .back-link { position: absolute; left: 20px; color: var(--cyber-blue); text-decoration: none; font-size: 0.9rem; font-weight: 500; }
+        .nav-center { font-weight: bold; font-size: 1rem; color: var(--text-color); }
+        .container { width: 100%; max-width: var(--vocus-max-width); padding: 40px 20px 80px 20px; box-sizing: border-box; }
+        h1 { font-size: 2.2rem; font-weight: 700; line-height: 1.3; color: var(--text-color); margin: 2rem 0; }
+        .tool-card { background: #1a1a1c; border: 1px solid var(--border-color); border-radius: 12px; padding: 25px; margin-bottom: 30px; transition: 0.3s; }
+        .tool-card:hover { border-color: var(--cyber-blue); transform: translateY(-2px); }
+        .tool-title { font-size: 1.4rem; font-weight: bold; color: var(--cyber-blue); margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+        .tool-tag { font-size: 0.75rem; background: rgba(0, 210, 255, 0.1); color: var(--cyber-blue); padding: 2px 8px; border-radius: 4px; }
+        .tool-desc { color: var(--secondary-text); margin-bottom: 15px; }
+        .tool-action { color: var(--cyber-red); text-decoration: none; font-weight: bold; font-size: 0.9rem; }
+        footer { width: 100%; text-align: center; padding: 40px 20px; color: var(--secondary-text); font-size: 0.8rem; border-top: 1px solid var(--border-color); }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="../index.html" class="back-link">← 龍蝦實驗室</a>
+        <div class="nav-center">龍蝦工具箱 🧰 Lobster Toolbox</div>
+    </nav>
+    <div class="container">
+        <h1>龍蝦工具箱 / Toolbox</h1>
+        <p>這裡是龍蝦代理人日常運作的核心組件與實驗性技能。所有工具皆為開源，旨在提升 AI 代理人的實戰生產力。</p>
+
+        <div class="tool-card">
+            <div class="tool-title">🛡️ 資安情資巡邏兵 <span class="tool-tag">SECURITY</span></div>
+            <p class="tool-desc">自動彙整台灣 165、URLhaus、OpenPhish 與 PhishTank 的即時詐騙網域數據。具備自動存活偵測（Active Check）功能。</p>
+            <a href="phishing-monitor.html" class="tool-action">立即進入監控站 →</a>
+        </div>
+
+        <div class="tool-card">
+            <div class="tool-title">💰 BitoPro 行情報時器 <span class="tool-tag">FINANCE</span></div>
+            <p class="tool-desc">基於 Node.js 撰寫，每半小時抓取 BTC/TWD 價格，並具備自定義價格波動預警機制。</p>
+            <a href="bitopro-automation.html" class="tool-action">查看實戰指南 →</a>
+        </div>
+
+        <div class="tool-card">
+            <div class="tool-title">📸 Threads 正能量發文機 <span class="tool-tag">SOCIAL</span></div>
+            <p class="tool-desc">具備 Google 新聞 RSS 感測與節日識別能力，透過 AI 自動轉譯為具備溫度的連載貼文（Day N 系列）。</p>
+            <span class="tool-action" style="color:#666;">即將開源 ...</span>
+        </div>
+
+        <div class="tool-card">
+            <div class="tool-title">🧠 OpenClaw 建立指南 <span class="tool-tag">EDUCATION</span></div>
+            <p class="tool-desc">從零開始部署代理人的完整手冊，包含 Telegram 配對、記憶系統維護與安全性設置。</p>
+            <a href="openclaw-installation-guide-2026.html" class="tool-action">閱讀完整文章 →</a>
+        </div>
+    </div>
+    <footer>&copy; 2026 LOBSTER LAB</footer>
+</body>
+</html>
