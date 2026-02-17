@@ -1,5 +1,485 @@
 [
   {
+    "date": "2026-02-17 02:39:02",
+    "url": "http://ccip-ui-chore-metamask-model-revamp-cll.vercel.app/address/Cu4TkhL3mNzj1MmrZCQtFGQ2F939BCmEyRE6KVbzeobz",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-02-17 02:39:02",
+    "url": "http://aps-ledgerlive-com.typedream.app/",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-02-17 02:39:02",
+    "url": "https://iostart-trezer.zapier.app/",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-02-17 02:39:02",
+    "url": "https://www-robiox.co/users/1937401827/profile",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-02-17 02:39:02",
+    "url": "https://s.id/www-roblox-com-users-472954625196-profile",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-02-17 02:39:02",
+    "url": "https://uhg.edu.py/wp-includes/nfcu.ed.html",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-02-17 02:39:02",
+    "url": "https://encausticcementtiles.co.uk/santaticket.encausticcementtiles.co.uk/santa/login.php",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-02-17 02:39:02",
+    "url": "https://u89w.xyz/",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-02-17 02:39:02",
+    "url": "http://get-cloud-kucoin-login-en.typedream.app/",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-02-17 02:39:02",
+    "url": "http://rafael-ods.github.io/spotify-old/",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-02-17 02:39:02",
+    "url": "http://metmsk.info/enter",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-02-17 02:39:02",
+    "url": "https://roblox.com.ge/games/120442199677678/Sleep-on-Nekos-Lap-UPDATE?privateServerLinkCode=15308075425908457185056706976228",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-02-17 02:39:02",
+    "url": "https://roblox.com.kz/users/863540855/profile",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-02-17 02:39:02",
+    "url": "https://kentakahashi0523.github.io/rakutenaimatching/",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-02-17 02:39:02",
+    "url": "https://manualdevidae.webcindario.com/",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-02-17 01:11:05",
+    "url": "https://fastsky.swiftmotion.coupons/chromesetup_x64",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "ClearFake"
+  },
+  {
+    "date": "2026-02-17 01:14:22",
+    "url": "http://115.49.64.147:58222/i",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-02-17 01:15:11",
+    "url": "https://openfield.swiftmotion.coupons/chromesetup_x64",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "ClearFake"
+  },
+  {
+    "date": "2026-02-17 01:18:06",
+    "url": "https://citylight.urbanharvest.coupons/chromesetup_x64",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "ClearFake"
+  },
+  {
+    "date": "2026-02-17 01:21:18",
+    "url": "http://110.37.10.84:48539/bin.sh",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-02-17 01:25:15",
+    "url": "http://110.38.192.158:49107/bin.sh",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-02-17 01:43:18",
+    "url": "http://61.54.11.227:52989/i",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-02-17 01:45:16",
+    "url": "http://115.49.234.115:57451/i",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-02-17 01:45:16",
+    "url": "http://61.0.110.104:40834/bin.sh",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-02-17 01:55:13",
+    "url": "http://115.55.56.152:52450/bin.sh",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-02-17 01:57:11",
+    "url": "http://61.52.159.45:35631/bin.sh",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-02-17 02:05:19",
+    "url": "http://182.116.250.40:43577/i",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-02-17 02:05:20",
+    "url": "http://222.137.123.77:57204/bin.sh",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-02-17 02:06:22",
+    "url": "http://117.209.5.191:50743/i",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-02-17 02:12:05",
+    "url": "https://greenpark.urbanharvest.coupons/chromesetup_x64",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "ClearFake"
+  },
+  {
+    "date": "2026-02-17 02:13:16",
+    "url": "http://61.52.159.45:35631/i",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-02-17 02:14:17",
+    "url": "http://110.37.112.66:39252/bin.sh",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,arm,elf,mirai,Mozi"
+  },
+  {
+    "date": "2026-02-17 02:17:15",
+    "url": "http://110.37.10.84:48539/i",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-02-17 02:21:06",
+    "url": "http://130.12.180.43/files/5926060486/MKktCIh.exe",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "c2-monitor-auto,dropped-by-amadey"
+  },
+  {
+    "date": "2026-02-17 02:24:20",
+    "url": "http://42.229.170.238:37915/bin.sh",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "Feb 16th 2026 11:52 PM",
+    "url": "https://habilidadeshjasdggadsv.onrender.com/",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9346743"
+  },
+  {
+    "date": "Feb 16th 2026 11:52 PM",
+    "url": "https://ofertasfinanceirasbr.vercel.app/cpf/?utm_source=organic&amp;am...",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9346744"
+  },
+  {
+    "date": "Feb 16th 2026 11:56 PM",
+    "url": "https://trezortyostart.gitbook.io/us/",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9346745"
+  },
+  {
+    "date": "Feb 16th 2026 11:57 PM",
+    "url": "https://trezortyostart.gitbook.io/",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9346746"
+  },
+  {
+    "date": "Feb 16th 2026 11:58 PM",
+    "url": "https://qxtrax.com/ionosforp/main.php",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9346747"
+  },
+  {
+    "date": "Feb 16th 2026 11:59 PM",
+    "url": "http://ipfs.io/ipfs/bafkreibtj3lb2o25x6ztkcwke4e6742tqm4recoqy74xpgkgr...",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9346748"
+  },
+  {
+    "date": "Feb 16th 2026 11:59 PM",
+    "url": "https://ipfs.io/ipfs/bafkreibtj3lb2o25x6ztkcwke4e6742tqm4recoqy74xpgkg...",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9346749"
+  },
+  {
+    "date": "Feb 17th 2026 12:17 AM",
+    "url": "http://sherwinwilliamswebsite.pages.dev",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9346750"
+  },
+  {
+    "date": "Feb 17th 2026 12:17 AM",
+    "url": "https://sherwinwilliamswebsite.pages.dev/",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9346751"
+  },
+  {
+    "date": "Feb 17th 2026 12:23 AM",
+    "url": "https://allegrolokalnie.oferta7136455.icu",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9346752"
+  },
+  {
+    "date": "Feb 17th 2026 12:45 AM",
+    "url": "https://allegrolokalnie.l23arg45el4.click",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9346753"
+  },
+  {
+    "date": "Feb 17th 2026 12:49 AM",
+    "url": "https://allegro.45689459868945.sbs",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9346755"
+  },
+  {
+    "date": "Feb 17th 2026 1:02 AM",
+    "url": "https://allegro.45689459868945.sbs/",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9346758"
+  },
+  {
+    "date": "Feb 17th 2026 1:03 AM",
+    "url": "http://allegrolokalnie.oferta6311957.click",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9346759"
+  },
+  {
+    "date": "Feb 17th 2026 1:06 AM",
+    "url": "https://official-website.ghost.io/en-start/",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9346761"
+  },
+  {
+    "date": "Feb 17th 2026 1:25 AM",
+    "url": "http://started-trezo.zapier.app",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9346762"
+  },
+  {
+    "date": "Feb 17th 2026 1:25 AM",
+    "url": "https://started-trezo.zapier.app/",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9346763"
+  },
+  {
+    "date": "Feb 17th 2026 2:12 AM",
+    "url": "https://started-webguide.ghost.io/suite-crypto/...",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9346768"
+  },
+  {
+    "date": "Feb 17th 2026 2:17 AM",
+    "url": "https://startdus.ghost.io/trezor-en/",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9346770"
+  },
+  {
+    "date": "Feb 17th 2026 2:24 AM",
+    "url": "http://allegrolokalnie.oferta76381-dla-ciebie.sbs...",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9346782"
+  },
+  {
     "date": "2026-02-15 08:03:15",
     "url": "http://182.117.31.248:42525/bin.sh",
     "type": "惡意程式下載",
