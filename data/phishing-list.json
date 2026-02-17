@@ -1,5 +1,23 @@
 [
   {
+    "date": "2026-02-17 02:35:32",
+    "url": "http://115.55.56.152:52450/i",
+    "type": "惡意程式下載",
+    "level": "HIGH",
+    "status": "○ INACTIVE (TAKEN DOWN)",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-02-17 02:36:17",
+    "url": "http://59.97.249.210:39284/bin.sh",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
     "date": "2026-02-17 02:39:02",
     "url": "http://ccip-ui-chore-metamask-model-revamp-cll.vercel.app/address/Cu4TkhL3mNzj1MmrZCQtFGQ2F939BCmEyRE6KVbzeobz",
     "type": "釣魚網站",
