@@ -1,5 +1,266 @@
 [
   {
+    "date": "2026-02-17 06:07:17",
+    "url": "http://219.155.231.86:59540/bin.sh",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-02-17 06:12:07",
+    "url": "http://82.26.74.181/hiddenbin/boatnet.i468",
+    "type": "惡意程式下載",
+    "level": "HIGH",
+    "status": "○ INACTIVE (TAKEN DOWN)",
+    "source": "URLhaus",
+    "tags": "elf,ua-wget"
+  },
+  {
+    "date": "2026-02-17 06:12:08",
+    "url": "http://82.26.74.181/hiddenbin/boatnet.spc",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "elf,mirai,ua-wget"
+  },
+  {
+    "date": "2026-02-17 06:12:08",
+    "url": "http://82.26.74.181/hiddenbin/boatnet.arc",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "elf,mirai,ua-wget"
+  },
+  {
+    "date": "2026-02-17 06:12:11",
+    "url": "http://82.26.74.181/hiddenbin/boatnet.x86",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "elf,mirai,ua-wget"
+  },
+  {
+    "date": "2026-02-17 06:12:11",
+    "url": "http://82.26.74.181/hiddenbin/boatnet.m68k",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "elf,ua-wget"
+  },
+  {
+    "date": "2026-02-17 06:12:11",
+    "url": "http://82.26.74.181/hiddenbin/boatnet.arm7",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "elf,ua-wget"
+  },
+  {
+    "date": "2026-02-17 06:12:22",
+    "url": "http://82.26.74.181/hiddenbin/boatnet.arm6",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "elf,mirai,ua-wget"
+  },
+  {
+    "date": "2026-02-17 06:12:32",
+    "url": "http://82.26.74.181/hiddenbin/boatnet.mpsl",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "elf,mirai,ua-wget"
+  },
+  {
+    "date": "2026-02-17 06:12:32",
+    "url": "http://82.26.74.181/hiddenbin/boatnet.arm5",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "elf,ua-wget"
+  },
+  {
+    "date": "2026-02-17 06:12:32",
+    "url": "http://82.26.74.181/hiddenbin/boatnet.x86_64",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "elf,mirai,ua-wget"
+  },
+  {
+    "date": "2026-02-17 06:12:33",
+    "url": "http://82.26.74.181/hiddenbin/boatnet.arm",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "elf,ua-wget"
+  },
+  {
+    "date": "2026-02-17 06:12:33",
+    "url": "http://82.26.74.181/hiddenbin/boatnet.sh4",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "elf,ua-wget"
+  },
+  {
+    "date": "2026-02-17 06:12:33",
+    "url": "http://82.26.74.181/hiddenbin/boatnet.ppc",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "elf,ua-wget"
+  },
+  {
+    "date": "2026-02-17 06:12:33",
+    "url": "http://82.26.74.181/hiddenbin/boatnet.i686",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "elf,mirai,ua-wget"
+  },
+  {
+    "date": "2026-02-17 06:12:36",
+    "url": "http://82.26.74.181/hiddenbin/boatnet.mips",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "elf,mirai,ua-wget"
+  },
+  {
+    "date": "2026-02-17 06:14:05",
+    "url": "https://highstone.silentpeak.coupons/chromesetup_x64",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "ClearFake"
+  },
+  {
+    "date": "2026-02-17 06:14:19",
+    "url": "http://115.55.237.47:46581/bin.sh",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-02-17 06:15:20",
+    "url": "http://42.230.212.36:54977/i",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-02-17 06:19:27",
+    "url": "http://39.187.73.117:39482/bin.sh",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "Feb 17th 2026 2:24 AM",
+    "url": "https://kutxabank.app-servicioslogin.com/acceso_usuario.php...",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9346781"
+  },
+  {
+    "date": "Feb 17th 2026 2:46 AM",
+    "url": "http://allegrolokalnie.pl-oferta6385272.cfd",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9346783"
+  },
+  {
+    "date": "Feb 17th 2026 3:58 AM",
+    "url": "https://tel17-securpass.com/start.php",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9346795"
+  },
+  {
+    "date": "Feb 17th 2026 3:58 AM",
+    "url": "https://tel17-securpass.com/",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9346796"
+  },
+  {
+    "date": "Feb 17th 2026 4:44 AM",
+    "url": "http://tw-airnet.net/",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9346809"
+  },
+  {
+    "date": "Feb 17th 2026 5:20 AM",
+    "url": "https://accessplpservice.com/captcha.php",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9346813"
+  },
+  {
+    "date": "Feb 17th 2026 5:20 AM",
+    "url": "https://accessplpservice.com/",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9346814"
+  },
+  {
+    "date": "Feb 17th 2026 5:37 AM",
+    "url": "https://lefleuristecadeau.info/check",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9346816"
+  },
+  {
+    "date": "Feb 17th 2026 5:37 AM",
+    "url": "https://lefleuristecadeau.info/",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9346817"
+  },
+  {
     "date": "2026-02-17 02:35:32",
     "url": "http://115.55.56.152:52450/i",
     "type": "惡意程式下載",
