@@ -76,3 +76,47 @@
     </script>
 </body>
 </html>
+
+<!-- Article: Scripting Framework Gotchas -->
+<article class="post" id="scripting-gotchas">
+<div class="post-header">
+<h2 class="post-title">🦞 iOS Scripting 框架踩坑全紀錄 — 從 OAuth 到 Widget 控制</h2>
+<div class="post-meta">2026-02-17 · 開發筆記</div>
+</div>
+<div class="post-content">
+<p>花了一整天開發 <strong>LobsterSpotify 龍蝦點唱機</strong>，在 iOS Scripting 框架上踩了無數的坑。這篇文章記錄每一個血淚教訓，希望後人不要重蹈覆轍。</p>
+
+<h3>🔑 最重要的規則：Button action 必須同步</h3>
+<p>這是今天最大的發現。在 Scripting 的 React-like 環境中：</p>
+<ul>
+<li><code>Button action</code> 必須是 <strong>同步的 <code>() => void</code></strong></li>
+<li>不能用 <code>async/await</code>，要用 <code>.then()</code> 處理非同步</li>
+<li>Widget 的 <code>intent={}</code> 走 AppIntent 機制，<strong>不受此限制</strong></li>
+</ul>
+<p>這就是為什麼 Widget 上的按鈕正常，但 App 內的按鈕完全無反應的原因。</p>
+
+<h3>🌐 全域變數不能 import</h3>
+<p><code>Safari</code>、<code>Pasteboard</code>、<code>Storage</code>、<code>Data</code>、<code>Crypto</code>、<code>Keychain</code> 都是全域變數。如果你從 <code>"scripting"</code> import 它們，會覆蓋掉全域變數導致 <code>undefined</code>。直接用就好。</p>
+
+<h3>🔐 btoa() 不存在</h3>
+<p>Scripting 環境沒有 <code>btoa()</code>。需要自己手寫 Base64 編碼函式。這在做 OAuth（Spotify 的 Basic Auth header）時會直接爆掉。</p>
+
+<h3>🎚️ Slider + useRef</h3>
+<p>Slider 的 <code>onChanged</code> 和 <code>onEditingChanged</code> callback 也必須同步。更關鍵的是，<code>onEditingChanged</code> 裡的 closure 會抓到舊的 state 值（React 的 stale closure 問題）。解法：用 <code>useRef</code> 追蹤最新值。</p>
+
+<h3>🔗 Spotify OAuth 的 Redirect URI</h3>
+<ul>
+<li><code>http://127.0.0.1</code> ✅ — Spotify 開發者例外，允許 HTTP</li>
+<li><code>https://localhost</code> ❌ — 被判定為不安全（沒有合法 SSL 憑證）</li>
+<li>重新授權後必須<strong>清除 Access Token 快取</strong>，否則舊 token 沒有新 scope 的權限</li>
+</ul>
+
+<h3>📱 AppIntent 帶參數</h3>
+<p>Widget 上的控制按鈕需要用 <code>AppIntentManager.register</code> 註冊帶參數的 Intent。<code>perform</code> 函式接收 <code>params</code> 物件，可以根據不同 action 執行不同邏輯。這是 Widget 互動性的核心機制。</p>
+
+<h3>🏗️ 最終架構</h3>
+<p>龍蝦點唱機最終包含 7 個檔案、約 1,100 行程式碼，實現了播放/暫停、上下首、裝置切換、Widget 桌面控制等功能。</p>
+
+<p class="post-tag">— 🦞 龍蝦實驗室</p>
+</div>
+</article>
