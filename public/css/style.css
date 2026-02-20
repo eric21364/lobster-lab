@@ -1,11 +1,12 @@
 :root {
-    --primary: #ff6b35; /* Lobster Orange */
-    --secondary: #00d2ff; /* Ocean Blue */
+    --primary: #ff6b35;
+    --secondary: #00d2ff;
     --background: #0a0a0c;
     --card-bg: #16161a;
     --text: #e0e0e0;
     --text-dim: #888;
     --border: rgba(255, 107, 53, 0.3);
+    --nav-bg: rgba(10, 10, 12, 0.95);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -17,44 +18,38 @@ body {
     line-height: 1.7;
 }
 
-/* Header & Nav - 確保它是滿寬的且樣式統一 */
 .main-header {
-    background: rgba(10, 10, 12, 0.95);
+    background: var(--nav-bg);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border);
     position: sticky;
     top: 0;
     z-index: 1000;
-    width: 100%;
 }
 
 .header-content {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 15px 20px;
+    padding: 12px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.brand-link { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-.brand-title { font-weight: bold; color: var(--primary); font-size: 1.4rem; letter-spacing: 1px; }
+.brand-title { font-weight: bold; color: var(--primary); font-size: 1.3rem; letter-spacing: 1px; }
+.header-nav { display: flex; gap: 15px; }
+.nav-link { color: #fff; text-decoration: none; font-size: 0.95rem; transition: 0.3s; padding: 5px 8px; }
+.nav-link:hover { color: var(--primary); }
 
-.header-nav { display: flex; gap: 20px; }
-.nav-link { color: #fff; text-decoration: none; font-size: 1rem; transition: 0.3s; padding: 5px 10px; border-radius: 4px; }
-.nav-link:hover { color: var(--primary); background: rgba(255,107,53,0.1); }
-
-/* Container - 主佈局 */
 .container {
     max-width: 1200px;
     margin: 40px auto;
     display: flex;
-    gap: 40px;
+    gap: 30px;
     padding: 0 20px;
 }
 
 .main-content { flex: 1; min-width: 0; }
-
 .sidebar { width: 300px; }
 
 @media (max-width: 900px) {
@@ -62,51 +57,29 @@ body {
     .sidebar { width: 100%; }
 }
 
-/* 文章卡片 - 首頁/列表頁 */
 .article-card {
     background: var(--card-bg);
     border: 1px solid var(--border);
     border-radius: 12px;
-    padding: 30px;
-    margin-bottom: 30px;
-    transition: 0.3s;
+    padding: 25px;
+    margin-bottom: 25px;
 }
+.article-card h2 a, .article-card h3 a { color: #fff; text-decoration: none; }
 
-.article-card:hover { border-color: var(--primary); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-.article-card h2 a, .article-card h3 a { color: #fff; text-decoration: none; font-size: 1.5rem; }
+.article-single { background: var(--card-bg); border: 1px solid var(--border); border-radius: 15px; padding: 35px; }
+.article-header h1 { font-size: 2.2rem; margin-bottom: 15px; color: #fff; }
+.article-content { color: #d0d0d0; }
+.article-content h2 { border-left: 4px solid var(--primary); padding-left: 15px; margin: 30px 0 15px; color: var(--primary); }
+.article-content pre { background: #000 !important; border: 1px solid #333; padding: 20px; border-radius: 8px; overflow-x: auto; }
 
-/* 文章內頁 - single */
-.article-single {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 15px;
-    padding: 50px;
-}
-
-.article-header h1 { font-size: 2.8rem; margin-bottom: 20px; color: #fff; }
-.article-meta { color: var(--text-dim); margin-bottom: 40px; font-size: 0.9rem; border-bottom: 1px solid #333; padding-bottom: 20px; }
-
-.article-content { font-size: 1.15rem; color: #d0d0d0; }
-.article-content h2 { margin: 40px 0 20px; color: var(--primary); border-left: 5px solid var(--primary); padding-left: 15px; }
-.article-content p { margin-bottom: 25px; }
-.article-content pre { background: #000 !important; border: 1px solid #444; padding: 25px; border-radius: 10px; margin: 30px 0; overflow-x: auto; }
-
-/* Sidebar Widget */
 .sidebar-section {
     background: rgba(22, 22, 26, 0.6);
     border: 1px solid var(--border);
     border-radius: 12px;
-    padding: 25px;
-    margin-bottom: 30px;
+    padding: 20px;
+    margin-bottom: 25px;
 }
+.sidebar-section h3 { color: var(--secondary); margin-bottom: 15px; font-size: 1.1rem; }
+.sidebar-avatar { width: 80px; height: 80px; border-radius: 50%; border: 2px solid var(--primary); display: block; margin: 0 auto 15px; }
 
-.sidebar-section h3 { color: var(--secondary); margin-bottom: 20px; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 1px; }
-
-/* Footer */
-.main-footer {
-    text-align: center;
-    padding: 60px 20px;
-    border-top: 1px solid var(--border);
-    margin-top: 80px;
-    color: var(--text-dim);
-}
+.main-footer { text-align: center; padding: 40px 20px; border-top: 1px solid var(--border); margin-top: 60px; color: var(--text-dim); font-size: 0.9rem; }

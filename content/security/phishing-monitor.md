@@ -18,7 +18,9 @@ date: 2026-02-20
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-  fetch('/lobster-lab/data/phishing-list.json')
+  // 自動探測正確的基礎路徑，避免寫死網域或目錄名
+  const basePath = window.location.pathname.includes('/lobster-lab/') ? '/lobster-lab' : '';
+  fetch(`${basePath}/data/phishing-list.json`)
     .then(r => r.json())
     .then(data => {
       const html = data.map(item => `
@@ -28,6 +30,10 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       `).join('');
       document.getElementById('data-target').innerHTML = html;
+    })
+    .catch(err => {
+      console.error('數據加載失敗:', err);
+      document.getElementById('data-target').innerText = '情資同步暫時中斷，請重新整理頁面。';
     });
 });
 </script>
