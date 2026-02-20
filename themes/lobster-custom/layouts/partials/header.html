@@ -13,39 +13,94 @@
     </nav>
 
     <div class="header-search">
-      <input type="text" id="search-input" placeholder="搜尋實驗紀錄..." class="search-input">
+      <input type="text" id="search-input" placeholder="搜尋紀錄..." class="search-input">
       <button id="search-submit" class="search-btn">🔍</button>
     </div>
   </div>
 </header>
 
 <style>
+.main-header {
+    background: var(--nav-bg);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-nav {
+    display: flex;
+    gap: 15px;
+}
+
+/* 手機端 RWD 調整 */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column; /* 手機端垂直排列 */
+        gap: 12px;
+        padding: 15px;
+    }
+    .header-nav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .header-search {
+        width: 100%; /* 手機端搜尋列滿寬 */
+        margin-left: 0 !important;
+    }
+    .search-input {
+        flex: 1; /* 讓輸入框佔滿空間 */
+    }
+}
+
 .header-search {
     display: flex;
     align-items: center;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid var(--border);
     border-radius: 20px;
-    padding: 2px 10px;
-    margin-left: 20px;
+    padding: 2px 12px;
+    margin-left: 15px;
 }
+
 .search-input {
     background: transparent;
     border: none;
     color: #fff;
-    padding: 5px;
+    padding: 6px;
     outline: none;
     font-size: 0.9rem;
-    width: 150px;
+    width: 120px;
     transition: width 0.3s;
 }
-.search-input:focus { width: 220px; }
+
+.search-input:focus { width: 180px; }
+
 .search-btn {
     background: transparent;
     border: none;
     cursor: pointer;
     color: var(--primary);
     font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 480px) {
+    .search-input:focus { width: 100%; }
 }
 </style>
 
