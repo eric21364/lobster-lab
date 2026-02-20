@@ -1,15 +1,5 @@
 [
   {
-    "date": "2026-02-20 10:41:00",
-    "url": "https://github.com/eric21364/lobster-lab",
-    "type": "資安監控數據庫",
-    "level": "INFO",
-    "status": "● ACTIVE",
-    "source": "龍蝦實驗室",
-    "tags": "phishing-monitor, security, anti-fraud",
-    "description": "龍蝦資安監控站 - 即時偵測 200+ 詐騙網域"
-  },
-  {
     "date": "2026-02-17 06:19:27",
     "url": "bitopro-loginc.com",
     "type": "品牌冒充 (Impersonation)",

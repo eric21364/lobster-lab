@@ -12,17 +12,31 @@ date: 2026-02-20
     <div style="font-weight: bold; color: #00ff88; display: flex; align-items: center; gap: 10px;">
       <span class="pulse-dot" style="height: 10px; width: 10px; background-color: #ff3131; border-radius: 50%; display: inline-block; animation: blink 1.5s infinite;"></span> 系統狀態：即時監控中 (24/7 LIVE)
     </div>
-    <!-- 專屬過濾搜尋欄 -->
     <div style="display: flex; align-items: center; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,107,53,0.5); border-radius: 8px; padding: 5px 15px;">
       <span style="margin-right: 10px; color: #888;">🔍 篩選:</span>
-      <input type="text" id="threat-filter" placeholder="輸入關鍵字 (如 bitopro)..." style="background: transparent; border: none; color: #fff; outline: none; font-size: 0.9rem; width: 200px;">
+      <input type="text" id="threat-filter" placeholder="輸入網址或關鍵字..." style="background: transparent; border: none; color: #fff; outline: none; font-size: 0.9rem; width: 180px;">
     </div>
   </div>
 
-  <div id="data-target" style="font-family: 'Courier New', monospace; font-size: 0.95em; min-height: 200px;">
-    正在連結龍蝦情資數據庫...
+  <!-- 內部滾動容器 -->
+  <div id="data-scroll-container" style="max-height: 500px; overflow-y: auto; padding-right: 10px; scrollbar-width: thin; scrollbar-color: #ff6b35 #16161a;">
+    <div id="data-target" style="font-family: 'Courier New', monospace; font-size: 0.95em;">
+      正在連結龍蝦情資數據庫...
+    </div>
   </div>
 </div>
+
+<style>
+/* 滾動條樣式優化 (Webkit) */
+#data-scroll-container::-webkit-scrollbar { width: 6px; }
+#data-scroll-container::-webkit-scrollbar-track { background: #16161a; }
+#data-scroll-container::-webkit-scrollbar-thumb { background: #ff6b35; border-radius: 10px; }
+
+.phishing-item { border-bottom: 1px solid rgba(255,255,255,0.05); padding: 15px 0; transition: 0.2s; }
+.phishing-item:hover { background: rgba(255,107,53,0.05); }
+
+@keyframes blink { 0% { opacity: 1; } 50% { opacity: 0.4; } 100% { opacity: 1; } }
+</style>
 
 <script>
 (function() {
@@ -32,22 +46,22 @@ date: 2026-02-20
 
   function render(data) {
     if (!data || data.length === 0) {
-      target.innerHTML = '<div style="text-align:center; padding: 20px; color: #888;">未發現匹配的威脅紀錄。</div>';
+      target.innerHTML = '<div style="text-align:center; padding: 40px; color: #888;">[ 無匹配威脅紀錄 ]</div>';
       return;
     }
     target.innerHTML = data.map(item => `
-      <div class="phishing-item" style="border-bottom: 1px solid rgba(255,255,255,0.05); padding: 15px 0;">
-        <div style="color: #ff6b35; font-weight: bold; word-break: break-all;">> ${item.url}</div>
-        <div style="font-size: 0.8em; color: #888; display: flex; gap: 15px; margin-top: 5px;">
+      <div class="phishing-item">
+        <div style="color: #ff6b35; font-weight: bold; word-break: break-all; margin-bottom: 5px;">> ${item.url}</div>
+        <div style="font-size: 0.8em; color: #888; display: flex; gap: 15px; flex-wrap: wrap;">
           <span>📅 ${item.date ? item.date.split(' ')[0] : 'N/A'}</span>
-          <span>⚠️ ${item.type}</span>
-          <span>📡 ${item.source}</span>
+          <span style="color: #00d2ff;">⚠️ ${item.type}</span>
+          <span>📡 來源: ${item.source}</span>
+          <span style="color: ${item.status.includes('ACTIVE') ? '#ff3131' : '#00ff88'}">${item.status}</span>
         </div>
       </div>
     `).join('');
   }
 
-  // 監聽輸入框實時過濾
   filterInput.addEventListener('input', (e) => {
     const term = e.target.value.toLowerCase();
     const filtered = allThreats.filter(item => 
@@ -64,25 +78,14 @@ date: 2026-02-20
       allThreats = data;
       render(data);
     })
-    .catch(e => {
-      console.error("Fetch 失敗，嘗試備援路徑");
-      fetch('https://lobster-lab.pomelo.pp.ua/data/phishing-list.json')
-        .then(r => r.json())
-        .then(data => {
-          allThreats = data;
-          render(data);
-        });
+    .catch(() => {
+      document.getElementById('data-target').innerText = '情資同步中斷，請重新整理頁面。';
     });
 })();
 </script>
 
-<style>
-@keyframes blink { 0% { opacity: 1; } 50% { opacity: 0.4; } 100% { opacity: 1; } }
-.phishing-item:hover { background: rgba(255,107,53,0.05); }
-</style>
-
 ---
 ## 🦞 龍蝦安全建議
 1. **檢查 URL**：輸入密碼前務必確認網址完全正確。
-2. **使用書籤**：交易所請存入書籤，勿從不明搜尋結果進入。
+2. **使用書籤**：將常用交易所存入書籤。
 3. **2FA**：絕對不要關閉二階段驗證。
