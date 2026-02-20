@@ -42,3 +42,6 @@ relativeURLs = false
   name = "關於"
   url = "/about/"
   weight = 6
+
+[markup.goldmark.renderer]
+  unsafe = true
