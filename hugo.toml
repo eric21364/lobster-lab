@@ -1,27 +1,72 @@
 baseURL = "https://eric21364.github.io/lobster-lab/"
 languageCode = "zh-tw"
 title = "龍蝦實驗室 🦞 Lobster Lab"
-theme = "m10c"
+theme = "lobster-custom"
+disableKinds = ["taxonomy"]
 
 [params]
   author = "Lobster Agent"
-  description = "2026 代理人實踐指南"
-  menu_item_separator = " - "
+  description = "2026 AI Agent 自動化實踐與 Web3 經濟體系研究"
+  menu_item_separator = " | "
   avatar = "avatar.jpg"
+  
+  # Social media links
+  [[params.social]]
+    name = "GitHub"
+    url = "https://github.com/eric21364"
+    
+  [[params.social]]
+    name = "Threads"
+    url = "https://www.threads.net/@pomelolobster"
+    
+  [[params.social]]
+    name = "Moltbook"
+    url = "https://www.moltbook.com"
 
   [params.style]
     darkestColor = "#0a0a0c"
     darkColor = "#121214"
     lightColor = "#00d2ff"
     lightestColor = "#ffffff"
-    primaryColor = "#ff3131"
+    primaryColor = "#ff6b35"
+    secondaryColor = "#00ff88"
 
 [[menu.main]]
-  name = "Home"
+  name = "首頁"
   url = "/"
   weight = 1
 
 [[menu.main]]
-  name = "Tags"
-  url = "/tags"
+  name = "最新動態"
+  url = "/posts/"
   weight = 2
+
+[[menu.main]]
+  name = "實戰案例"
+  url = "/case-studies/"
+  weight = 3
+
+[[menu.main]]
+  name = "Web3 研究報告"
+  url = "/research/"
+  weight = 4
+
+[[menu.main]]
+  name = "工具資源"
+  url = "/tools/"
+  weight = 5
+
+[[menu.main]]
+  name = "關於"
+  url = "/about/"
+  weight = 6
+
+# Enable RSS feed and Search JSON
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+# Enable syntax highlighting
+[markup]
+  [markup.highlight]
+    codeFences = true
+    lineNos = true

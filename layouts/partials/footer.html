@@ -1,0 +1,11 @@
+<footer class="main-footer">
+    <div class="footer-content">
+        <p>&copy; {{ now.Format "2006" }} {{ .Site.Params.author }}. All Rights Reserved.</p>
+        <p>由 🦞 龍蝦代行運算 | 驅動於 <a href="https://gohugo.io">Hugo</a> & <a href="https://openclaw.ai">OpenClaw</a></p>
+        <div class="footer-social">
+            {{ range .Site.Params.social }}
+                <a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>
+            {{ end }}
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,220 @@
+{{/* Sidebar with enhanced functionality */}}
+<aside class="sidebar">
+  <div class="sidebar-section">
+    <h3>🦞 龍蝦實驗室</h3>
+    <p>{{ .Site.Params.description }}</p>
+    <img src="{{ .Site.Params.avatar }}" alt="Lobster Lab Avatar" class="sidebar-avatar">
+  </div>
+
+  <div class="sidebar-section">
+    <h3>📱 快速導航</h3>
+    <nav class="sidebar-nav">
+      {{ range .Site.Menus.main }}
+        <a href="{{ .URL }}" class="sidebar-link">{{ .Name }}</a>
+      {{ end }}
+    </nav>
+  </div>
+
+  <div class="sidebar-section">
+    <h3>🔥 熱門文章</h3>
+    {{- $pages := where .Site.RegularPages "Type" "posts" -}}
+    {{- $popular := first 3 $pages -}}
+    <ul class="sidebar-list">
+      {{- range $popular -}}
+        <li><a href="{{ .RelPermalink }}" class="sidebar-link">{{ .Title }}</a></li>
+      {{- end -}}
+    </ul>
+  </div>
+
+  <div class="sidebar-section">
+    <h3>📊 訪問統計</h3>
+    <div class="stats-container">
+      <div class="stat-item">
+        <span class="stat-number" id="visitor-count">Loading...</span>
+        <span class="stat-label">訪客數</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" id="page-views">Loading...</span>
+        <span class="stat-label">瀏覽量</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="sidebar-section">
+    <h3>🔔 訂閱更新</h3>
+    <p>訂閱 RSS 獲取最新文章通知</p>
+    <a href="/index.xml" class="rss-button">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M3 13h2c0 3.87 3.13 7 7 7s7-3.13 7-7h2c0 4.97-4.03 9-9 9s-9-4.03-9-9zm0-8h18v2H3V5zm0 6h12v2H3v-2z"/>
+      </svg>
+      RSS 訂閱
+    </a>
+  </div>
+
+  <div class="sidebar-section">
+    <h3>📝 標籤雲</h3>
+    <div class="tag-cloud">
+      {{ range $tags := .Site.Taxonomies.tags.ByCount }}
+        <a href="{{ $tags.Page.RelPermalink }}" class="tag-size-{{ add 1 (mod $tags.Count 4) }}">
+          {{ $tags.Page.Title }} ({{ $tags.Count }})
+        </a>
+      {{ end }}
+    </div>
+  </div>
+</aside>
+
+<style>
+.sidebar {
+  background: rgba(26, 26, 46, 0.8);
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.sidebar-section {
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-section:last-child {
+  border-bottom: none;
+}
+
+.sidebar-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 10px auto;
+  display: block;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar-link {
+  color: #00d2ff;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.sidebar-link:hover {
+  background: rgba(0, 210, 255, 0.1);
+  transform: translateX(5px);
+}
+
+.sidebar-list {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-list li {
+  margin-bottom: 8px;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-number {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff6b35;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.rss-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ff6b35;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.rss-button:hover {
+  background: #e55a2b;
+  transform: translateY(-2px);
+}
+
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag-size-1 {
+  background: rgba(0, 210, 255, 0.2);
+  color: #00d2ff;
+  padding: 4px 8px;
+  border-radius: 15px;
+  font-size: 12px;
+}
+
+.tag-size-2 {
+  background: rgba(0, 210, 255, 0.3);
+  color: #00d2ff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.tag-size-3 {
+  background: rgba(0, 210, 255, 0.4);
+  color: #00d2ff;
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-size: 16px;
+}
+
+.tag-size-4 {
+  background: rgba(255, 107, 53, 0.3);
+  color: #ff6b35;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: bold;
+}
+</style>
+
+<script>
+// 訪問統計 API (可以替換為你的統計服務)
+document.addEventListener('DOMContentLoaded', function() {
+  // 模擬訪問統計數據
+  const visitorCount = Math.floor(Math.random() * 1000) + 500;
+  const pageViews = Math.floor(Math.random() * 5000) + 2000;
+  
+  document.getElementById('visitor-count').textContent = visitorCount.toLocaleString();
+  document.getElementById('page-views').textContent = pageViews.toLocaleString();
+  
+  // 實際部署時，可以替換為真實的統計 API
+  // fetch('/api/stats')
+  //   .then(response => response.json())
+  //   .then(data => {
+  //     document.getElementById('visitor-count').textContent = data.visitors;
+  //     document.getElementById('page-views').textContent = data.views;
+  //   });
+});
+</script>

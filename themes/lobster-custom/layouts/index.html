@@ -1,0 +1,51 @@
+{{ define "main" }}
+<div class="hero-section">
+    <h1>{{ .Site.Title }}</h1>
+    <p class="hero-subtitle">{{ .Site.Params.description }}</p>
+</div>
+
+<div class="content-section">
+    <h2>🎯 最新實驗紀錄</h2>
+    <div class="article-grid">
+        {{ range (where .Site.RegularPages "Section" "in" (slice "guides" "tutorials" "research" "case-studies" "news")).ByDate.Reverse | first 5 }}
+        <article class="article-card">
+            <div class="article-header">
+                <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                <div class="article-meta">
+                    <span class="date">{{ .Date.Format "2006-01-02" }}</span>
+                    <span class="category">[{{ .Section | humanize }}]</span>
+                </div>
+            </div>
+            <div class="article-excerpt">
+                {{ .Summary | plainify | truncate 150 }}
+            </div>
+            <div class="article-footer">
+                <a href="{{ .RelPermalink }}" class="read-more">進入檔案 →</a>
+            </div>
+        </article>
+        {{ end }}
+    </div>
+</div>
+
+<style>
+.hero-section {
+    padding: 60px 0;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 40px;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    background: linear-gradient(45deg, #ff6b35, #00d2ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+}
+</style>
+{{ end }}

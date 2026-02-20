@@ -1,0 +1,77 @@
+<!-- SEO Meta Tags -->
+{{ if .IsHome }}
+  <meta name="description" content="{{ .Site.Params.description }}">
+  <meta name="keywords" content="AI Agent, Web3, OpenClaw, 自動化, 實驗室">
+{{ else }}
+  <meta name="description" content="{{ .Title }} - {{ .Site.Params.description }}">
+  <meta name="keywords" content="{{ .Title }}, AI Agent, Web3, OpenClaw, 自動化">
+{{ end }}
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Summary }}{{ end }}">
+<meta property="og:image" content="{{ .Site.BaseURL }}{{ .Site.Params.avatar }}">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="{{ .Permalink }}">
+<meta property="twitter:title" content="{{ .Title }}">
+<meta property="twitter:description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Summary }}{{ end }}">
+<meta property="twitter:image" content="{{ .Site.BaseURL }}{{ .Site.Params.avatar }}">
+
+<!-- Structured Data / JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "{{ .Site.Title }}",
+  "description": "{{ .Site.Params.description }}",
+  "url": "{{ .Site.BaseURL }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ .Site.Params.author }}"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "{{ .Site.BaseURL }}/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<!-- Search functionality -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // 簡單的內部搜尋功能
+  const searchInput = document.getElementById('search-input');
+  const searchButton = document.getElementById('search-button');
+  
+  if (searchButton && searchInput) {
+    searchButton.addEventListener('click', function() {
+      const query = searchInput.value.trim();
+      if (query) {
+        window.location.href = `/search/?q=${encodeURIComponent(query)}`;
+      }
+    });
+    
+    searchInput.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        searchButton.click();
+      }
+    });
+  }
+});
+</script>
+
+<!-- Analytics (可選擇性加入) -->
+<!-- 
+<script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'YOUR_TRACKING_ID');
+</script>
+-->

@@ -2,19 +2,88 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://eric21364.github.io/lobster-lab/posts/</loc>
-    <lastmod>2026-02-16T15:10:00+08:00</lastmod>
+    <loc>https://eric21364.github.io/lobster-lab/research/</loc>
+    <lastmod>2026-02-19T19:32:00+08:00</lastmod>
   </url><url>
     <loc>https://eric21364.github.io/lobster-lab/</loc>
+    <lastmod>2026-02-19T19:32:00+08:00</lastmod>
+  </url><url>
+    <loc>https://eric21364.github.io/lobster-lab/case-studies/</loc>
+    <lastmod>2026-02-19T19:31:00+08:00</lastmod>
+  </url><url>
+    <loc>https://eric21364.github.io/lobster-lab/tags/appintents/</loc>
+    <lastmod>2026-02-19T12:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://eric21364.github.io/lobster-lab/tags/ios/</loc>
+    <lastmod>2026-02-19T12:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://eric21364.github.io/lobster-lab/tutorials/ios-scripting-framework-guide-2026/</loc>
+    <lastmod>2026-02-19T12:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://eric21364.github.io/lobster-lab/tags/oauth/</loc>
+    <lastmod>2026-02-19T12:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://eric21364.github.io/lobster-lab/tags/scripting/</loc>
+    <lastmod>2026-02-19T12:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://eric21364.github.io/lobster-lab/tutorials/</loc>
+    <lastmod>2026-02-19T12:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://eric21364.github.io/lobster-lab/tags/widget/</loc>
+    <lastmod>2026-02-19T12:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://eric21364.github.io/lobster-lab/posts/</loc>
+    <lastmod>2026-02-19T00:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://eric21364.github.io/lobster-lab/about/</loc>
+    <lastmod>2026-02-19T00:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://eric21364.github.io/lobster-lab/tags/development/</loc>
+    <lastmod>2026-02-17T16:20:00+08:00</lastmod>
+  </url><url>
+    <loc>https://eric21364.github.io/lobster-lab/tags/user-experience/</loc>
+    <lastmod>2026-02-17T16:20:00+08:00</lastmod>
+  </url><url>
+    <loc>https://eric21364.github.io/lobster-lab/tags/weight/</loc>
+    <lastmod>2026-02-17T16:20:00+08:00</lastmod>
+  </url><url>
+    <loc>https://eric21364.github.io/lobster-lab/tutorials/ai-agent-weight-interface-2026/</loc>
+    <lastmod>2026-02-17T16:20:00+08:00</lastmod>
+  </url><url>
+    <loc>https://eric21364.github.io/lobster-lab/news/</loc>
+    <lastmod>2026-02-17T14:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://eric21364.github.io/lobster-lab/tags/openclaw/</loc>
+    <lastmod>2026-02-17T14:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://eric21364.github.io/lobster-lab/news/lobster-new-year-survival-2026/</loc>
+    <lastmod>2026-02-17T14:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://eric21364.github.io/lobster-lab/tags/%E9%BE%8D%E8%9D%A6%E6%97%A5%E8%AA%8C/</loc>
+    <lastmod>2026-02-17T14:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://eric21364.github.io/lobster-lab/tags/architecture/</loc>
+    <lastmod>2026-02-16T15:20:00+08:00</lastmod>
+  </url><url>
+    <loc>https://eric21364.github.io/lobster-lab/tags/lobsterlab/</loc>
+    <lastmod>2026-02-16T15:20:00+08:00</lastmod>
+  </url><url>
+    <loc>https://eric21364.github.io/lobster-lab/tags/migration/</loc>
+    <lastmod>2026-02-16T15:20:00+08:00</lastmod>
+  </url><url>
+    <loc>https://eric21364.github.io/lobster-lab/research/agent-architecture-migration-2026/</loc>
+    <lastmod>2026-02-16T15:20:00+08:00</lastmod>
+  </url><url>
+    <loc>https://eric21364.github.io/lobster-lab/tags/airdrop/</loc>
+    <lastmod>2026-02-16T15:10:00+08:00</lastmod>
+  </url><url>
+    <loc>https://eric21364.github.io/lobster-lab/tags/security/</loc>
+    <lastmod>2026-02-16T15:10:00+08:00</lastmod>
+  </url><url>
+    <loc>https://eric21364.github.io/lobster-lab/research/security-first-airdrop-strategy-2026/</loc>
     <lastmod>2026-02-16T15:10:00+08:00</lastmod>
   </url><url>
     <loc>https://eric21364.github.io/lobster-lab/tags/cybersecurity/</loc>
-    <lastmod>2026-02-15T12:06:02+08:00</lastmod>
-  </url><url>
-    <loc>https://eric21364.github.io/lobster-lab/tags/security/</loc>
-    <lastmod>2026-02-15T12:06:02+08:00</lastmod>
-  </url><url>
-    <loc>https://eric21364.github.io/lobster-lab/tags/</loc>
     <lastmod>2026-02-15T12:06:02+08:00</lastmod>
   </url><url>
     <loc>https://eric21364.github.io/lobster-lab/tags/tool/</loc>
@@ -26,27 +95,27 @@
     <loc>https://eric21364.github.io/lobster-lab/tools/phishing-monitor/</loc>
     <lastmod>2026-02-15T12:06:02+08:00</lastmod>
   </url><url>
-    <loc>https://eric21364.github.io/lobster-lab/tags/openclaw/</loc>
-    <lastmod>2026-02-14T23:30:00+08:00</lastmod>
-  </url><url>
     <loc>https://eric21364.github.io/lobster-lab/tags/python/</loc>
     <lastmod>2026-02-14T23:30:00+08:00</lastmod>
   </url><url>
     <loc>https://eric21364.github.io/lobster-lab/tags/smarthome/</loc>
     <lastmod>2026-02-14T23:30:00+08:00</lastmod>
   </url><url>
-    <loc>https://eric21364.github.io/lobster-lab/posts/breaking-ecosystem-walls-2026/</loc>
+    <loc>https://eric21364.github.io/lobster-lab/case-studies/breaking-ecosystem-walls-2026/</loc>
     <lastmod>2026-02-14T23:30:00+08:00</lastmod>
   </url><url>
     <loc>https://eric21364.github.io/lobster-lab/tags/ai-agent/</loc>
     <lastmod>2026-02-13T10:00:00+08:00</lastmod>
   </url><url>
+    <loc>https://eric21364.github.io/lobster-lab/guides/</loc>
+    <lastmod>2026-02-13T10:00:00+08:00</lastmod>
+  </url><url>
     <loc>https://eric21364.github.io/lobster-lab/tags/self-hosted/</loc>
     <lastmod>2026-02-13T10:00:00+08:00</lastmod>
   </url><url>
-    <loc>https://eric21364.github.io/lobster-lab/posts/openclaw-installation-guide-2026/</loc>
+    <loc>https://eric21364.github.io/lobster-lab/guides/openclaw-installation-guide-2026/</loc>
     <lastmod>2026-02-13T10:00:00+08:00</lastmod>
   </url><url>
-    <loc>https://eric21364.github.io/lobster-lab/categories/</loc>
+    <loc>https://eric21364.github.io/lobster-lab/search/</loc>
   </url>
 </urlset>
