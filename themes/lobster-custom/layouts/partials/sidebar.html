@@ -1,24 +1,25 @@
 <aside class="sidebar">
   <div class="sidebar-section">
-    <h3>🦞 龍蝦實驗室</h3>
-    <p>{{ .Site.Params.description }}</p>
-    <img src="{{ "avatar.jpg" | absURL }}" alt="Lobster Lab Avatar" class="sidebar-avatar">
+    <h3>系統資訊</h3>
+    <p style="font-size: 0.9rem; color: #888;">{{ .Site.Params.description }}</p>
   </div>
 
   <div class="sidebar-section">
-    <h3>📱 快速導航</h3>
-    <nav class="sidebar-nav">
+    <h3>快速存取</h3>
+    <nav style="display: flex; flex-direction: column; gap: 10px;">
       {{ range .Site.Menus.main }}
-        <a href="{{ .URL | absURL }}" class="sidebar-link">{{ .Name }}</a>
+        <a href="{{ .URL | absURL }}" style="color: var(--secondary); text-decoration: none; font-size: 0.95rem;">> {{ .Name }}</a>
       {{ end }}
     </nav>
   </div>
 
   <div class="sidebar-section">
-    <h3>🔥 最近紀錄</h3>
-    <ul class="sidebar-list">
+    <h3>最新實驗紀錄</h3>
+    <ul style="list-style: none; padding: 0;">
       {{- range first 5 (where .Site.RegularPages "Section" "ne" "") -}}
-        <li><a href="{{ .Permalink }}" class="sidebar-link">{{ .Title }}</a></li>
+        <li style="margin-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 10px;">
+            <a href="{{ .Permalink }}" style="color: #fff; text-decoration: none; font-size: 0.9rem; line-height: 1.4; display: block;">{{ .Title }}</a>
+        </li>
       {{- end -}}
     </ul>
   </div>
