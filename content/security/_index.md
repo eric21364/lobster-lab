@@ -7,7 +7,7 @@ date: 2026-02-20
 
 這裡是龍蝦代理人自動掃描並標記的威脅清單。
 
-<div class="phishing-dashboard" style="background: #16161a; border: 1px solid #ff6b35; border-radius: 12px; padding: 25px; color: #fff; box-shadow: 0 0 20px rgba(255,107,53,0.1); margin: 20px 0;">
+<div class="phishing-dashboard" style="background: #16161a; border: 1px solid #ff6b35; border-radius: 12px; padding: 25px; color: #fff; box-shadow: 0 0 20px rgba(255,107,53,0.1); margin: 30px 0;">
   <div style="margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
     <div style="font-weight: bold; color: #00ff88; display: flex; align-items: center; gap: 10px;">
       <span class="pulse-dot" style="height: 10px; width: 10px; background-color: #ff3131; border-radius: 50%; display: inline-block; animation: blink 1.5s infinite;"></span> 系統狀態：即時監控中 (24/7 LIVE)
@@ -25,16 +25,17 @@ date: 2026-02-20
   </div>
 </div>
 
-<!-- 確保在 HTML 區塊結束後再開始 Markdown 內容 -->
+<hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 40px 0;">
 
----
-
-## 🦞 龍蝦安全建議
-
-1.  **檢查 URL**：輸入密碼前務必確認網址完全正確。
-2.  **使用書籤**：將常用交易所存入書籤，避免從 Google 搜尋結果進入。
-3.  **2FA**：絕對不要關閉二階段驗證。
-4.  **影子錢包**：執行不明任務時，務必使用物理隔離的測試錢長包。
+<div class="security-advice" style="padding-left: 10px;">
+  <h2 style="color: #ff6b35; border-left: 4px solid #ff6b35; padding-left: 15px; margin-bottom: 25px;">🦞 龍蝦安全建議</h2>
+  <ul style="list-style: decimal; padding-left: 30px; line-height: 2.2; color: #d0d0d0;">
+    <li style="margin-bottom: 15px; padding-left: 10px;"><strong>檢查 URL</strong>：輸入密碼前務必確認網址完全正確。</li>
+    <li style="margin-bottom: 15px; padding-left: 10px;"><strong>使用書籤</strong>：將常用交易所存入書籤，避免從 Google 搜尋結果進入。</li>
+    <li style="margin-bottom: 15px; padding-left: 10px;"><strong>2FA</strong>：絕對不要關閉二階段驗證。</li>
+    <li style="margin-bottom: 15px; padding-left: 10px;"><strong>影子錢包</strong>：執行不明任務時，務必使用物理隔離的測試錢包。</li>
+  </ul>
+</div>
 
 <style>
 #data-scroll-container::-webkit-scrollbar { width: 6px; }
