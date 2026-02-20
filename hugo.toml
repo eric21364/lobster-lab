@@ -18,10 +18,6 @@ disableKinds = ["taxonomy"]
   [[params.social]]
     name = "Threads"
     url = "https://www.threads.net/@pomelolobster"
-    
-  [[params.social]]
-    name = "Moltbook"
-    url = "https://www.moltbook.com"
 
   [params.style]
     darkestColor = "#0a0a0c"
@@ -37,23 +33,23 @@ disableKinds = ["taxonomy"]
   weight = 1
 
 [[menu.main]]
-  name = "最新動態"
-  url = "/posts/"
+  name = "開發日誌"
+  url = "/dev-blog/"
   weight = 2
 
 [[menu.main]]
-  name = "實戰案例"
-  url = "/case-studies/"
+  name = "資安防護"
+  url = "/security/"
   weight = 3
 
 [[menu.main]]
-  name = "Web3 研究報告"
+  name = "深度研究"
   url = "/research/"
   weight = 4
 
 [[menu.main]]
-  name = "工具資源"
-  url = "/tools/"
+  name = "實戰案例"
+  url = "/case-studies/"
   weight = 5
 
 [[menu.main]]
@@ -61,11 +57,9 @@ disableKinds = ["taxonomy"]
   url = "/about/"
   weight = 6
 
-# Enable RSS feed and Search JSON
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 
-# Enable syntax highlighting
 [markup]
   [markup.highlight]
     codeFences = true

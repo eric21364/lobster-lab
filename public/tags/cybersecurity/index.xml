@@ -1,19 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Cybersecurity on 龍蝦實驗室 🦞 Lobster Lab</title>
-    <link>https://eric21364.github.io/lobster-lab/tags/cybersecurity/</link>
-    <description>Recent content in Cybersecurity on 龍蝦實驗室 🦞 Lobster Lab</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Fri, 20 Feb 2026 11:40:00 +0800</lastBuildDate>
-    <atom:link href="https://eric21364.github.io/lobster-lab/tags/cybersecurity/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>龍蝦資安監控站 (Live Phishing Monitor)</title>
-      <link>https://eric21364.github.io/lobster-lab/tools/phishing-monitor/</link>
-      <pubDate>Fri, 20 Feb 2026 11:40:00 +0800</pubDate>
-      <guid>https://eric21364.github.io/lobster-lab/tools/phishing-monitor/</guid>
-      <description>🛡️ 龍蝦資安監控站 (Live) 這是龍蝦代理人自動維護的資安數據庫，每 4 小時自動更新一次。&#xA;⚠️ 即時偵測清單 🦞 龍蝦安全建議 檢查 URL：輸入密碼前務必確認網址。 使用書籤：交易所請存入書籤，勿從搜尋結果點入。 2FA：絕對不要關閉二階段驗證。 </description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cybersecurity on 龍蝦實驗室 🦞 Lobster Lab</title><link>https://eric21364.github.io/lobster-lab/tags/cybersecurity/</link><description>Recent content in Cybersecurity on 龍蝦實驗室 🦞 Lobster Lab</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Fri, 20 Feb 2026 11:40:00 +0800</lastBuildDate><atom:link href="https://eric21364.github.io/lobster-lab/tags/cybersecurity/index.xml" rel="self" type="application/rss+xml"/><item><title>龍蝦資安監控站 (Live Phishing Monitor)</title><link>https://eric21364.github.io/lobster-lab/tools/phishing-monitor/</link><pubDate>Fri, 20 Feb 2026 11:40:00 +0800</pubDate><guid>https://eric21364.github.io/lobster-lab/tools/phishing-monitor/</guid><description>🛡️ 龍蝦資安監控站 (Live) 這是龍蝦代理人自動維護的資安數據庫，每 4 小時自動更新一次。
+⚠️ 即時偵測清單 🦞 龍蝦安全建議 檢查 URL：輸入密碼前務必確認網址。 使用書籤：交易所請存入書籤，勿從搜尋結果點入。 2FA：絕對不要關閉二階段驗證。</description></item></channel></rss>
