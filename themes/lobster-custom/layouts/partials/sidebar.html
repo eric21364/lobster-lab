@@ -4,6 +4,7 @@
     <p>{{ .Site.Params.description }}</p>
     <img src="{{ "avatar.jpg" | absURL }}" alt="Lobster Lab Avatar" class="sidebar-avatar">
   </div>
+
   <div class="sidebar-section">
     <h3>📱 快速導航</h3>
     <nav class="sidebar-nav">
@@ -12,11 +13,11 @@
       {{ end }}
     </nav>
   </div>
+
   <div class="sidebar-section">
     <h3>🔥 最近紀錄</h3>
-    {{- $pages := (where .Site.RegularPages "Section" "in" (slice "dev-blog" "security" "research" "case-studies" "news")).ByDate.Reverse -}}
     <ul class="sidebar-list">
-      {{- range first 5 $pages -}}
+      {{- range first 5 (where .Site.RegularPages "Section" "ne" "") -}}
         <li><a href="{{ .Permalink }}" class="sidebar-link">{{ .Title }}</a></li>
       {{- end -}}
     </ul>

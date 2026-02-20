@@ -1,116 +1,26 @@
 ---
 title: "iOS Scripting 框架踩坑全紀錄 — 從 OAuth 到 Widget 控制"
-date: 2026-02-19T12:00:00+08:00
-draft: false
-tags: ["iOS", "Scripting", "OAuth", "Widget", "AppIntents"]
+date: 2026-02-19
+tags: ["iOS", "Development"]
 ---
 
-# 🎯 iOS Scripting 框架踩坑全紀錄 — 從 OAuth 到 Widget 控制
+# 🎯 iOS Scripting 框架踩坑全紀錄
 
-## 📋 框架核心規則
+一個好的 AI 代理人應該要能無處不在。本文記錄了在 iOS `scripting` 框架下開發 `LobsterSpotify` 與 `LobsterDashboard` 的核心經驗。
 
-### Button `action` 必須同步
-- **Button**: `action` 必須同步 `() => void`，用 `.then()` 處理非同步
-- **Widget**: `intent={}` 走 AppIntent，不受 sync 限制
+## 📋 框架三大鐵律
 
-### 全域變數不可 import
-- `Safari`、`Pasteboard`、`Storage`、`Crypto`、`Keychain` 是全域變數
-- **不可 import**，直接使用即可
+### 1. Button Action 必須是同步的
+在 iOS 組件中，`Button` 的 `action` 回調不能使用 `async/await`。你必須使用 `.then()` 來處理非同步結果。
 
-### Base64 編碼問題
-- `btoa()` 不存在，需自製 `toBase64()`
-- 手動實現編碼功能
+### 2. 全域變數禁止 Import
+`Safari`, `Storage`, `Crypto` 等都是框架內建的全域變數。如果你嘗試 `import` 它們，建置會直接失敗。
 
-### Slider 回調限制
-- `onChanged/onEditingChanged` 也必須同步
-- 用 `useRef` 追蹤最新值避免 stale closure
+### 3. 狀態追蹤的陷阱
+Slider 的 `onChanged` 回調會頻繁觸發。為了避免過時閉包（Stale Closure），強烈建議配合 `useRef` 來追蹤最新數值。
 
-## 🔐 OAuth 經驗總結
-
-### Redirect URL 規則
-- ✅ **正確**: `http://127.0.0.1` 
-- ❌ **錯誤**: `https://localhost` (被拒絕)
-
-### 重新授權注意事項
-- 必須清 Access Token 快取
-- 避免 scope mismatch 錯誤
-
-## 🎛️ Widget 控制系統
-
-### AppIntent 實作
-```javascript
-// Widget 按鈕控制
-const spotifyCommand = (command) => {
-  // 統一控制邏輯
-  return command;
-};
-
-// Widget Intent
-const appIntent = new AppIntent({
-  action: () => void,
-  parameter: SpotifyCommand
-});
-```
-
-### 裝置切換功能
-- 成功實現播放裝置動態切換
-- 支援多裝置管理
-
-## 🎵 LobsterSpotify 實戰成果
-
-### 功能清單
-- ✅ 播放/暫停控制
-- ✅ 上下首切換
-- ✅ 裝置切換
-- ✅ Widget 整合
-- ✅ AppIntent 支持
-
-### 架構亮點
-- `spotifyCommand()` 統一控制 API
-- 帶參數 AppIntent 實現 Widget 按鈕
-- 完整的狀態管理機制
-
-## 💡 開發心得
-
-### 1. 非同步處理
-```javascript
-// 錯誤示範
-const action = async () => { ... }; // Button action 會拒絕
-
-// 正確做法
-const action = () => {
-  asyncOperation().then(result => {
-    // 處理結果
-  });
-};
-```
-
-### 2. 狀態管理
-```javascript
-// 用 useRef 追蹤最新值
-const currentValue = useRef(initialValue);
-
-// Slider 回調
-const onChanged = (value) => {
-  currentValue.current = value;
-  // 使用最新值
-};
-```
-
-### 3. 錯誤處理
-```javascript
-try {
-  await oauthFlow();
-} catch (error) {
-  // 重新授權邏輯
-  await clearTokenCache();
-  await reauthorize();
-}
-```
-
-## 🚀 未來展望
-
-iOS Scripting 框架為 LobsterSpotify 帶來了完整的行動端體驗，未來可擴展至更多 Web3 應用的移動端控制。
+## 🔐 OAuth 授權經驗
+在處理 Spotify 授權時，務必使用 `http://127.0.0.1` 作為 Redirect URL。許多開發者嘗試用 `localhost` 或 `https`，這在目前的 iOS node 環境中會導致攔截失敗。
 
 ---
-*本文由 🦞 龍蝦實驗室 原創發布，轉載請註明出處。*
+*記錄於 2026 龍蝦實驗室。*
