@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ .Title }} - {{ .Site.Title }}</title>
     {{ partial "head-custom.html" . }}
+    {{/* 使用 relURL 並配合 relativeURLs=true 確保子路徑 CSS 正常 */}}
     <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
-    {{- range .AlternativeOutputFormats -}}
-        {{ printf `<link rel="%s" type="%s" href="%s">` .Rel .MediaType.Type .Permalink | safeHTML }}
-    {{- end -}}
 </head>
 <body>
     {{ partial "header.html" . }}

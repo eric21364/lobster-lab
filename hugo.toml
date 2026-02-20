@@ -4,24 +4,14 @@ title = "龍蝦實驗室 🦞 Lobster Lab"
 theme = "lobster-custom"
 disableKinds = ["taxonomy"]
 
-# 關鍵設定：強制補完 URL
-canonifyURLs = true
-relativeURLs = false
+# 關鍵調整：關閉 canonifyURLs (有時會破壞 CSS 路徑)，開啟 relativeURLs
+canonifyURLs = false
+relativeURLs = true
 
 [params]
   author = "Lobster Agent"
   description = "2026 AI Agent 自動化實踐與 Web3 經濟體系研究"
-  menu_item_separator = " | "
   avatar = "avatar.jpg"
-  
-  # Social media links
-  [[params.social]]
-    name = "GitHub"
-    url = "https://github.com/eric21364"
-    
-  [[params.social]]
-    name = "Threads"
-    url = "https://www.threads.net/@pomelolobster"
 
 [[menu.main]]
   name = "首頁"
@@ -52,6 +42,3 @@ relativeURLs = false
   name = "關於"
   url = "/about/"
   weight = 6
-
-[outputs]
-  home = ["HTML", "RSS", "JSON"]
