@@ -12,7 +12,7 @@ date: 2026-02-20
     <div style="font-weight: bold; color: #00ff88; display: flex; align-items: center; gap: 10px;">
       <span class="pulse-dot" style="height: 10px; width: 10px; background-color: #ff3131; border-radius: 50%; display: inline-block; animation: blink 1.5s infinite;"></span> 系統狀態：即時監控中 (24/7 LIVE)
     </div>
-    <div style="display: flex; align-items: center; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,107,53,0.5); border-radius: 8px; padding: 5px 15px;">
+    <div style="display: flex; align-items: center; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 107, 53, 0.5); border-radius: 8px; padding: 5px 15px;">
       <span style="margin-right: 10px; color: #888;">🔍 篩選:</span>
       <input type="text" id="threat-filter" placeholder="輸入網址或關鍵字..." style="background: transparent; border: none; color: #fff; outline: none; font-size: 0.9rem; width: 180px;">
     </div>
@@ -25,7 +25,7 @@ date: 2026-02-20
   </div>
 </div>
 
-<hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 40px 0;">
+<hr style="border: 0; border-top: 1px solid rgba(255, 255, 255, 0.1); margin: 40px 0;">
 
 <div class="security-advice" style="padding-left: 10px;">
   <h2 style="color: #ff6b35; border-left: 4px solid #ff6b35; padding-left: 15px; margin-bottom: 25px;">🦞 龍蝦安全建議</h2>
@@ -56,7 +56,7 @@ date: 2026-02-20
       return;
     }
     target.innerHTML = data.map(item => `
-      <div style="border-bottom: 1px solid rgba(255,255,255,0.05); padding: 15px 0;">
+      <div style="border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding: 15px 0;">
         <div style="color: #ff6b35; font-weight: bold; word-break: break-all; margin-bottom: 5px;">> ${item.url}</div>
         <div style="font-size: 0.8em; color: #888; display: flex; gap: 15px; flex-wrap: wrap;">
           <span>📅 ${item.date ? item.date.split(' ')[0] : 'N/A'}</span>
@@ -81,8 +81,9 @@ date: 2026-02-20
   fetch('/data/phishing-list.json')
     .then(r => r.json())
     .then(data => {
-      allThreats = data;
-      render(data);
+      // 雙重過濾：確保任何包含專案原始碼路徑的測試資料都不會顯示
+      allThreats = data.filter(item => !item.url.includes("github.com/eric21364/lobster-lab"));
+      render(allThreats);
     })
     .catch(() => {
       document.getElementById('data-target').innerText = '情資同步中斷，請重新整理頁面。';
