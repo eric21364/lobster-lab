@@ -2,10 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://eric21364.github.io/lobster-lab/research/</loc>
-    <lastmod>2026-02-19T19:32:00+08:00</lastmod>
+    <loc>https://eric21364.github.io/lobster-lab/tags/cybersecurity/</loc>
+    <lastmod>2026-02-20T11:40:00+08:00</lastmod>
+  </url><url>
+    <loc>https://eric21364.github.io/lobster-lab/tags/security/</loc>
+    <lastmod>2026-02-20T11:40:00+08:00</lastmod>
+  </url><url>
+    <loc>https://eric21364.github.io/lobster-lab/tags/tool/</loc>
+    <lastmod>2026-02-20T11:40:00+08:00</lastmod>
+  </url><url>
+    <loc>https://eric21364.github.io/lobster-lab/tools/</loc>
+    <lastmod>2026-02-20T11:40:00+08:00</lastmod>
   </url><url>
     <loc>https://eric21364.github.io/lobster-lab/</loc>
+    <lastmod>2026-02-20T11:40:00+08:00</lastmod>
+  </url><url>
+    <loc>https://eric21364.github.io/lobster-lab/tools/phishing-monitor/</loc>
+    <lastmod>2026-02-20T11:40:00+08:00</lastmod>
+  </url><url>
+    <loc>https://eric21364.github.io/lobster-lab/security/</loc>
+    <lastmod>2026-02-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://eric21364.github.io/lobster-lab/security/phishing-monitor/</loc>
+    <lastmod>2026-02-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://eric21364.github.io/lobster-lab/research/</loc>
     <lastmod>2026-02-19T19:32:00+08:00</lastmod>
   </url><url>
     <loc>https://eric21364.github.io/lobster-lab/case-studies/</loc>
@@ -14,19 +35,19 @@
     <loc>https://eric21364.github.io/lobster-lab/tags/appintents/</loc>
     <lastmod>2026-02-19T12:00:00+08:00</lastmod>
   </url><url>
+    <loc>https://eric21364.github.io/lobster-lab/dev-blog/</loc>
+    <lastmod>2026-02-19T12:00:00+08:00</lastmod>
+  </url><url>
     <loc>https://eric21364.github.io/lobster-lab/tags/ios/</loc>
     <lastmod>2026-02-19T12:00:00+08:00</lastmod>
   </url><url>
-    <loc>https://eric21364.github.io/lobster-lab/tutorials/ios-scripting-framework-guide-2026/</loc>
+    <loc>https://eric21364.github.io/lobster-lab/dev-blog/ios-scripting-framework-guide-2026/</loc>
     <lastmod>2026-02-19T12:00:00+08:00</lastmod>
   </url><url>
     <loc>https://eric21364.github.io/lobster-lab/tags/oauth/</loc>
     <lastmod>2026-02-19T12:00:00+08:00</lastmod>
   </url><url>
     <loc>https://eric21364.github.io/lobster-lab/tags/scripting/</loc>
-    <lastmod>2026-02-19T12:00:00+08:00</lastmod>
-  </url><url>
-    <loc>https://eric21364.github.io/lobster-lab/tutorials/</loc>
     <lastmod>2026-02-19T12:00:00+08:00</lastmod>
   </url><url>
     <loc>https://eric21364.github.io/lobster-lab/tags/widget/</loc>
@@ -39,6 +60,9 @@
     <lastmod>2026-02-19T00:00:00+08:00</lastmod>
   </url><url>
     <loc>https://eric21364.github.io/lobster-lab/tags/development/</loc>
+    <lastmod>2026-02-17T16:20:00+08:00</lastmod>
+  </url><url>
+    <loc>https://eric21364.github.io/lobster-lab/tutorials/</loc>
     <lastmod>2026-02-17T16:20:00+08:00</lastmod>
   </url><url>
     <loc>https://eric21364.github.io/lobster-lab/tags/user-experience/</loc>
@@ -77,23 +101,8 @@
     <loc>https://eric21364.github.io/lobster-lab/tags/airdrop/</loc>
     <lastmod>2026-02-16T15:10:00+08:00</lastmod>
   </url><url>
-    <loc>https://eric21364.github.io/lobster-lab/tags/security/</loc>
-    <lastmod>2026-02-16T15:10:00+08:00</lastmod>
-  </url><url>
     <loc>https://eric21364.github.io/lobster-lab/research/security-first-airdrop-strategy-2026/</loc>
     <lastmod>2026-02-16T15:10:00+08:00</lastmod>
-  </url><url>
-    <loc>https://eric21364.github.io/lobster-lab/tags/cybersecurity/</loc>
-    <lastmod>2026-02-15T12:06:02+08:00</lastmod>
-  </url><url>
-    <loc>https://eric21364.github.io/lobster-lab/tags/tool/</loc>
-    <lastmod>2026-02-15T12:06:02+08:00</lastmod>
-  </url><url>
-    <loc>https://eric21364.github.io/lobster-lab/tools/</loc>
-    <lastmod>2026-02-15T12:06:02+08:00</lastmod>
-  </url><url>
-    <loc>https://eric21364.github.io/lobster-lab/tools/phishing-monitor/</loc>
-    <lastmod>2026-02-15T12:06:02+08:00</lastmod>
   </url><url>
     <loc>https://eric21364.github.io/lobster-lab/tags/python/</loc>
     <lastmod>2026-02-14T23:30:00+08:00</lastmod>
