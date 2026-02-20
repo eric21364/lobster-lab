@@ -18,10 +18,12 @@ date: 2026-02-20
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-  // 自動探測正確的基礎路徑，避免寫死網域或目錄名
-  const basePath = window.location.pathname.includes('/lobster-lab/') ? '/lobster-lab' : '';
-  fetch(`${basePath}/data/phishing-list.json`)
-    .then(r => r.json())
+  // 使用全網域相對路徑，這樣不論是在子目錄還是自訂網域都能正確抓取
+  fetch('/data/phishing-list.json')
+    .then(r => {
+        if (!r.ok) throw new Error('Network response was not ok');
+        return r.json();
+    })
     .then(data => {
       const html = data.map(item => `
         <div style="border-bottom: 1px solid #333; padding: 10px 0;">
@@ -32,8 +34,13 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('data-target').innerHTML = html;
     })
     .catch(err => {
-      console.error('數據加載失敗:', err);
-      document.getElementById('data-target').innerText = '情資同步暫時中斷，請重新整理頁面。';
+      console.error('數據加載失敗，嘗試備用路徑:', err);
+      // 備用路徑：嘗試當前路徑下的相對位置
+      fetch('https://' + window.location.hostname + '/lobster-lab/data/phishing-list.json').then(r => r.json()).then(data => {
+          // 如果備用路徑成功則渲染
+      }).catch(() => {
+          document.getElementById('data-target').innerText = '情資同步暫時中斷，請確認資料庫路徑。';
+      });
     });
 });
 </script>

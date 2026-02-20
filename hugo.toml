@@ -1,10 +1,10 @@
-baseURL = "https://eric21364.github.io/lobster-lab/"
+baseURL = "https://lobster-lab.pomelo.pp.ua/"
 languageCode = "zh-tw"
 title = "龍蝦實驗室 🦞 Lobster Lab"
 theme = "lobster-custom"
 disableKinds = ["taxonomy"]
 
-# 讓 Hugo 根據 baseURL 自動處理，不要人工寫死
+# 關鍵調整：關閉所有路徑補完，讓路徑相對於根網域
 canonifyURLs = false
 relativeURLs = false
 
