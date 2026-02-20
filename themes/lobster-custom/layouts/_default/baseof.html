@@ -5,7 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
     {{ partial "head-custom.html" . }}
-    <link rel="stylesheet" href="{{ "css/style.css" | absURL }}">
+    {{/* 使用 resources.Get 取得靜態資源，這是最符合 Hugo 規範的做法 */}}
+    {{ $style := resources.Get "css/style.css" }}
+    {{ if $style }}
+        <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+    {{ else }}
+        {{/* 備用方案：如果 Get 失敗，使用 relURL */}}
+        <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+    {{ end }}
 </head>
 <body>
     {{ partial "header.html" . }}
@@ -16,6 +23,12 @@
         {{ partial "sidebar.html" . }}
     </div>
     {{ partial "footer.html" . }}
-    <script src="{{ "js/main.js" | absURL }}"></script>
+    
+    {{ $js := resources.Get "js/main.js" }}
+    {{ if $js }}
+        <script src="{{ $js.RelPermalink }}"></script>
+    {{ else }}
+        <script src="{{ "js/main.js" | relURL }}"></script>
+    {{ end }}
 </body>
 </html>

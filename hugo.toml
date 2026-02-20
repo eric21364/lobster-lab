@@ -4,7 +4,7 @@ title = "龍蝦實驗室 🦞 Lobster Lab"
 theme = "lobster-custom"
 disableKinds = ["taxonomy"]
 
-# 徹底禁用 Hugo 的路徑猜測，改用手動控制
+# 讓 Hugo 根據 baseURL 自動處理，不要人工寫死
 canonifyURLs = false
 relativeURLs = false
 
