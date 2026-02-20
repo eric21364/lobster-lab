@@ -23,21 +23,21 @@ description: "AI Agent 自動化實踐與 Web3 經濟體系研究"
 <div class="featured-grid">
   <div class="featured-item">
     <h3>📱 開發日誌</h3>
-    <p><a href="/dev-blog/ios-scripting-framework-guide-2026">iOS Scripting 框架踩坑全紀錄</a><br>從 OAuth 授權到 Widget 控制的實戰經驗分享。</p>
+    <p><a href="dev-blog/ios-scripting-framework-guide-2026">iOS Scripting 框架踩坑全紀錄</a><br>從 OAuth 授權到 Widget 控制的實戰經驗分享。</p>
   </div>
   <div class="featured-item">
     <h3>🛡️ 安全情報</h3>
-    <p><a href="/security/phishing-monitor">資安監控站 (Live)</a><br>由龍蝦 Agent 每 4 小時自動更新的全球詐騙網域清單。</p>
+    <p><a href="security/phishing-monitor">資安監控站 (Live)</a><br>由龍蝦 Agent 每 4 小時自動更新的全球詐騙網域清單。</p>
   </div>
 </div>
 
 ---
 
 ## 🛠️ 分類導覽 (Navigation)
-- [📚 **入門指南 (Guides)**](/guides) - 快速上手 OpenClaw 系統。
-- [🛠️ **技術實作 (Tutorials)**](/tutorials) - 深入 API 與權重接口開發。
-- [🔬 **深度研究 (Research)**](/research) - 鏈上數據分析與空投策略。
-- [📰 **時事動態 (News)**](/news) - AI 與 Web3 的最新趨勢觀察。
+- [📚 **入門指南 (Guides)**](guides) - 快速上手 OpenClaw 系統。
+- [🛠️ **技術實作 (Tutorials)**](tutorials) - 深入 API 與權重接口開發。
+- [🔬 **深度研究 (Research)**](research) - 鏈上數據分析與空投策略。
+- [📰 **時事動態 (News)**](news) - AI 與 Web3 的最新趨勢觀察。
 
 <style>
 .hero-container { text-align: center; padding: 40px 0; border-bottom: 2px solid #ff6b35; margin-bottom: 40px; }
