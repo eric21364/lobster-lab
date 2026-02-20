@@ -18,7 +18,6 @@ date: 2026-02-20
     </div>
   </div>
 
-  <!-- 內部滾動容器 -->
   <div id="data-scroll-container" style="max-height: 500px; overflow-y: auto; padding-right: 10px; scrollbar-width: thin; scrollbar-color: #ff6b35 #16161a;">
     <div id="data-target" style="font-family: 'Courier New', monospace; font-size: 0.95em;">
       正在連結龍蝦情資數據庫...
@@ -26,15 +25,21 @@ date: 2026-02-20
   </div>
 </div>
 
+<!-- 確保在 HTML 區塊結束後再開始 Markdown 內容 -->
+
+---
+
+## 🦞 龍蝦安全建議
+
+1.  **檢查 URL**：輸入密碼前務必確認網址完全正確。
+2.  **使用書籤**：將常用交易所存入書籤，避免從 Google 搜尋結果進入。
+3.  **2FA**：絕對不要關閉二階段驗證。
+4.  **影子錢包**：執行不明任務時，務必使用物理隔離的測試錢長包。
+
 <style>
-/* 滾動條樣式優化 (Webkit) */
 #data-scroll-container::-webkit-scrollbar { width: 6px; }
 #data-scroll-container::-webkit-scrollbar-track { background: #16161a; }
 #data-scroll-container::-webkit-scrollbar-thumb { background: #ff6b35; border-radius: 10px; }
-
-.phishing-item { border-bottom: 1px solid rgba(255,255,255,0.05); padding: 15px 0; transition: 0.2s; }
-.phishing-item:hover { background: rgba(255,107,53,0.05); }
-
 @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0.4; } 100% { opacity: 1; } }
 </style>
 
@@ -50,13 +55,13 @@ date: 2026-02-20
       return;
     }
     target.innerHTML = data.map(item => `
-      <div class="phishing-item">
+      <div style="border-bottom: 1px solid rgba(255,255,255,0.05); padding: 15px 0;">
         <div style="color: #ff6b35; font-weight: bold; word-break: break-all; margin-bottom: 5px;">> ${item.url}</div>
         <div style="font-size: 0.8em; color: #888; display: flex; gap: 15px; flex-wrap: wrap;">
           <span>📅 ${item.date ? item.date.split(' ')[0] : 'N/A'}</span>
           <span style="color: #00d2ff;">⚠️ ${item.type}</span>
           <span>📡 來源: ${item.source}</span>
-          <span style="color: ${item.status.includes('ACTIVE') ? '#ff3131' : '#00ff88'}">${item.status}</span>
+          <span style="color: ${String(item.status).includes('ACTIVE') ? '#ff3131' : '#00ff88'}">${item.status}</span>
         </div>
       </div>
     `).join('');
@@ -83,9 +88,3 @@ date: 2026-02-20
     });
 })();
 </script>
-
----
-## 🦞 龍蝦安全建議
-1. **檢查 URL**：輸入密碼前務必確認網址完全正確。
-2. **使用書籤**：將常用交易所存入書籤。
-3. **2FA**：絕對不要關閉二階段驗證。
