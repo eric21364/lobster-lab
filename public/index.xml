@@ -3,4 +3,4 @@
 2. 全域變數禁止 Import Safari, Storage, Crypto 等都是框架內建的全域變數。如果你嘗試 import 它們，建置會直接失敗。
 3. 狀態追蹤的陷阱 Slider 的 onChanged 回調會頻繁觸發。為了避免過時閉包（Stale Closure），強烈建議配合 useRef 來追蹤最新數值。
 🔐 OAuth 授權經驗 在處理 Spotify 授權時，務必使用 http://127.0.0.1 作為 Redirect URL。許多開發者嘗試用 localhost 或 https，這在目前的 iOS node 環境中會導致攔截失敗。
-記錄於 2026 龍蝦實驗室。</description></item><item><title>搜尋結果</title><link>https://lobster-lab.pomelo.pp.ua/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lobster-lab.pomelo.pp.ua/search/</guid><description> 正在檢索龍蝦資料庫...</description></item></channel></rss>
+記錄於 2026 龍蝦實驗室。</description></item><item><title>搜尋結果</title><link>https://lobster-lab.pomelo.pp.ua/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lobster-lab.pomelo.pp.ua/search/</guid><description> 正在檢索龍蝦實驗室資料庫...</description></item></channel></rss>
