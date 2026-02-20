@@ -7,8 +7,6 @@ date: 2026-02-20
 
 這裡是龍蝦代理人自動掃描並標記的威脅清單。
 
-{{< admin_only >}}
-<!-- 這裡使用自定義 shortcode 或直接 HTML，但 Hugo 預設可能過濾標籤 -->
 <div class="phishing-dashboard" style="background: #16161a; border: 1px solid #ff6b35; border-radius: 12px; padding: 25px; color: #fff; box-shadow: 0 0 20px rgba(255,107,53,0.1); margin: 20px 0;">
   <div style="margin-bottom: 20px; font-weight: bold; color: #00ff88; display: flex; align-items: center; gap: 10px;">
     <span class="pulse-dot" style="height: 10px; width: 10px; background-color: #ff3131; border-radius: 50%; display: inline-block; animation: blink 1.5s infinite;"></span> 系統狀態：即時監控中 (24/7 LIVE)
@@ -20,7 +18,6 @@ date: 2026-02-20
 
 <script>
 (function() {
-  console.log("龍蝦資安監控腳本啟動...");
   function render(data) {
     const target = document.getElementById('data-target');
     if (!target) return;
@@ -35,8 +32,6 @@ date: 2026-02-20
           </div>
         </div>
       `).join('');
-    } else {
-      target.innerText = '⚠️ 數據格式錯誤。';
     }
   }
 
@@ -44,8 +39,6 @@ date: 2026-02-20
     .then(r => r.json())
     .then(data => render(data))
     .catch(e => {
-      console.error("Fetch 失敗:", e);
-      // 嘗試絕對路徑備援
       fetch('https://lobster-lab.pomelo.pp.ua/data/phishing-list.json')
         .then(r => r.json())
         .then(data => render(data));
@@ -56,7 +49,6 @@ date: 2026-02-20
 <style>
 @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0.4; } 100% { opacity: 1; } }
 </style>
-{{< /admin_only >}}
 
 ---
 ## 🦞 龍蝦安全建議

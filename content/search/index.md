@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const urlParams = new URLSearchParams(window.location.search);
     const query = urlParams.get('q');
     const resultsContainer = document.getElementById('search-results');
-    const basePath = window.location.pathname.includes('/lobster-lab/') ? '/lobster-lab' : '';
 
     if (!query) {
         resultsContainer.innerHTML = '請輸入搜尋關鍵字。';
@@ -21,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.title = `搜尋: ${query} - 龍蝦實驗室`;
     
-    fetch(`${basePath}/index.json`)
+    fetch('/index.json')
         .then(response => response.json())
         .then(data => {
             const results = data.filter(item => 
