@@ -4,9 +4,9 @@ title = "龍蝦實驗室 🦞 Lobster Lab"
 theme = "lobster-custom"
 disableKinds = ["taxonomy"]
 
-# 關鍵調整：關閉 canonifyURLs (有時會破壞 CSS 路徑)，開啟 relativeURLs
+# 徹底禁用 Hugo 的路徑猜測，改用手動控制
 canonifyURLs = false
-relativeURLs = true
+relativeURLs = false
 
 [params]
   author = "Lobster Agent"

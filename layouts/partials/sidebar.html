@@ -2,9 +2,8 @@
   <div class="sidebar-section">
     <h3>🦞 龍蝦實驗室</h3>
     <p>{{ .Site.Params.description }}</p>
-    <img src="{{ .Site.Params.avatar | absURL }}" alt="Lobster Lab Avatar" class="sidebar-avatar">
+    <img src="{{ "avatar.jpg" | absURL }}" alt="Lobster Lab Avatar" class="sidebar-avatar">
   </div>
-
   <div class="sidebar-section">
     <h3>📱 快速導航</h3>
     <nav class="sidebar-nav">
@@ -13,7 +12,6 @@
       {{ end }}
     </nav>
   </div>
-
   <div class="sidebar-section">
     <h3>🔥 最近紀錄</h3>
     {{- $pages := (where .Site.RegularPages "Section" "in" (slice "dev-blog" "security" "research" "case-studies" "news")).ByDate.Reverse -}}

@@ -52,27 +52,26 @@ a:hover { color: var(--primary-color); }
     align-items: center;
 }
 
-.nav-link { color: #fff; font-weight: 500; margin-left: 20px; }
+.header-brand .brand-link { display: flex; align-items: center; gap: 10px; }
+.brand-avatar { width: 35px; height: 35px; border-radius: 50%; border: 1px solid var(--primary-color); }
+.brand-title { font-weight: bold; color: var(--primary-color); font-size: 1.2rem; }
+
+.header-nav { display: flex; gap: 20px; }
+.nav-link { color: #fff; font-weight: 500; position: relative; }
 .nav-link:hover { color: var(--primary-color); }
 
-/* Hero */
-.hero-container { text-align: center; padding: 60px 0; }
-.glitch-title { font-size: 3.5rem; font-weight: bold; color: var(--primary-color); }
+/* 文章單頁 */
+.article-single { background: var(--card-bg); padding: 40px; border-radius: 15px; border: 1px solid var(--border-color); }
+.article-header h1 { font-size: 2.5rem; color: #fff; margin-bottom: 20px; }
+.article-content { font-size: 1.1rem; line-height: 1.8; color: #f0f0f0; }
+.article-content h2 { border-left: 4px solid var(--primary-color); padding-left: 15px; margin-top: 30px; color: #fff; }
 
-/* Cards */
-.article-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    padding: 25px;
-    margin-bottom: 25px;
-}
+/* 卡片 */
+.article-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 25px; margin-bottom: 25px; transition: 0.3s; }
+.article-card:hover { border-color: var(--primary-color); transform: translateY(-3px); }
 
 /* Sidebar */
 .sidebar { background: rgba(22, 22, 26, 0.5); padding: 20px; border-radius: 12px; border: 1px solid var(--border-color); }
-.sidebar-avatar { width: 80px; height: 80px; border-radius: 50%; margin-bottom: 15px; border: 2px solid var(--primary-color); }
-
-/* Article Single */
-.article-single { background: var(--card-bg); padding: 40px; border-radius: 15px; border: 1px solid var(--border-color); }
-.article-content { font-size: 1.1rem; line-height: 1.8; }
-.article-content h2 { border-left: 4px solid var(--primary-color); padding-left: 15px; margin-top: 30px; }
+.sidebar-avatar { width: 80px; height: 80px; border-radius: 50%; margin-bottom: 15px; border: 2px solid var(--primary-color); display: block; }
+.sidebar-list { list-style: none; padding: 0; }
+.sidebar-link { display: block; padding: 5px 0; font-size: 0.9rem; }
