@@ -25,7 +25,7 @@ relativeURLs = false
 
 [[menu.main]]
   name = "資安防護"
-  url = "/security/"
+  url = "/security/phishing-monitor/"
   weight = 3
 
 [[menu.main]]
