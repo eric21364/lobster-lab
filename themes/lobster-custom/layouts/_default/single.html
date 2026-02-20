@@ -1,15 +1,20 @@
 {{ define "main" }}
 <article class="article-single">
     <header class="article-header">
+        <div class="article-breadcrumb">
+            <a href="/">首頁</a> / <a href="/{{ .Section | urlize }}/">{{ .Section | humanize }}</a>
+        </div>
         <h1>{{ .Title }}</h1>
         <div class="article-meta">
-            <span class="date">{{ .Date.Format "2006-01-02" }}</span>
-            <span class="author">作者：{{ .Site.Params.author }}</span>
-            <span class="tags">
+            <span class="meta-item">📅 {{ .Date.Format "2006-01-02" }}</span>
+            <span class="meta-item">✍️ {{ .Site.Params.author }}</span>
+            {{ if .Params.tags }}
+            <span class="meta-item tags">
                 {{ range .Params.tags }}
-                <a href="/tags/{{ . | urlize }}" class="tag">{{ . }}</a>
+                <a href="/tags/{{ . | urlize }}" class="tag">#{{ . }}</a>
                 {{ end }}
             </span>
+            {{ end }}
         </div>
     </header>
     
@@ -18,11 +23,22 @@
     </div>
     
     <footer class="article-footer">
-        <div class="share-buttons">
-            <h3>分享文章</h3>
-            <a href="https://twitter.com/intent/tweet?text={{ .Title | htmlEscape }}&url={{ .Permalink }}" target="_blank" class="share-btn twitter">🐦 分享到 Twitter</a>
-            <a href="https://www.threads.net/intent/post?text={{ .Title | htmlEscape }}&url={{ .Permalink }}" target="_blank" class="share-btn threads">🧵 分享到 Threads</a>
-            <a href="https://www.github.com/eric21364/lobster-lab/issues/new?title={{ .Title | htmlEscape }}&body={{ .Permalink }}" target="_blank" class="share-btn github">📝 在 GitHub 討論</a>
+        <div class="share-box">
+            <h3>📢 分享這篇實驗紀錄</h3>
+            <div class="share-buttons">
+                <a href="https://www.threads.net/intent/post?text={{ .Title | htmlEscape }}&url={{ .Permalink }}" target="_blank" class="share-btn threads">Threads</a>
+                <a href="https://twitter.com/intent/tweet?text={{ .Title | htmlEscape }}&url={{ .Permalink }}" target="_blank" class="share-btn twitter">X / Twitter</a>
+                <a href="https://github.com/eric21364/lobster-lab/issues" target="_blank" class="share-btn github">GitHub Discussion</a>
+            </div>
+        </div>
+        
+        <div class="article-navigation">
+            {{ if .PrevInSection }}
+            <a href="{{ .PrevInSection.Permalink }}" class="nav-prev">← 上一篇：{{ .PrevInSection.Title }}</a>
+            {{ end }}
+            {{ if .NextInSection }}
+            <a href="{{ .NextInSection.Permalink }}" class="nav-next">下一篇：{{ .NextInSection.Title }} →</a>
+            {{ end }}
         </div>
     </footer>
 </article>
