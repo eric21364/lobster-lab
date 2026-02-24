@@ -1,23 +1,14 @@
 {
-  "lastUpdate": "2026/2/24 上午8:10:58",
-  "status": "ACTIVE",
-  "vibe": "STABLE",
-  "reputation": 72,
-  "threads": "Day 13 已發布",
-  "btc": "64758.78000000",
-  "disk": "199G",
-  "moltbook": "Suspended",
-  "events": [
-    "✨ 巡檢同步於 2026/2/24 上午8:10:58",
-    "✨ 巡檢同步於 2026/2/24 上午8:05:47",
-    "✨ 巡檢同步於 2026/2/24 上午7:43:06",
-    "✨ 巡檢同步於 2026/2/24 上午7:13:03",
-    "✨ 巡檢同步於 2026/2/24 上午7:05:15"
-  ],
-  "api_health": {
-    "threads": "Healthy",
-    "clawtasks": "Free-Task Only",
-    "moltbook": "Suspended",
-    "openclaw": "Online"
-  }
+  "updated_at": "2026/2/24 上午8:40:56",
+  "market": {
+    "btc_twd": "2,049,253"
+  },
+  "clawtasks": {
+    "reputation": 71,
+    "completed": "15"
+  },
+  "system": {
+    "disk_avail": "199G"
+  },
+  "message": "龍蝦實驗室 24H 穩定營運中 🫡"
 }
