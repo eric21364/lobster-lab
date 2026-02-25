@@ -10,13 +10,17 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 ul, li { list-style: none !important; }
+img { max-width: 100%; height: auto; }
 
 body {
     background-color: var(--bg-body);
     color: var(--text-main);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
     display: flex;
     min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 /* ⬅️ 側邊欄導航 (Sidebar Nav) */
@@ -29,11 +33,11 @@ body {
     height: 100vh;
     left: 0;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .brand-area { margin-bottom: 3rem; }
@@ -53,18 +57,21 @@ body {
     font-weight: 500;
     padding: 0.75rem 1rem;
     border-radius: 6px;
+    display: block;
     transition: all 0.2s;
 }
 .nav-link:hover {
-    background: rgba(255, 107, 53, 0.05);
+    background: rgba(255, 107, 53, 0.1);
     color: var(--primary);
 }
 
-/* ➡️ 右側主內容區 */
+/* ➡️ 主內容區包裹層 */
 .main-wrapper {
     flex: 1;
     margin-left: var(--sidebar-width); 
-    padding: 4rem 3rem;
+    width: calc(100% - var(--sidebar-width));
+    padding: 4rem 2rem;
+    min-height: 100vh;
 }
 
 .container {
@@ -72,46 +79,59 @@ body {
     margin: 0 auto;
 }
 
-/* 📱 手機版 RWD 強化：維持側邊欄架構 */
+/* 📱 手機版 RWD 核心修復 */
 @media (max-width: 768px) {
-    /* 這裡透過 CSS 控制讓側邊欄依然存在，但考慮到螢幕寬度，
-       我們可以讓它變得稍微窄一點，或者使用遮罩點擊展開。
-       但為了滿足「一樣要變成側邊欄」的要求，我們先維持固定顯示或隱藏式滑動。
-       我們先嘗試「窄版側邊欄」或「全屏側邊欄切換」模式。 */
+    body { display: block; }
     
-    /* 為了手機閱讀體驗，我們採用「點擊展開」的側邊欄，但它絕對是在側邊 */
     .main-sidebar {
-        transform: translateX(-100%); /* 預設隱藏在左側 */
+        transform: translateX(-100%);
+        box-shadow: 10px 0 30px rgba(0,0,0,0.1);
     }
     .main-sidebar.active {
-        transform: translateX(0); /* 點擊後推出來 */
+        transform: translateX(0);
     }
     
     .main-wrapper {
         margin-left: 0;
-        padding: 2rem 1rem;
+        width: 100%;
+        padding: 5rem 1rem 2rem 1rem;
     }
-    
-    /* 手機版專用漢堡選單按鈕 */
+
     .mobile-toggle {
-        display: block !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
         position: fixed;
         top: 1rem;
         left: 1rem;
-        z-index: 200;
+        z-index: 2000;
         background: var(--primary);
         color: #fff;
         border: none;
-        padding: 0.5rem;
-        border-radius: 4px;
-        font-size: 1.2rem;
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 50%;
+        font-size: 1.5rem;
         cursor: pointer;
+        box-shadow: 0 4px 12px rgba(255,107,53,0.3);
     }
 }
 
 .mobile-toggle { display: none; }
 
-/* 文章排版 */
-.article-item { margin-bottom: 4rem; }
-.article-item h2 a { color: var(--text-main); text-decoration: none; font-size: 1.6rem; font-weight: 700; }
-.post-content { font-size: 1.05rem; }
+/* 內容排版微調 */
+.article-item { margin-bottom: 4rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 2rem; }
+.article-item h2 a { color: var(--text-main); text-decoration: none; font-size: 1.8rem; font-weight: 700; }
+.post-content { font-size: 1.1rem; line-height: 1.8; }
+.post-content h2 { margin: 2rem 0 1rem; color: var(--primary); border-left: 4px solid var(--primary); padding-left: 1rem; }
+
+/* 搜尋樣式修復 */
+.search-input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid var(--border-subtle);
+    border-radius: 8px;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+.search-input:focus { border-color: var(--primary); outline: none; }
