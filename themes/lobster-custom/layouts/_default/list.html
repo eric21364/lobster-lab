@@ -1,4 +1,9 @@
 {{ define "main" }}
+<header class="section-header" style="margin-bottom: 30px;">
+    <h1 style="font-size: 1.5rem; color: var(--wp-primary); border-bottom: 2px solid var(--wp-border); padding-bottom: 10px;">
+        {{ .Title }}
+    </h1>
+</header>
 <div class="article-list">
     {{ range .Pages }}
     <section class="article-card">
@@ -6,8 +11,10 @@
             <span>📅 {{ .Date.Format "2006-01-02" }}</span>
         </div>
         <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-        <p>{{ .Summary | truncate 150 }}</p>
-        <a href="{{ .Permalink }}" class="read-more" style="color: var(--wp-primary); text-decoration: none; font-size: 0.9rem; font-weight: bold; margin-top: 15px; display: inline-block;">繼續閱讀 →</a>
+        <div class="post-summary" style="color: var(--wp-text-muted); font-size: 1rem;">
+            {{ .Summary | truncate 150 }}
+        </div>
+        <a href="{{ .Permalink }}" class="read-more" style="color: var(--wp-primary); text-decoration: none; font-size: 0.85rem; font-weight: bold; margin-top: 15px; display: inline-block;">繼續閱讀 →</a>
     </section>
     {{ end }}
 </div>
