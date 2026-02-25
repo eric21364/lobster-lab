@@ -1,28 +1,31 @@
 :root {
-    --wp-primary: #ff6b35; /* Lobster Orange */
-    --wp-secondary: #2271b1; /* WordPress Blue inspired */
-    --wp-dark: #101012;
-    --wp-surface: #1d2327; /* WP Admin dark grey */
-    --wp-border: rgba(255, 255, 255, 0.1);
-    --wp-text: #f0f0f1;
-    --wp-text-muted: #a7aaad;
-    --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    --primary: #ff6b35; /* 龍蝦橘 */
+    --link-color: #2271b1;
+    --bg-main: #f0f2f5;
+    --bg-white: #ffffff;
+    --text-main: #1d2327;
+    --text-muted: #50575e;
+    --border-color: #dcdcde;
+    --shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-    background-color: var(--wp-dark);
-    color: var(--wp-text);
-    font-family: var(--font-main);
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
 }
 
-/* 頂部導航欄 - WP 風格 */
+/* Header WP 專業風格 */
 .main-header {
-    background: var(--wp-surface);
-    border-bottom: 1px solid var(--wp-border);
+    background: #23282d;
+    color: #fff;
+    padding: 0 20px;
+    height: 46px;
+    display: flex;
+    align-items: center;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -31,156 +34,72 @@ body {
 .header-content {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
-    height: 60px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.brand-title {
-    color: #fff;
-    font-size: 1.25rem;
-    font-weight: 600;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
+.brand-link { color: #fff; text-decoration: none; font-weight: bold; font-size: 0.9rem; }
+.header-nav { display: flex; gap: 15px; }
+.nav-link { color: #c3c4c7; text-decoration: none; font-size: 0.85rem; transition: 0.2s; }
+.nav-link:hover { color: #fff; }
 
-.brand-title:hover { color: var(--wp-primary); }
-
-.header-nav { display: flex; gap: 4px; height: 100%; }
-.nav-link {
-    color: var(--wp-text-muted);
-    text-decoration: none;
-    font-size: 0.9rem;
-    padding: 0 16px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    transition: 0.2s;
-}
-
-.nav-link:hover { color: #fff; background: rgba(255,255,255,0.05); }
-
-/* 主容器 */
+/* 主佈局 */
 .container {
     max-width: 1200px;
-    margin: 40px auto;
+    margin: 30px auto;
     display: grid;
     grid-template-columns: 1fr 300px;
-    gap: 40px;
+    gap: 30px;
     padding: 0 20px;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 900px) {
     .container { grid-template-columns: 1fr; }
 }
 
-/* 文章列表卡片 */
+/* 文章卡片 - 乾淨、白底、層次感 */
 .article-card {
-    background: var(--wp-surface);
-    border: 1px solid var(--wp-border);
-    padding: 40px;
-    margin-bottom: 24px;
-    border-radius: 2px; /* WP 風格偏向直角或極小圓角 */
-    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.article-card:hover { border-color: var(--wp-primary); box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
-
-.article-card h2 { margin-bottom: 12px; }
-.article-card h2 a { color: #fff; text-decoration: none; font-size: 1.8rem; }
-.article-card h2 a:hover { color: var(--wp-primary); }
-
-.article-meta {
-    font-size: 0.85rem;
-    color: var(--wp-text-muted);
+    background: var(--bg-white);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+    padding: 30px;
     margin-bottom: 20px;
-    display: flex;
-    gap: 15px;
-}
-
-/* 文章單頁 */
-.article-single {
-    background: var(--wp-surface);
-    border: 1px solid var(--wp-border);
-    padding: 60px;
-    border-radius: 2px;
-}
-
-.article-header h1 { font-size: 2.5rem; margin-bottom: 20px; line-height: 1.2; }
-
-.article-content {
-    font-size: 1.125rem;
-    line-height: 1.8;
-}
-
-.article-content h2 {
-    font-size: 1.75rem;
-    margin: 48px 0 24px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid var(--wp-border);
-}
-
-.article-content p { margin-bottom: 24px; }
-
-/* 程式碼區塊 - 易讀性優先 */
-.article-content pre {
-    background: #000 !important;
-    padding: 24px;
     border-radius: 4px;
-    margin: 32px 0;
-    overflow-x: auto;
-    border: 1px solid var(--wp-border);
 }
 
-/* 側邊欄 */
+.article-card h2 a { color: var(--text-main); text-decoration: none; font-size: 1.5rem; font-weight: 700; }
+.article-card h2 a:hover { color: var(--link-color); }
+.article-meta { color: var(--text-muted); font-size: 0.8rem; margin-bottom: 15px; }
+
+/* 內頁閱讀優化 */
+.article-single {
+    background: var(--bg-white);
+    border: 1px solid var(--border-color);
+    padding: 50px;
+    border-radius: 4px;
+}
+
+.article-header h1 { font-size: 2.2rem; margin-bottom: 20px; }
+.article-content { font-size: 1.1rem; line-height: 1.8; color: #3c434a; }
+.article-content h2 { margin: 35px 0 15px; padding-bottom: 10px; border-bottom: 2px solid #f0f0f1; }
+.article-content p { margin-bottom: 20px; }
+.article-content pre { background: #23282d; color: #f0f0f1; padding: 20px; border-radius: 4px; overflow-x: auto; margin: 20px 0; }
+
+/* 側邊欄 Widget */
 .sidebar-section {
-    margin-bottom: 40px;
+    background: var(--bg-white);
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
 }
 
-.sidebar-section h3 {
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--wp-text-muted);
-    margin-bottom: 16px;
-    border-bottom: 1px solid var(--wp-border);
-    padding-bottom: 8px;
-}
+.sidebar-section h3 { font-size: 0.9rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 15px; }
+.sidebar-section ul { list-style: none; }
+.sidebar-section li { margin-bottom: 10px; font-size: 0.9rem; }
+.sidebar-section a { color: var(--link-color); text-decoration: none; }
 
 /* 頁腳 */
-.main-footer {
-    padding: 60px 20px;
-    text-align: center;
-    color: var(--wp-text-muted);
-    font-size: 0.9rem;
-    border-top: 1px solid var(--wp-border);
-}
-
-/* 搜尋頁面樣式 */
-.search-input {
-    width: 100%;
-    padding: 15px;
-    background: var(--wp-dark);
-    border: 1px solid var(--wp-border);
-    color: #fff;
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-#search-results { margin-top: 20px; }
-
-/* 修復首頁卡片間距與圖片 */
-.article-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 4px;
-    margin-bottom: 20px;
-}
-.article-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
+.main-footer { text-align: center; padding: 40px; color: var(--text-muted); font-size: 0.8rem; }
