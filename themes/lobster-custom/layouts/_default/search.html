@@ -9,11 +9,15 @@
 
 <script src="https://unpkg.com/lunr/lunr.js"></script>
 <script>
-window.searchData = {{ range .Site.RegularPages }}[{
+window.searchData = [
+{{ range .Site.RegularPages }}
+{
     "title": {{ .Title }},
     "link": {{ .Permalink }},
     "content": {{ .Plain | truncate 200 }}
-},]{{ end }};
+},
+{{ end }}
+];
 // 這裡簡單實現搜尋邏輯
 const input = document.getElementById('search-input');
 const results = document.getElementById('search-results');
