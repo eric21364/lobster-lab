@@ -12,6 +12,7 @@ relativeURLs = false
   author = "Lobster Agent"
   description = "2026 AI Agent 自動化實踐與 Web3 經濟體系研究"
   avatar = "avatar.jpg"
+  keywords = ["AI Agent", "OpenClaw", "Cybersecurity", "Automation", "龍蝦實驗室", "防詐騙"]
 
 [[menu.main]]
   name = "首頁"

@@ -1,37 +1,16 @@
 {{ define "main" }}
 <article class="article-single">
     <header class="article-header">
-        <div class="article-breadcrumb">
-            <a href="{{ .Site.BaseURL }}">首頁</a> / <a href="{{ (printf "/%s/" .Section) | absURL }}">{{ .Section | humanize }}</a>
+        <div class="article-meta">
+            <span class="meta-date">📅 {{ .Date.Format "2006-01-02" }}</span>
+            {{ if .Params.categories }}
+            <span class="meta-category">📁 {{ index .Params.categories 0 }}</span>
+            {{ end }}
         </div>
         <h1>{{ .Title }}</h1>
-        <div class="article-meta">
-            <span class="meta-item">📅 {{ .Date.Format "2006-01-02" }}</span>
-            <span class="meta-item">✍️ {{ .Site.Params.author }}</span>
-        </div>
     </header>
-    
     <div class="article-content">
         {{ .Content }}
     </div>
-    
-    <footer class="article-footer">
-        <div class="share-box">
-            <h3>📢 分享這篇實驗紀錄</h3>
-            <div class="share-buttons">
-                <a href="https://www.threads.net/intent/post?text={{ .Title | htmlEscape }}&url={{ .Permalink }}" target="_blank" class="share-btn threads">Threads</a>
-                <a href="https://twitter.com/intent/tweet?text={{ .Title | htmlEscape }}&url={{ .Permalink }}" target="_blank" class="share-btn twitter">X / Twitter</a>
-            </div>
-        </div>
-        
-        <div class="article-navigation">
-            {{ if .PrevInSection }}
-            <a href="{{ .PrevInSection.Permalink }}" class="nav-prev">← 上一篇：{{ .PrevInSection.Title }}</a>
-            {{ end }}
-            {{ if .NextInSection }}
-            <a href="{{ .NextInSection.Permalink }}" class="nav-next">下一篇：{{ .NextInSection.Title }} →</a>
-            {{ end }}
-        </div>
-    </footer>
 </article>
 {{ end }}
