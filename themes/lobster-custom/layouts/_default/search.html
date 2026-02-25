@@ -1,35 +1,45 @@
 {{ define "main" }}
-<div class="article-single">
-    <h1>{{ .Title }}</h1>
-    <div class="article-content">
-        <input type="text" id="search-input" class="search-input" placeholder="輸入關鍵字搜尋龍蝦筆記...">
-        <div id="search-results"></div>
-    </div>
+<div class="search-container">
+    <h1 style="margin-bottom: 1.5rem; font-size: 1.875rem;">搜索龍蝦實驗室 🔍</h1>
+    <input type="text" id="search-input" class="search-input" placeholder="輸入關鍵字，找回遺落的技術片段...">
+    <div id="search-results" style="margin-top: 2rem;"></div>
 </div>
 
-<script src="https://unpkg.com/lunr/lunr.js"></script>
 <script>
 window.searchData = [
 {{ range .Site.RegularPages }}
 {
     "title": {{ .Title }},
     "link": {{ .Permalink }},
-    "content": {{ .Plain | truncate 200 }}
+    "summary": {{ .Summary | truncate 150 }},
+    "date": {{ .Date.Format "2006-01-02" }}
 },
 {{ end }}
 ];
-// 這裡簡單實現搜尋邏輯
+
 const input = document.getElementById('search-input');
 const results = document.getElementById('search-results');
+
 input.addEventListener('input', (e) => {
-    const query = e.target.value.toLowerCase();
-    if (!query) { results.innerHTML = ''; return; }
-    const filtered = window.searchData.filter(d => d.title.toLowerCase().includes(query) || d.content.toLowerCase().includes(query));
+    const query = e.target.value.toLowerCase().trim();
+    if (query.length < 2) { results.innerHTML = ''; return; }
+    
+    const filtered = window.searchData.filter(d => 
+        d.title.toLowerCase().includes(query) || 
+        d.summary.toLowerCase().includes(query)
+    );
+    
+    if (filtered.length === 0) {
+        results.innerHTML = '<p style="color: var(--slate-500);">找不到符合的內容 🦞💧</p>';
+        return;
+    }
+    
     results.innerHTML = filtered.map(d => `
-        <div class="article-card" style="padding: 20px; margin-bottom: 15px;">
-            <h3><a href="${d.link}">${d.title}</a></h3>
-            <p style="font-size: 0.9rem; color: #a7aaad;">${d.content}</p>
-        </div>
+        <article class="article-card" style="padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1rem; box-shadow: none;">
+            <div class="article-meta">${d.date}</div>
+            <h3 style="font-size: 1.25rem;"><a href="${d.link}" style="color: var(--slate-900); text-decoration: none; font-weight: 700;">${d.title}</a></h3>
+            <p style="font-size: 0.875rem; color: var(--slate-700); margin-top: 0.5rem;">${d.summary}</p>
+        </article>
     `).join('');
 });
 </script>

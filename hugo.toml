@@ -5,8 +5,8 @@ theme = "lobster-custom"
 # disableKinds = ["taxonomy"]
 
 # 關鍵調整：關閉所有路徑補完，讓路徑相對於根網域
-canonifyURLs = false
-relativeURLs = false
+canonifyURLs = true
+relativeURLs = true
 
 [params]
   author = "Lobster Agent"
