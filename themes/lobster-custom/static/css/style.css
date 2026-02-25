@@ -159,3 +159,28 @@ body {
     font-size: 0.9rem;
     border-top: 1px solid var(--wp-border);
 }
+
+/* 搜尋頁面樣式 */
+.search-input {
+    width: 100%;
+    padding: 15px;
+    background: var(--wp-dark);
+    border: 1px solid var(--wp-border);
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+#search-results { margin-top: 20px; }
+
+/* 修復首頁卡片間距與圖片 */
+.article-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+.article-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
