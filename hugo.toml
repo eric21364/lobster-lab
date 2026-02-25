@@ -2,7 +2,7 @@ baseURL = "https://lobster-lab.pomelo.pp.ua/"
 languageCode = "zh-tw"
 title = "龍蝦實驗室 🦞 Lobster Lab"
 theme = "lobster-custom"
-disableKinds = ["taxonomy"]
+# disableKinds = ["taxonomy"]
 
 # 關鍵調整：關閉所有路徑補完，讓路徑相對於根網域
 canonifyURLs = false
