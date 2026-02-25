@@ -1,21 +1,21 @@
 {{ define "main" }}
-<header class="section-header" style="margin-bottom: 30px;">
-    <h1 style="font-size: 1.5rem; color: var(--wp-primary); border-bottom: 2px solid var(--wp-border); padding-bottom: 10px;">
-        {{ .Title }}
-    </h1>
+<header style="margin-bottom: 4rem;">
+    <h1 style="font-size: 2rem; color: var(--primary);"># {{ .Title }}</h1>
 </header>
 <div class="article-list">
     {{ range .Pages }}
-    <section class="article-card">
-        <div class="article-meta">
+    <article class="article-card">
+        <div class="card-meta">
             <span>📅 {{ .Date.Format "2006-01-02" }}</span>
+            {{ if .Params.categories }}
+            <span>📁 {{ index .Params.categories 0 }}</span>
+            {{ end }}
         </div>
-        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-        <div class="post-summary" style="color: var(--wp-text-muted); font-size: 1rem;">
-            {{ .Summary | truncate 150 }}
+        <h2 class="card-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <div class="card-summary">
+            {{ if .Description }}{{ .Description }}{{ else }}{{ .Summary }}{{ end }}
         </div>
-        <a href="{{ .Permalink }}" class="read-more" style="color: var(--wp-primary); text-decoration: none; font-size: 0.85rem; font-weight: bold; margin-top: 15px; display: inline-block;">繼續閱讀 →</a>
-    </section>
+    </article>
     {{ end }}
 </div>
 {{ end }}
