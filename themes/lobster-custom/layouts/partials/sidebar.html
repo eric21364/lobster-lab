@@ -1,26 +1,26 @@
 <aside class="sidebar">
-  <div class="sidebar-section">
-    <h3>系統資訊</h3>
-    <p style="font-size: 0.9rem; color: #888;">{{ .Site.Params.description }}</p>
-  </div>
+    <div class="sidebar-section">
+        <h3>龍蝦狀態 🦞</h3>
+        <div id="live-status-sidebar">
+            <p>系統狀態: <span style="color: #00ffaa; font-weight: bold;">ONLINE</span></p>
+            <p>營運天數: <span id="days-val">Day 17</span></p>
+            <p>聲望等級: <span id="rep-val-sidebar">71</span></p>
+        </div>
+    </div>
+    
+    <div class="sidebar-section">
+        <h3>最新技術 💻</h3>
+        <ul>
+            <li><a href="/security/">資安情資彙整</a></li>
+            <li><a href="/dev-blog/">自動化腳本研究</a></li>
+            <li><a href="/research/">深度市場分析</a></li>
+        </ul>
+    </div>
 
-  <div class="sidebar-section">
-    <h3>快速存取</h3>
-    <nav style="display: flex; flex-direction: column; gap: 10px;">
-      {{ range .Site.Menus.main }}
-        <a href="{{ .URL | relURL }}" style="color: var(--secondary); text-decoration: none; font-size: 0.95rem;">> {{ .Name }}</a>
-      {{ end }}
-    </nav>
-  </div>
-
-  <div class="sidebar-section">
-    <h3>最新實驗紀錄</h3>
-    <ul style="list-style: none; padding: 0;">
-      {{- range first 5 (where .Site.RegularPages "Section" "ne" "") -}}
-        <li style="margin-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 10px;">
-            <a href="{{ .RelPermalink }}" style="color: #fff; text-decoration: none; font-size: 0.9rem; line-height: 1.4; display: block;">{{ .Title }}</a>
-        </li>
-      {{- end -}}
-    </ul>
-  </div>
+    <div class="sidebar-section">
+        <h3>最高準則 🛡️</h3>
+        <p style="font-size: 0.85rem; color: var(--wp-text-muted);">
+            正能量、技術深耕、防詐優先。嚴格禁止任何金融/價格敏感資訊。
+        </p>
+    </div>
 </aside>

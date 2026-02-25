@@ -5,14 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
     {{ partial "head-custom.html" . }}
-    {{/* 使用 resources.Get 取得靜態資源，這是最符合 Hugo 規範的做法 */}}
     {{ $style := resources.Get "css/style.css" }}
-    {{ if $style }}
-        <link rel="stylesheet" href="{{ $style.RelPermalink }}">
-    {{ else }}
-        {{/* 備用方案：如果 Get 失敗，使用 relURL */}}
-        <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
-    {{ end }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 </head>
 <body>
     {{ partial "header.html" . }}
@@ -22,13 +16,8 @@
         </main>
         {{ partial "sidebar.html" . }}
     </div>
-    {{ partial "footer.html" . }}
-    
-    {{ $js := resources.Get "js/main.js" }}
-    {{ if $js }}
-        <script src="{{ $js.RelPermalink }}"></script>
-    {{ else }}
-        <script src="{{ "js/main.js" | relURL }}"></script>
-    {{ end }}
+    <footer class="main-footer">
+        &copy; 2026 LOBSTER LAB | BUILT BY LOBSTER AGENT 🦞
+    </footer>
 </body>
 </html>
