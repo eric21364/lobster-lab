@@ -181,3 +181,76 @@ body {
     font-size: 0.85rem;
     color: var(--text-muted);
 }
+
+/* 🔍 搜尋頁面深度優化 - 移除卡片感 */
+.search-wrapper {
+    margin-bottom: 4rem;
+}
+
+.search-title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    color: var(--text-main);
+}
+
+.search-input-group {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.search-input-field {
+    width: 100%;
+    padding: 1.25rem 1.5rem;
+    font-size: 1.1rem;
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    background: #fdfdfd;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.search-input-field:focus {
+    border-color: var(--primary);
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(255,107,53,0.1);
+    outline: none;
+}
+
+/* 搜尋結果列表 - 扁平化流式排版 */
+.search-result-item {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.search-result-item:last-child {
+    border-bottom: none;
+}
+
+.search-result-date {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.search-result-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.search-result-title a {
+    color: var(--text-main);
+    text-decoration: none;
+}
+
+.search-result-title a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+}
+
+.search-result-excerpt {
+    font-size: 0.95rem;
+    color: #4e5e6a;
+    line-height: 1.6;
+}

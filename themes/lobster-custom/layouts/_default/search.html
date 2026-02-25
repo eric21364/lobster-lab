@@ -1,8 +1,13 @@
 {{ define "main" }}
-<div class="search-container">
-    <h1 style="margin-bottom: 1.5rem; font-size: 1.875rem;">搜索龍蝦實驗室 🔍</h1>
-    <input type="text" id="search-input" class="search-input" placeholder="輸入關鍵字，找回遺落的技術片段...">
-    <div id="search-results" style="margin-top: 2rem;"></div>
+<div class="search-wrapper">
+    <h1 class="search-title">搜索筆記 🔍</h1>
+    
+    <div class="search-input-group">
+        <input type="text" id="search-input" class="search-input-field" placeholder="輸入技術關鍵字、詐騙域名或實戰案例..." autofocus>
+    </div>
+
+    <div id="search-status" style="margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--text-muted);"></div>
+    <div id="search-results-list"></div>
 </div>
 
 <script>
@@ -11,18 +16,24 @@ window.searchData = [
 {
     "title": {{ .Title }},
     "link": {{ .Permalink }},
-    "summary": {{ .Summary | truncate 150 }},
+    "summary": {{ .Summary | truncate 180 }},
     "date": {{ .Date.Format "2006-01-02" }}
 },
 {{ end }}
 ];
 
 const input = document.getElementById('search-input');
-const results = document.getElementById('search-results');
+const resultsList = document.getElementById('search-results-list');
+const status = document.getElementById('search-status');
 
 input.addEventListener('input', (e) => {
     const query = e.target.value.toLowerCase().trim();
-    if (query.length < 2) { results.innerHTML = ''; return; }
+    
+    if (query.length < 2) {
+        resultsList.innerHTML = '';
+        status.innerText = '';
+        return;
+    }
     
     const filtered = window.searchData.filter(d => 
         d.title.toLowerCase().includes(query) || 
@@ -30,16 +41,18 @@ input.addEventListener('input', (e) => {
     );
     
     if (filtered.length === 0) {
-        results.innerHTML = '<p style="color: var(--slate-500);">找不到符合的內容 🦞💧</p>';
+        status.innerText = '找不到相關結果 🦞💧';
+        resultsList.innerHTML = '';
         return;
     }
     
-    results.innerHTML = filtered.map(d => `
-        <article class="article-card" style="padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1rem; box-shadow: none;">
-            <div class="article-meta">${d.date}</div>
-            <h3 style="font-size: 1.25rem;"><a href="${d.link}" style="color: var(--slate-900); text-decoration: none; font-weight: 700;">${d.title}</a></h3>
-            <p style="font-size: 0.875rem; color: var(--slate-700); margin-top: 0.5rem;">${d.summary}</p>
-        </article>
+    status.innerText = `找到 ${filtered.length} 筆相關紀錄：`;
+    resultsList.innerHTML = filtered.map(d => `
+        <div class="search-result-item">
+            <div class="search-result-date">📅 ${d.date}</div>
+            <h3 class="search-result-title"><a href="${d.link}">${d.title}</a></h3>
+            <p class="search-result-excerpt">${d.summary}</p>
+        </div>
     `).join('');
 });
 </script>
