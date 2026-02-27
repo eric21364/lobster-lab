@@ -1,5 +1,845 @@
 [
   {
+    "date": "2026-02-27 17:36:16",
+    "url": "http://verification-coinbase.venezuelacybernetica.com/",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-02-27 17:36:16",
+    "url": "https://proteceng.jp/mpp.php?mc_phishing_protection_id=28396-d6gjl4fs2tuvppksptk0",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-02-27 17:36:16",
+    "url": "https://account-log.kesug.com/check-action.php?i=1",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-02-27 17:36:16",
+    "url": "https://wanderson-a-timoteo.github.io/instagram-interface/",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-02-27 17:36:16",
+    "url": "http://im.nbpublic.com/loading_page/amazon/AmazonGiftCard_10/index.html?lptoken=17e1629705be74da1605&cep=N4Igdgpg7g+gFgSwC4wQExALhAIwGYBMAzAIzF4C0AhiXgCwV0AMEAnBQByFEU4DshCGho4ArKwBsIADQgAbggDOyVBmwcqdAhwIkGHVlUrMiaCqz0MmEqgRY6+EEgGMZ8pSqQIAthEVIqbwAHLBA7AlEKEhIKJgIAFSYiTFFkolEAOlY+DgAtNwVlJAB7ACdVUKJbPkMIBj4+KghGQypePiIeAgkIHS0JcQgpWWdAoKoEAHMwCuwJViYSHGc0CCIJJjxxJkXu5zoiMTcwYtXZkCYYEmPTiBgkAE8giFCAGSowNAQwSZuz5zgEzAWAA2hcriAALqyIKlPwQAA2EGcSCEMBOqywoEezzeHy+PzcAVKkwgKHQoXmixwaGYBAIVCYdAgOzIEQITlEfzuFOwl2uskgAA8kFiQDiXtgAPJ4PAQUpEqgksnnKlLHBUVjORpGOy7VJCGnc86XU0AH35MCYFpgBCtxwgIqwYAArgiEQBfD0jQHfGBBYpFBDFYGYUDOF2lOFgJAAOVuAElPo6sExZDhSh8AUmvs4/KDId6QEoYHCvnCUVgkKUXRBZABHRQhMMgZwIhDOADW52AbY73fQHrczjhVC8ch5ahAvdH48nQ9kVDQchgo2CE2mPaXK7X4ymM0Hw9nCAn6MCkunI4gY5PdzA54XIBdLt50+fh8Xy5gxVl8q3X5/OVyg/EBAL/e9fFCYAwPKCCIEfIw8AQdsx0nKDEOQhBUNUR90DwKgoLwqhcLQfCYG8NAuWwYAiPIyjH0mCYp2ARiQNYtA6Ko6d2M43DfAQQj+L4iAEE4wSRN4tx8VKYp0C3T4ZLkkDpNkji5IorjgBUpSOI0x9vCoVxqIM5x9MMsTjPMvS3GKJioNskCHN0yj7KYyTZBdAjqM8ocixLSAoCwfCEUUeCgA=",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-02-27 17:36:16",
+    "url": "http://im.nbpublic.com/loading_page_cpl/amazon/amazon_cf_4/index.html?lptoken=17aa60187602241299c8&cep=N4Igdgpg7g+gFgSwC4wQExALhAQwOxp54QCMArALQ4AMALCRbQJx4BMFTtAxgBwXU4ARmjJNq1IrVYgANCABuCAM7JUGbDhIAzVhFY8AbBQDMEJjkZMmgqgbTV+aLrR5NjNJmQOyFy1UgQAWwglJBxAgAcsEFZqVkoSBxIeABU6TBISTGMmADo8AzwALR9FFSQAewAnNWicMmMeEjRWGxwICGNGFpseWIZWLjwtJq4ILjIeah8ucIicBABzMFrsAx4O6h58Lw3WPHESVuMtA3qfMAq0CFWQablL65gkAE8IiGiAGRwwNAQwRYXK43LhwBZgLAAbTuIAAunIIlUQhAADbjJAQNAwR4fTCgV7vL4/P4AnxhKqLCAodDRdabPBcNAbHgMwSHVisOzXe7gYG3HmQAAeSCw+LeuJAAHktFoIFUyTgKVTbnSIFtBszWezOWhrtIHnyadhqDABRBhVgwABXFEogC+drkoPBMAiFXKCAqELxIC4VqqSLASAAcsCAJK/c1YahyQRVH6giN/MZKKGwx0gZQwJF/JFcEWYJBVK0QOQARyUUR9ODQ8hgs0iC2Wt2ANfrczUdp8NbrFRlcpbPelsqqYbQXbkOBlCBRCBwGJbAAF/loKrklFbBPWwWBICjFxPcL8qhV0C3rvIx4fiSez2fAiJosAL2OALIiQ9cWdcADWS5Xa5fggv7oAeMxIvOCDyDcRogMAXAQQE0FXuBECQdB2LhBK8GIVBEDBlhh6LAs6hwcR6BESRMAPmQT7kWg75kIe6BaDgT4sTgzFoKx1GPtgwAcYxzHBAg7EicJEAILxtH8UEklCT4gQ4FwT5KVwh5qdJqnKQpcgVCRT76RRPhGViNGGSRukgH2I6YcET7LmAq65A28xLGAuQ2QOYBYWBchWmx/EBYeVpWrBwCOc5rlNh5PnBGBGZZpAUBYKxKJKBAdpAA",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-02-27 17:36:16",
+    "url": "http://tech-institute.org/s/63BZGFSVBWSFCDX7Y9/584dd8/90eab167-7429-489f-99f6-ce86e8d0d81a",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-02-27 17:36:16",
+    "url": "http://invoicenotices.com/s/63BZGFSVBWSFCDX7Y9/584dd8/90eab167-7429-489f-99f6-ce86e8d0d81a",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-02-27 17:36:16",
+    "url": "http://easy-bank-code.vercel.app/",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-02-27 17:36:16",
+    "url": "http://robl.vercel.app/",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-02-27 17:36:16",
+    "url": "https://www.5mp.eu/fajlok2/email/index_www.5mp.eu_.html",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-02-27 17:36:16",
+    "url": "http://www.airbnb-demo-jade.vercel.app/",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-02-27 17:36:16",
+    "url": "http://pub-8c1be1f2764c443096fe5ba20d7802b5.r2.dev/index.html",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-02-27 17:36:16",
+    "url": "https://admin2.ondoc.co.kr/vxgo4kiuum3baoChromepublicfari537.html?eta=3mail@a.b.c0",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-02-27 17:36:16",
+    "url": "http://www.re11133.vercel.app/",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-02-27 17:21:08",
+    "url": "https://sunchernical.com/2026/blessed/SECURED.ps1",
+    "type": "惡意程式下載",
+    "level": "HIGH",
+    "status": "○ INACTIVE (TAKEN DOWN)",
+    "source": "URLhaus",
+    "tags": "ascii,PhantomStealer,powershell,ps1"
+  },
+  {
+    "date": "2026-02-27 17:21:09",
+    "url": "https://umxtxhub.za.com/OGR%20SECURE/SECURED.ps1",
+    "type": "惡意程式下載",
+    "level": "HIGH",
+    "status": "○ INACTIVE (TAKEN DOWN)",
+    "source": "URLhaus",
+    "tags": "ascii,PhantomStealer,powershell,ps1"
+  },
+  {
+    "date": "2026-02-27 17:22:07",
+    "url": "https://archive.org/download/0225-r/0225R.png",
+    "type": "惡意程式下載",
+    "level": "HIGH",
+    "status": "○ INACTIVE (TAKEN DOWN)",
+    "source": "URLhaus",
+    "tags": "VIPKeylogger"
+  },
+  {
+    "date": "2026-02-27 17:22:09",
+    "url": "http://excellence02.rf.gd/arquivo_20260227020225.txt",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "VIPKeylogger"
+  },
+  {
+    "date": "2026-02-27 17:23:09",
+    "url": "http://archive.org/download/optimized_msi_20260226_1507/optimized_MSI.png",
+    "type": "惡意程式下載",
+    "level": "HIGH",
+    "status": "○ INACTIVE (TAKEN DOWN)",
+    "source": "URLhaus",
+    "tags": "AsyncRAT,rat"
+  },
+  {
+    "date": "2026-02-27 17:23:09",
+    "url": "http://124.234.182.193:24121/.i",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "hajime"
+  },
+  {
+    "date": "2026-02-27 17:23:10",
+    "url": "https://yaso.su/raw/UpxC8OJX",
+    "type": "惡意程式下載",
+    "level": "HIGH",
+    "status": "○ INACTIVE (TAKEN DOWN)",
+    "source": "URLhaus",
+    "tags": "VIPKeylogger"
+  },
+  {
+    "date": "2026-02-27 17:23:11",
+    "url": "http://fil.ydns.eu/wkijh/FnIeaoI.txt",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "VIPKeylogger"
+  },
+  {
+    "date": "2026-02-27 17:23:11",
+    "url": "https://pastefy.app/sLC7Jpkp/raw",
+    "type": "惡意程式下載",
+    "level": "HIGH",
+    "status": "○ INACTIVE (TAKEN DOWN)",
+    "source": "URLhaus",
+    "tags": "VIPKeylogger"
+  },
+  {
+    "date": "2026-02-27 17:24:18",
+    "url": "http://42.231.92.19:51879/i",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-02-27 17:25:09",
+    "url": "https://eyasinarafat.com/wp-admin/js/opkarig.txt",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "ascii,PhantomStealer"
+  },
+  {
+    "date": "2026-02-27 17:25:16",
+    "url": "http://103.116.52.44/debug.dbg",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "elf,mirai,ua-wget"
+  },
+  {
+    "date": "2026-02-27 17:25:17",
+    "url": "http://103.116.52.44/abc2.sh",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "mirai,sh,ua-wget"
+  },
+  {
+    "date": "2026-02-27 17:25:17",
+    "url": "http://103.116.52.44/abc3.sh",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "sh,ua-wget"
+  },
+  {
+    "date": "2026-02-27 17:25:17",
+    "url": "http://103.116.52.44/abc1.sh",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "sh,ua-wget"
+  },
+  {
+    "date": "2026-02-27 17:25:17",
+    "url": "http://103.116.52.44/jack5tr.sh",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "sh,ua-wget"
+  },
+  {
+    "date": "2026-02-27 17:26:21",
+    "url": "https://uploads.otzo.com/1D/a5c1D.exe",
+    "type": "惡意程式下載",
+    "level": "HIGH",
+    "status": "○ INACTIVE (TAKEN DOWN)",
+    "source": "URLhaus",
+    "tags": "exe"
+  },
+  {
+    "date": "2026-02-27 17:27:10",
+    "url": "https://www.kotojuki.com/upload/upl/aIh2Q8_tdPWA9w6hskn5/539869.pdf",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "Formbook"
+  },
+  {
+    "date": "2026-02-27 17:27:20",
+    "url": "https://one-graup.com/LAH.hta",
+    "type": "惡意程式下載",
+    "level": "HIGH",
+    "status": "○ INACTIVE (TAKEN DOWN)",
+    "source": "URLhaus",
+    "tags": "hta"
+  },
+  {
+    "date": "2026-02-27 17:28:20",
+    "url": "http://182.127.56.186:45376/bin.sh",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "Feb 27th 2026 2:28 PM",
+    "url": "https://7wh6wg.lat/l7iqb9c7/2hIPeF/wLMPVX",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9355621"
+  },
+  {
+    "date": "Feb 27th 2026 2:30 PM",
+    "url": "https://7wy66w2.lol/l7iqb9c7/2hIPeF/wLMPVX",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9355624"
+  },
+  {
+    "date": "Feb 27th 2026 2:32 PM",
+    "url": "https://826wgtfw.lat/l7iqb9c7/2hIPeF/wLMPVX",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9355625"
+  },
+  {
+    "date": "Feb 27th 2026 2:34 PM",
+    "url": "https://92iuwyg.lat/l7iqb9c7/2hIPeF/wLMPVX",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9355626"
+  },
+  {
+    "date": "Feb 27th 2026 2:36 PM",
+    "url": "https://ft2r65ftw.lat/l7iqb9c7/2hIPeF/wLMPVX",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9355628"
+  },
+  {
+    "date": "Feb 27th 2026 2:38 PM",
+    "url": "https://ywh6732.lol/l7iqb9c7/2hIPeF/wLMPVX",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9355631"
+  },
+  {
+    "date": "Feb 27th 2026 2:57 PM",
+    "url": "http://allegrolokalnie.pl-kategorie-polecane-74832.sbs...",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9355649"
+  },
+  {
+    "date": "Feb 27th 2026 2:57 PM",
+    "url": "http://allegrolokalnie.pl-kategorie-polecane-38594.sbs...",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9355650"
+  },
+  {
+    "date": "Feb 27th 2026 3:00 PM",
+    "url": "https://hub-managed-endpoint-e5.s3.eu-west-1.amazonaws.com/fDKMNn?em=r...",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9355653"
+  },
+  {
+    "date": "Feb 27th 2026 3:00 PM",
+    "url": "http://prestamos-oca-uy.webcindario.com",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9355655"
+  },
+  {
+    "date": "Feb 27th 2026 4:04 PM",
+    "url": "http://everifytaxationportal.com/idme",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9355672"
+  },
+  {
+    "date": "Feb 27th 2026 4:04 PM",
+    "url": "http://everifytaxationportal.com/idme/",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9355673"
+  },
+  {
+    "date": "Feb 27th 2026 4:26 PM",
+    "url": "https://duiehuifgfuishfioshd62736duishui.cfolks.pl/wi/vr/...",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9355681"
+  },
+  {
+    "date": "Feb 27th 2026 4:26 PM",
+    "url": "https://duiehuifgfuishfioshd62736duishui.cfolks.pl/wi/vr/auth/log.php...",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9355683"
+  },
+  {
+    "date": "Feb 27th 2026 4:27 PM",
+    "url": "https://franceweb.pro/index.php",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9355685"
+  },
+  {
+    "date": "Feb 27th 2026 4:31 PM",
+    "url": "https://bellsouth-att-sign-in-a8d857.webflow.io/...",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9355687"
+  },
+  {
+    "date": "Feb 27th 2026 4:32 PM",
+    "url": "https://bellsouth-att-sign-in-d48a69.webflow.io/...",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9355688"
+  },
+  {
+    "date": "Feb 27th 2026 5:06 PM",
+    "url": "https://allegrolokalnie.pl99183.cfd/oferta/konsola-sony-ps5-naped-cfi-...",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9355699"
+  },
+  {
+    "date": "Feb 27th 2026 5:26 PM",
+    "url": "https://support-clientt.com/pages/captcha.php",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9355701"
+  },
+  {
+    "date": "Feb 27th 2026 5:26 PM",
+    "url": "https://support-clientt.com/",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9355702"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "www.lcon.click",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "www.khguasd.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "www.conking-wishiist.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "www.twxauxjnvni.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "aitech.optixaiplusorganization.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "www.qxrstfj.cn",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "h5.fdoigjf.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "www.mdexpyo.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "www.nhkutdp.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "h5.lqsjxpro.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "fc.rirris666.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "www.listanmz.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "www.tradestreg.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "www.kaddexoxnse.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "s.bauncy.space",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "www.seveshop-hub.store",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "www.nm12.top",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "www.atfxreg.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "www.ascascx.cc",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "www.yulinglong123.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "www.vnxwallet.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "www.digitalorigin30.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "www.snow-flake.org",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "www.databaseou.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "www.shop-online.life",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "www.incolendjio.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "www.ceffknohg.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "www.gsjsbvgz.top",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "app.nkhurst.vip",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "www.orbexencelan.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "www.wqpbh.top",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "h5.lqsjxm.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "www.skxbitex.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "jollywizij.com.tw",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "www.djowk.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "galaxyark.zalomexu.vip",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "www.etoroao.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "www.globep.xyz",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "www.xfafpa.cc",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "ed89797.tt23.life.cdn.cloudflare.net",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "www.mwserodk.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "h5.cjkism.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "www.xtpro1.top",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "www.lps-ser.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
+    "date": "2026-02-27 17:36:25",
+    "url": "www.alignmarketscrm.com",
+    "type": "假投資/博弈詐騙",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "165反詐騙"
+  },
+  {
     "date": "2026-02-26 07:13:28",
     "url": "https://roblox.com.ge/games/85966125008822/Untitled-Game?privateServerLinkCode=72087693466529531410811275946727",
     "type": "釣魚網站",
