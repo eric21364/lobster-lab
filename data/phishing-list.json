@@ -1,5 +1,485 @@
 [
   {
+    "date": "2026-03-03 01:39:41",
+    "url": "https://itsritikcodes-dev.github.io/Amazon-Clone/",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-03-03 01:39:41",
+    "url": "https://muhammadwaleedqazi.github.io/fb_home/",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-03-03 01:39:41",
+    "url": "https://www.newsessionbox-mint5.vercel.app/",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-03-03 01:39:41",
+    "url": "https://pv007.com/",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-03-03 01:39:41",
+    "url": "http://boainternational.vercel.app/register",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-03-03 01:39:41",
+    "url": "https://ingresoahoraneswes.fun/",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-03-03 01:39:41",
+    "url": "https://nbvc.us-southeast-1.linodeobjects.com/index.html?3mail@a.b.c0",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-03-03 01:39:41",
+    "url": "https://exportex.net/wp-includes/rdr/",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-03-03 01:39:41",
+    "url": "https://roblox.com.py/communities/213129502/",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-03-03 01:39:41",
+    "url": "https://roblox.com.kz/users/7048358411/profile./",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-03-03 01:39:41",
+    "url": "https://roblox.com.ge/communities/6598990823/",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-03-03 01:39:41",
+    "url": "https://fidelitysafetyio.one/16bcg7s",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-03-03 01:39:41",
+    "url": "https://fidelitysafetyio.one/16bcg7s/page.html",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-03-03 01:39:41",
+    "url": "https://www.robiox.com.py/users/158162285240/profile",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-03-03 01:39:41",
+    "url": "https://vwww-roblox.com.ru/games/920587237/NEW-Adopt-Me?privateServerLinkCode=97333097989164825371023145551828",
+    "type": "釣魚網站",
+    "level": "HIGH",
+    "status": "● ACTIVE",
+    "source": "OpenPhish"
+  },
+  {
+    "date": "2026-03-03 00:01:20",
+    "url": "http://92.38.51.65:39022/bin.sh",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-03-03 00:07:11",
+    "url": "http://59.42.88.34:56735/i",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,arm,elf,mirai,Mozi"
+  },
+  {
+    "date": "2026-03-03 00:18:17",
+    "url": "http://123.9.193.220:37185/bin.sh",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-03-03 00:28:07",
+    "url": "http://114.226.201.118:34400/.i",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "hajime"
+  },
+  {
+    "date": "2026-03-03 00:28:21",
+    "url": "http://110.37.85.74:46000/bin.sh",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-03-03 00:39:06",
+    "url": "http://130.12.180.43/files/6498612463/joycgCT.exe",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "dropped-by-amadey,fbf543,RemcosRAT"
+  },
+  {
+    "date": "2026-03-03 00:42:06",
+    "url": "http://110.36.80.171:33042/bin.sh",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-03-03 00:43:08",
+    "url": "http://114.226.201.118:31855/.i",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "hajime"
+  },
+  {
+    "date": "2026-03-03 00:43:17",
+    "url": "http://125.44.192.82:37629/bin.sh",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-03-03 00:52:18",
+    "url": "http://125.44.192.82:37629/i",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-03-03 00:56:19",
+    "url": "http://110.37.85.74:46000/i",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-03-03 01:04:14",
+    "url": "http://121.228.193.129:54257/bin.sh",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-03-03 01:04:14",
+    "url": "http://117.196.173.99:49029/bin.sh",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-03-03 01:07:16",
+    "url": "http://115.55.228.201:54410/i",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-03-03 01:21:14",
+    "url": "http://121.228.193.129:54257/i",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-03-03 01:21:14",
+    "url": "http://110.37.38.88:44035/i",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,arm,elf,mirai,Mozi"
+  },
+  {
+    "date": "2026-03-03 01:22:20",
+    "url": "http://115.57.181.117:59858/bin.sh",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-03-03 01:28:19",
+    "url": "http://115.57.181.117:59858/i",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-03-03 01:29:12",
+    "url": "http://117.196.173.99:49029/i",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "2026-03-03 01:34:20",
+    "url": "http://222.141.74.247:35547/bin.sh",
+    "type": "惡意程式下載",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "URLhaus",
+    "tags": "32-bit,elf,mips,Mozi"
+  },
+  {
+    "date": "Mar 2nd 2026 9:26 PM",
+    "url": "https://promocionbhd2025.webcindario.com/",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9357721"
+  },
+  {
+    "date": "Mar 2nd 2026 9:29 PM",
+    "url": "https://rock-modern-change.shop/c/Auth/ini/",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9357724"
+  },
+  {
+    "date": "Mar 2nd 2026 10:39 PM",
+    "url": "https://portalsegurity26.webcindario.com/",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9357735"
+  },
+  {
+    "date": "Mar 2nd 2026 10:48 PM",
+    "url": "https://voluble-crostata-bae7d9.netlify.app/",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9357736"
+  },
+  {
+    "date": "Mar 2nd 2026 10:49 PM",
+    "url": "https://9af8ad9c-05a1-4595-ad30-4def1ed98656-00-89wii1gjlnqy.worf.repl...",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9357737"
+  },
+  {
+    "date": "Mar 2nd 2026 10:49 PM",
+    "url": "https://finasas-amarilla.webcindario.com/",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9357738"
+  },
+  {
+    "date": "Mar 2nd 2026 10:50 PM",
+    "url": "https://gemini.hoiswong.com/",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9357739"
+  },
+  {
+    "date": "Mar 2nd 2026 10:55 PM",
+    "url": "https://bansamikaga.netlify.app",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9357740"
+  },
+  {
+    "date": "Mar 2nd 2026 10:58 PM",
+    "url": "https://geminime.sinkabyss.top/",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9357741"
+  },
+  {
+    "date": "Mar 2nd 2026 11:00 PM",
+    "url": "https://geminibalance.osricw.com/",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9357742"
+  },
+  {
+    "date": "Mar 2nd 2026 11:01 PM",
+    "url": "https://gemini.036699.xyz/",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9357743"
+  },
+  {
+    "date": "Mar 2nd 2026 11:04 PM",
+    "url": "https://trezorr-device.netlify.app/",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9357744"
+  },
+  {
+    "date": "Mar 2nd 2026 11:19 PM",
+    "url": "https://a2beda5e-e3d5-459a-b684-0f21c1267569-00-2q0n48dfp3y4g.worf.rep...",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9357747"
+  },
+  {
+    "date": "Mar 2nd 2026 11:19 PM",
+    "url": "https://ckpn.io/FQeLvBNWl",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9357748"
+  },
+  {
+    "date": "Mar 2nd 2026 11:28 PM",
+    "url": "https://order.littlecaecars.com/en-us/order/",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9357752"
+  },
+  {
+    "date": "Mar 3rd 2026 12:15 AM",
+    "url": "https://eaqui-tu-regitro.webcindario.com/",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9357757"
+  },
+  {
+    "date": "Mar 3rd 2026 1:13 AM",
+    "url": "https://intro-live.ghost.io/suite/",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9357765"
+  },
+  {
+    "date": "Mar 3rd 2026 1:17 AM",
+    "url": "https://platform-intro.ghost.io/suite-en/",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9357766"
+  },
+  {
+    "date": "Mar 3rd 2026 1:22 AM",
+    "url": "https://started-trezr.ghost.io/suite/",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9357771"
+  },
+  {
+    "date": "Mar 3rd 2026 1:27 AM",
+    "url": "https://starting-page.ghost.io/en-suite/",
+    "type": "釣魚網站",
+    "level": "CRITICAL",
+    "status": "● ACTIVE",
+    "source": "PhishTank",
+    "tags": "phishtank-9357773"
+  },
+  {
     "date": "2026-03-02 14:58:05",
     "url": "https://shop.tech-applications.com/wp-content/plugins/otxte/acc/signin.php",
     "type": "釣魚網站",
